@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>cargos</source>
+         <target>cargos</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new cargos</source>
+         <target>Agregar cargos</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit cargos</source>
+         <target>Editar cargos</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List cargos</source>
+         <target>Listar cargos</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Nome</source>
+         <target>Nome</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Meta</source>
+         <target>Meta</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

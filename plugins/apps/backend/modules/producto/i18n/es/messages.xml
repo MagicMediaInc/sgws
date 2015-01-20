@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>producto</source>
+         <target>producto</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new producto</source>
+         <target>Agregar producto</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit producto</source>
+         <target>Editar producto</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List producto</source>
+         <target>Listar producto</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Codigo</source>
+         <target>Codigo</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Destaque</source>
+         <target>Destaque</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Nome</source>
+         <target>Nome</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Ano</source>
+         <target>Ano</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Id categoria</source>
+         <target>Id categoria</target>
+     </trans-unit>
+         <trans-unit id="10">
+         <source>Escala</source>
+         <target>Escala</target>
+     </trans-unit>
+         <trans-unit id="11">
+         <source>Peso</source>
+         <target>Peso</target>
+     </trans-unit>
+         <trans-unit id="12">
+         <source>Comprimento</source>
+         <target>Comprimento</target>
+     </trans-unit>
+         <trans-unit id="13">
+         <source>Largura</source>
+         <target>Largura</target>
+     </trans-unit>
+         <trans-unit id="14">
+         <source>Altura</source>
+         <target>Altura</target>
+     </trans-unit>
+         <trans-unit id="15">
+         <source>Cor</source>
+         <target>Cor</target>
+     </trans-unit>
+         <trans-unit id="16">
+         <source>Preco</source>
+         <target>Preco</target>
+     </trans-unit>
+         <trans-unit id="17">
+         <source>Desconto</source>
+         <target>Desconto</target>
+     </trans-unit>
+         <trans-unit id="18">
+         <source>Desconto boleto</source>
+         <target>Desconto boleto</target>
+     </trans-unit>
+         <trans-unit id="19">
+         <source>Max parcelas</source>
+         <target>Max parcelas</target>
+     </trans-unit>
+         <trans-unit id="20">
+         <source>Estoque</source>
+         <target>Estoque</target>
+     </trans-unit>
+         <trans-unit id="21">
+         <source>Min estoque</source>
+         <target>Min estoque</target>
+     </trans-unit>
+         <trans-unit id="22">
+         <source>Credito</source>
+         <target>Credito</target>
+     </trans-unit>
+         <trans-unit id="23">
+         <source>Data cad</source>
+         <target>Data cad</target>
+     </trans-unit>
+         <trans-unit id="24">
+         <source>Foto</source>
+         <target>Foto</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0px;padding:0px;font-family: sans-serif;font-size: 12px;color: #333333; background-color: #f6f6f6; height:100%;}
+
+#logo-cte{
+    height: 60px;
+    width: 180px;
+    margin-top: 25px;
+}
+
+#container{
+       
+}
+
+#footer{text-align: center;}
+a:link,a:active,a:visited,a:hover {color: #60899f;font-size:14px;text-decoration: none;}
+
+h1{
+    color: #3793c1;
+    text-transform: uppercase;
+    font-size: 15px !important;
+}
+h1.black{
+    color: #000000;
+    font-size: 14px !important;
+    padding-top: 15px;
+    text-transform: none;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #cccccc
+}
+#frmLogin {
+    width: 430px;
+    background-color: #FCFCFB;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border: solid #cccccc 1px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+label{color: #333333;font-family: sans-serif;font-weight: bold;}
+input[type=text],textarea,input[type=password],input[type=button],input[type=submit]
+{
+    padding: 4px;
+    border: none;
+    border: #CCCCCC;
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #666666;
+    width: 200px;
+}
+input[type=button],input[type=submit]
+{
+    cursor: pointer;
+    padding: 0px 20px 0px 20px;
+    background-color: #fff;
+    background-image:url(../images/bck_button.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    border: 1px #c9c9c9 solid;
+    width: auto;
+    height: 25px;
+    color: #FFF;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus{
+    border-bottom: 1px solid #edeadb !important;
+    border-right: 1px solid #edeadb !important;
+    background-color: #fffeec !important;
+}
+input[type=button]:hover,input[type=submit]:hover
+{
+    background-image:url(../images/bck_button_over.png);
+    background-repeat: repeat-x;
+    background-position: center;
+}
+input.errorFound, textarea.errorFound{background-color: #faf3f3 !important;}
+.error_list{
+    width: 350px;
+    padding: 6px;
+    margin: 0px;
+    background-color: #FEE0E0;
+    border: 1px solid #E55555;
+    list-style: none;
+    text-align: left;
+    color: #333333;
+    font-size: 12px;
+}
+.msn_error{
+    background-color: #ffdfe0;
+    border: 1px solid #e65455;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    width: 380px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #333333;
+    font-weight: normal;
+}
+
+#topSite{
+    width: 100%; margin: auto; background-color: #006699; height: 112px;
+    background-image:url(../images/bck_top.png);
+    background-repeat: repeat-x;
+    background-position: center;  
+}
+
+#topMenu{
+    background-image:url(../images/bck_menu_top.png);
+    background-repeat: repeat-x;
+    background-position: center;    
+    width: 100%; margin: auto; background-color: #000;
+    height: 40px;
+}
+
+#footer {
+    background-image:url(../images/bck_footer.png);
+    background-repeat: repeat-x;
+    background-position: center;    
+    width: 100%; margin: auto; background-color: none;
+    height: 55px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}

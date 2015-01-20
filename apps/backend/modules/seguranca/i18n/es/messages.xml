@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>seguranca</source>
+         <target>seguranca</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new seguranca</source>
+         <target>Agregar seguranca</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit seguranca</source>
+         <target>Editar seguranca</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List seguranca</source>
+         <target>Listar seguranca</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Id user</source>
+         <target>Id user</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Ip</source>
+         <target>Ip</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Modulo</source>
+         <target>Modulo</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Fecha</source>
+         <target>Fecha</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Hora</source>
+         <target>Hora</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

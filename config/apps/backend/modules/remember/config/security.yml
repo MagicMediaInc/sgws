@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [remember_view]
+
+new:
+  credentials: [remember_view, remember_insert]
+
+create:
+  credentials: [remember_view, remember_insert]
+
+edit:
+  credentials: [remember_view, remember_update]
+
+delete:
+  credentials: [remember_view, remember_delete]
+
+deleteAll:
+  credentials: [remember_view, remember_delete]

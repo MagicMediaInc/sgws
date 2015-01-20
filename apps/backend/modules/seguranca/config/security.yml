@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [seguranca_view]
+
+new:
+  credentials: [seguranca_view, seguranca_insert]
+
+create:
+  credentials: [seguranca_view, seguranca_insert]
+
+edit:
+  credentials: [seguranca_view, seguranca_update]
+
+delete:
+  credentials: [seguranca_view, seguranca_delete]
+
+deleteAll:
+  credentials: [seguranca_view, seguranca_delete]

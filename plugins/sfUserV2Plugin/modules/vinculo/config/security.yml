@@ -1,0 +1,6 @@
+all:
+  is_secure: on
+
+
+index:
+  credentials: [[vinculo_view, vinculo_view_1, vinculo_view_2]]

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>Current password</source>
+         <target>Contraseña actual</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>New password</source>
+         <target>Nueva contraseña</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>New password</source>
+         <target>Nueva contraseña</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>Confirm new password</source>
+         <target>Confirmar nueva contraseña</target>
+      </trans-unit>      
+      <trans-unit id="5">
+         <source>The new password must have more than 6 characters</source>
+         <target>La nueva contraseña debe tener más de 6 caracteres</target>
+      </trans-unit>
+      <trans-unit id="6">
+         <source>Your confirm password doesn't match with the new password. Please try again</source>
+         <target>Su confirmación de contraseña no coincide con la primera contraseña, por favor, inténtelo de nuevo</target>
+      </trans-unit>
+      <trans-unit id="7">
+         <source>The new password must have less than 12 characters</source>
+         <target>La nueva contraseña no puede ser mayor a 12 caracteres</target>
+      </trans-unit>
+      <trans-unit id="8">
+         <source>Your current password is incorrect</source>
+         <target>La contraseña actual es incorrecta</target>
+      </trans-unit>
+      <!-- Verificar traducciones -->
+      <trans-unit id="9">
+         <source>The new password must be diferent a current password</source>
+         <target>La nueva contraseña debe ser diferente a la actual</target>
+      </trans-unit>      
+
+    </body>
+  </file>
+</xliff>
+

@@ -1,0 +1,5 @@
+66.249.88.162 - - [02/Oct/2014:09:59:53 -0300] "GET /backend_dev.php/producto HTTP/1.1" 200 42340 "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"
+66.249.88.162 - - [02/Oct/2014:09:59:55 -0300] "GET /favicon.ico HTTP/1.1" 406 - "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"
+66.249.83.16 - - [02/Oct/2014:11:32:10 -0300] "GET /backend_dev.php HTTP/1.1" 200 40586 "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"
+66.249.88.162 - - [02/Oct/2014:22:34:43 -0300] "GET /backend_dev.php HTTP/1.1" 200 40592 "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"
+66.249.83.16 - - [02/Oct/2014:22:34:45 -0300] "GET /favicon.ico HTTP/1.1" 406 - "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"

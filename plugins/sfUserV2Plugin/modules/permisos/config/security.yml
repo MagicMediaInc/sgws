@@ -1,0 +1,6 @@
+all:
+  is_secure: on
+
+
+#index:
+#  credentials: [[permisos_view, permisos_view_1, permisos_view_2]]

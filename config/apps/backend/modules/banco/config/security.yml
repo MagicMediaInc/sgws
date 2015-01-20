@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [banco_view]
+
+new:
+  credentials: [banco_view, banco_insert]
+
+create:
+  credentials: [banco_view, banco_insert]
+
+edit:
+  credentials: [banco_view, banco_update]
+
+delete:
+  credentials: [banco_view, banco_delete]
+
+deleteAll:
+  credentials: [banco_view, banco_delete]

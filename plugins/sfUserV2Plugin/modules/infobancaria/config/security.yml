@@ -1,0 +1,6 @@
+#all:
+#  is_secure: on
+#
+#
+#index:
+#  credentials: [[infobancaria_view, infobancaria_view_1, infobancaria_view_2]]

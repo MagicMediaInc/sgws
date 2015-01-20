@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages"  product-name="messages">
+    <body>
+      <trans-unit id="1">
+         <source>Reference</source>
+         <target>Referencia</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Description</source>
+         <target>Descripción</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Quantity</source>
+         <target>Cantidad</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>Item Price</source>
+         <target>Precio artículo</target>
+      </trans-unit>
+      <trans-unit id="5">
+         <source>Price</source>
+         <target>Precio</target>
+      </trans-unit>
+      <trans-unit id="6">
+         <source>Currently In Your Shopping Cart</source>
+         <target>Actualmente en su carro de compras</target>
+      </trans-unit>
+      <trans-unit id="7">
+         <source>Estimated Tax</source>
+         <target>Impuesto estimado</target>
+      </trans-unit>
+      <trans-unit id="8">
+         <source>Grand Total</source>
+         <target>Total</target>
+      </trans-unit>
+      <trans-unit id="9">
+         <source>items</source>
+         <target>artículos</target>
+      </trans-unit>
+      <trans-unit id="10">
+         <source>Select a shipping address</source>
+         <target>Seleccione una dirección de envío</target>
+      </trans-unit>
+      <trans-unit id="11">
+         <source>Is the address you´d like to use displayed below ? If so, click the corresponding "Ship to this address" button. Or you can enter a new shipping address</source>
+         <target>Es la dirección que desea utilizar se muestra a continuación? Si es así, haga clic en el correspondiente "enviar a esta dirección" botón. O usted puede entrar en una nueva dirección de envío</target>
+      </trans-unit>
+      <trans-unit id="12">
+         <source>Address book</source>
+         <target>Libreta de direcciones</target>
+      </trans-unit>
+      <trans-unit id="13">
+         <source>Ship to this address</source>
+         <target>Enviar a esta dirección</target>
+      </trans-unit>
+      <trans-unit id="14">
+         <source>Not have allocated addresses for sending</source>
+         <target>No se han asignado direcciones de envío</target>
+      </trans-unit>
+      <trans-unit id="15">
+         <source>Or enter a new shipping address</source>
+         <target>O ingrese una nueva dirección de envío</target>
+      </trans-unit>
+      <trans-unit id="16">
+         <source>Be sure to click "Ship to this address" when done</source>
+         <target>Asegúrese de hacer clic en "Enviar a esta dirección" cuando finalice</target>
+      </trans-unit>
+      <trans-unit id="17">
+         <source>Contact name</source>
+         <target>Nombre de contacto</target>
+      </trans-unit>
+      <trans-unit id="18">
+         <source>Telephone</source>
+         <target>Teléfono</target>
+      </trans-unit>
+      <trans-unit id="19">
+         <source>Confirmation purchase order to generate</source>
+         <target>Confirmación de la orden de compra</target>
+      </trans-unit>
+      <trans-unit id="20">
+         <source>Customer</source>
+         <target>Cliente</target>
+      </trans-unit>
+      <trans-unit id="21">
+         <source>ERROR. Customer unselected</source>
+         <target>ERROR. Cliente no seleccionado</target>
+      </trans-unit>
+      <trans-unit id="22">
+         <source>Order process</source>
+         <target>Procesar orden</target>
+      </trans-unit>
+      <trans-unit id="23">
+         <source>Thank you for you shopping at Stocksys Puma</source>
+         <target>Gracias por su compra en Stocksys Puma</target>
+      </trans-unit>
+      <trans-unit id="24">
+         <source>We appreciate your business ! Your order has been received</source>
+         <target>Nosotros apreciamos su negocio! Su pedido ha sido recibido</target>
+      </trans-unit>
+      <trans-unit id="25">
+         <source>ORDER NUMBER</source>
+         <target>NÚMERO DE ORDEN</target>
+      </trans-unit>
+      <trans-unit id="26">
+         <source>Please refer this reference number if you need further assistance. You may also use this number to track you order in My Account. Please keep this information for your records</source>
+         <target>Por favor, consulte este número de referencia si usted necesita más ayuda. Usted también puede usar este número para realizar el seguimiento de orden en mi cuenta. Por favor, mantenga esta información en sus archivos</target>
+      </trans-unit>
+      <trans-unit id="27">
+         <source>YOUR ORDER SUMMARY</source>
+         <target>RESUMEN DE SU PEDIDO</target>
+      </trans-unit>
+      <trans-unit id="28">
+         <source>CONTINUE SHOPPING</source>
+         <target>SEGUIR COMPRANDO</target>
+      </trans-unit>
+      <trans-unit id="29">
+         <source>LOGOUT</source>
+         <target>CERRAR SESIÓN</target>
+      </trans-unit>
+      <trans-unit id="30">
+         <source>ORDER PROCESS</source>
+         <target>FINALIZAR ORDEN</target>
+      </trans-unit>
+      <trans-unit id="31">
+         <source>Select your customer</source>
+         <target>Seleccione su cliente</target>
+      </trans-unit>
+      <trans-unit id="32">
+         <source>Select customer</source>
+         <target>Seleccione cliente</target>
+      </trans-unit>
+      <trans-unit id="33">
+         <source>Unable to process the order. No associated customers</source>
+         <target>No se puede procesar el pedido sin cliente asociado</target>
+      </trans-unit>
+      <trans-unit id="">
+         <source></source>
+         <target></target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>
+

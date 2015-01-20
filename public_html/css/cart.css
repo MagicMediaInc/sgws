@@ -1,0 +1,182 @@
+table.cart {
+    width: 99%;
+    clear: both;
+    border-collapse: collapse;
+    background: white;
+}
+
+caption {
+    padding: 5px 15px;
+    font-size: 12px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    background: #069;
+    color: white;
+    text-shadow: rgba(0, 0, 0, .3) 0px 1px 1px;
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    border-top-left-radius: 6px 6px;
+    border-top-right-radius: 6px 6px;
+}
+.simple {
+    padding: 5px 15px;
+    font-size: 12px !important;
+    /*font-weight: bold;
+    text-transform: uppercase;*/
+    text-align: left;
+    /*background: #A3A3A3;*/
+    color: white;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.desc {
+    width: 326px;
+    padding-left: 19px;
+    text-align: left;
+    
+}
+
+.firstColum{
+    border-left: 1px solid #E8E8E8;
+}
+
+.lastColumn{
+    border-right: 1px solid #E8E8E8;
+}
+
+th {
+    text-transform: uppercase;
+    padding: 7px 5px;
+    font-size:11px;
+    background: #F9F9F9;
+    color: gray;
+    font-weight: bold;
+}
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+tfoot td {
+    padding: 0 20px 10px 0;
+    text-align: right;
+    text-transform: uppercase;
+    background-color: #F9F9F9;
+}
+
+tfoot .sum {
+    border-left: 1px solid #E8E8E8;
+    color: gray;
+    letter-spacing: 5px;
+}
+
+td.amt {
+    font-size: 12px;
+}
+
+td.totales{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.imagecolumn{
+    width: 58px;
+    padding: 10px 5px 0 20px;
+}
+
+td.reference{
+    width: 100px;
+}
+
+.amt, .unavailable {
+    text-align: center;
+}
+
+.amt {
+    width: 5px;
+    padding-right: 19px;
+    border-right: 1px solid #E8E8E8;
+}
+
+#cart th, #cart tbody td {
+    border-bottom: 1px solid #E8E8E8;
+    text-align: center;
+}
+
+#cart td, #cart th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+#subtotal td {
+    padding-top: 10px;
+}
+
+.cart tbody tr td {
+    padding: 5px 5px 10px;
+    vertical-align: top;
+    background: white;
+}
+
+.back {
+margin-right: 15px;
+}
+
+.secondary {
+zoom: 1;
+padding: 5px 8px;
+border: 1px solid #DDD;
+color: #2C5987;
+font-size: 9px;
+font-weight: bold;
+background: #E8E8E8 0 -444px;
+text-indent: 0;
+}
+
+.btn {
+width: auto;
+text-decoration: none;
+overflow: visible;
+font-family: Verdana, Arial, sans;
+text-transform: uppercase;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+outline: 0;
+}
+
+#cart-foot{
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 15px 20px 12px;
+    border: 1px solid #E8E8E8;
+    border-top: none;
+    background: white;
+    text-align: right;
+}
+
+

@@ -1,0 +1,2 @@
+66.249.88.162 - - [25/Oct/2014:21:53:52 -0200] "GET /backend_dev.php HTTP/1.1" 200 40592 "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"
+66.249.88.162 - - [25/Oct/2014:21:53:55 -0200] "GET /favicon.ico HTTP/1.1" 406 - "-" "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20110814 Firefox/6.0 Google favicon"

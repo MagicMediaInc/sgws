@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>statusProposta</source>
+         <target>statusProposta</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new statusProposta</source>
+         <target>Agregar statusProposta</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit statusProposta</source>
+         <target>Editar statusProposta</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List statusProposta</source>
+         <target>Listar statusProposta</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Nome</source>
+         <target>Nome</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

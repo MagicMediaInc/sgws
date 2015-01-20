@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>banco</source>
+         <target>banco</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new banco</source>
+         <target>Agregar banco</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit banco</source>
+         <target>Editar banco</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List banco</source>
+         <target>Listar banco</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Nombre banco</source>
+         <target>Nombre banco</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

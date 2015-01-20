@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>horasbillability</source>
+         <target>horasbillability</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new horasbillability</source>
+         <target>Agregar horasbillability</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit horasbillability</source>
+         <target>Editar horasbillability</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List horasbillability</source>
+         <target>Listar horasbillability</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Ano</source>
+         <target>Ano</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Mes1</source>
+         <target>Mes1</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Mes2</source>
+         <target>Mes2</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Mes3</source>
+         <target>Mes3</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Mes4</source>
+         <target>Mes4</target>
+     </trans-unit>
+         <trans-unit id="10">
+         <source>Mes5</source>
+         <target>Mes5</target>
+     </trans-unit>
+         <trans-unit id="11">
+         <source>Mes6</source>
+         <target>Mes6</target>
+     </trans-unit>
+         <trans-unit id="12">
+         <source>Mes7</source>
+         <target>Mes7</target>
+     </trans-unit>
+         <trans-unit id="13">
+         <source>Mes8</source>
+         <target>Mes8</target>
+     </trans-unit>
+         <trans-unit id="14">
+         <source>Mes9</source>
+         <target>Mes9</target>
+     </trans-unit>
+         <trans-unit id="15">
+         <source>Mes10</source>
+         <target>Mes10</target>
+     </trans-unit>
+         <trans-unit id="16">
+         <source>Mes11</source>
+         <target>Mes11</target>
+     </trans-unit>
+         <trans-unit id="17">
+         <source>Mes12</source>
+         <target>Mes12</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

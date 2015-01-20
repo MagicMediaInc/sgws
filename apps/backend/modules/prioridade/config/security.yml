@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [prioridade_view]
+
+new:
+  credentials: [prioridade_view, prioridade_insert]
+
+create:
+  credentials: [prioridade_view, prioridade_insert]
+
+edit:
+  credentials: [prioridade_view, prioridade_update]
+
+delete:
+  credentials: [prioridade_view, prioridade_delete]
+
+deleteAll:
+  credentials: [prioridade_view, prioridade_delete]

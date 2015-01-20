@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>tipoprojeto</source>
+         <target>tipoprojeto</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new tipoprojeto</source>
+         <target>Agregar tipoprojeto</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit tipoprojeto</source>
+         <target>Editar tipoprojeto</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List tipoprojeto</source>
+         <target>Listar tipoprojeto</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Tipo</source>
+         <target>Tipo</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

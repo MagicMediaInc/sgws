@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>subtipo</source>
+         <target>subtipo</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new subtipo</source>
+         <target>Agregar subtipo</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit subtipo</source>
+         <target>Editar subtipo</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List subtipo</source>
+         <target>Listar subtipo</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Id tipo cadastro</source>
+         <target>Id tipo cadastro</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Id parent</source>
+         <target>Id parent</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Position</source>
+         <target>Position</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Subtipo</source>
+         <target>Subtipo</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

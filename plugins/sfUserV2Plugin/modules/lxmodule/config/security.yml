@@ -1,0 +1,24 @@
+all:
+  is_secure: on
+
+
+index:
+  credentials: [lx_module_view]
+
+new:
+  credentials: [lx_module_view, lx_module_insert]
+
+create:
+  credentials: [lx_module_view, lx_module_insert]
+
+edit:
+  credentials: [lx_module_view, lx_module_update]
+
+delete:
+  credentials: [lx_module_view, lx_module_delete]
+
+deleteAll:
+  credentials: [lx_module_view, lx_module_delete]
+  
+treeSections:
+  credentials: [lx_module_view, lx_module_update]

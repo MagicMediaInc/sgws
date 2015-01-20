@@ -1,0 +1,75 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/04-Settings
+
+prod:
+  .settings:
+    no_script_name:         false
+    logging_enabled:        false
+
+dev:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
+    web_debug:              true
+    cache:                  false
+    no_script_name:         false
+    etag:                   false
+
+test:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
+    cache:                  false
+    web_debug:              false
+    no_script_name:         false
+    etag:                   false
+
+all:
+  .actions:
+    login_module:           lxlogin
+    login_action:           index
+    error_404_module:       default
+    error_404_action:       error404
+    secure_module:          default
+    secure_action:          secure
+    module_disabled_module: default
+    module_disabled_action: disabled
+    secure_module:          error      # To be called when a user doesn't have
+    secure_action:          credential # The credentials required for an action
+
+
+  .settings:
+    enabled_modules:
+      - default
+      - language
+      - lxsection
+      - infobancaria
+      - infocomplementaria
+      - lxaccount
+      - lxchangePassword
+      - lxmodule
+      - lxprofile
+      - lxuser
+      - lxuserpermission
+      - permisos
+      - vinculo
+      - news
+      - preco_funcionario
+   
+    available: on
+    use_security: on    
+    charset: utf-8
+    i18n: true
+    default_culture:        en_US
+    standard_helpers:       [Partial, Cache, I18N, JavascriptBase, jQuery, Number]
+    rich_text_fck_js_dir:   js/fckeditor
+    
+
+    # Form security secret (CSRF protection)
+    csrf_secret:            707766e9d5d341cedd18feb3e9de480548f40434
+
+    # Output escaping settings
+    escaping_strategy:      true
+    escaping_method:        ESC_SPECIALCHARS
+    # Session timeout, in seconds
+    timeout:                10800
+    # Enable the database manager
+    use_database:           true

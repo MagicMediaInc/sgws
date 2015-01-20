@@ -1,0 +1,86 @@
+[Wed Jun 18 12:30:24 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Wed Jun 18 12:45:46 2014] [error] [client 189.121.210.226] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'The application "backend" does not exist.' in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfProjectConfiguration.class.php:609
+[Wed Jun 18 12:45:46 2014] [error] [client 189.121.210.226] Stack trace:
+[Wed Jun 18 12:45:46 2014] [error] [client 189.121.210.226] #0 /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php(12): sfProjectConfiguration::getApplicationConfiguration('backend', 'dev', true)
+[Wed Jun 18 12:45:46 2014] [error] [client 189.121.210.226] #1 {main}
+[Wed Jun 18 12:45:46 2014] [error] [client 189.121.210.226]   thrown in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfProjectConfiguration.class.php on line 609
+[Wed Jun 18 12:45:46 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Wed Jun 18 12:48:11 2014] [error] [client 189.121.210.226] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'The application "backend" does not exist.' in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfProjectConfiguration.class.php:609
+[Wed Jun 18 12:48:11 2014] [error] [client 189.121.210.226] Stack trace:
+[Wed Jun 18 12:48:11 2014] [error] [client 189.121.210.226] #0 /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php(12): sfProjectConfiguration::getApplicationConfiguration('backend', 'dev', true)
+[Wed Jun 18 12:48:11 2014] [error] [client 189.121.210.226] #1 {main}
+[Wed Jun 18 12:48:11 2014] [error] [client 189.121.210.226]   thrown in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfProjectConfiguration.class.php on line 609
+[Wed Jun 18 12:48:19 2014] [error] [client 189.121.210.226] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'The application "backend" does not exist.' in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfProjectConfiguration.class.php:609
+[Wed Jun 18 12:48:19 2014] [error] [client 189.121.210.226] Stack trace:
+[Wed Jun 18 12:48:19 2014] [error] [client 189.121.210.226] #0 /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php(12): sfProjectConfiguration::getApplicationConfiguration('backend', 'dev', true)
+[Wed Jun 18 12:48:19 2014] [error] [client 189.121.210.226] #1 {main}
+[Wed Jun 18 12:48:19 2014] [error] [client 189.121.210.226]   thrown in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfProjectConfiguration.class.php on line 609
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] Action "lxlogin/index" does not exist.
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:36 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 12:54:46 2014] [error] [client 189.121.210.226] Action "lxlogin/index" does not exist.
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:12 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:27 2014] [error] [client 189.121.210.226] PHP Strict Standards:  Non-static method lynxValida::setCredentialUser() should not be called statically, assuming $this from incompatible context in /home/storage/6/8c/8b/sgws11/apps/backend/modules/lxlogin/actions/actions.class.php on line 60, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:22:29 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:25:25 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 14:35:25 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:35:35 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:36:03 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:37:22 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:37:30 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:44:20 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:46:45 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:46:52 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to undefined method SaidasPeer::getAlertaDespesasPorAprobar() in /home/storage/6/8c/8b/sgws11/apps/backend/modules/home/actions/actions.class.php on line 35
+[Wed Jun 18 14:56:06 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Wed Jun 18 15:06:46 2014] [error] [client 189.121.210.226] Directory index forbidden by Options directive: /home/storage/6/8c/8b/sgws11/public_html/
+[Wed Jun 18 15:06:51 2014] [error] [client 189.121.210.226] Directory index forbidden by Options directive: /home/storage/6/8c/8b/sgws11/public_html/
+[Wed Jun 18 15:07:06 2014] [error] [client 189.121.210.226] Directory index forbidden by Options directive: /home/storage/6/8c/8b/sgws11/public_html/
+[Wed Jun 18 15:09:13 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php
+[Wed Jun 18 15:09:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php
+[Wed Jun 18 15:10:00 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php
+[Wed Jun 18 15:10:14 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php
+[Wed Jun 18 15:11:52 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:26 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:41 2014] [error] [client 189.121.210.226] PHP Strict Standards:  Non-static method lynxValida::setCredentialUser() should not be called statically, assuming $this from incompatible context in /home/storage/6/8c/8b/sgws11/apps/backend/modules/lxlogin/actions/actions.class.php on line 60, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Jun 18 15:34:43 2014] [error] [client 189.121.210.226] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/home
+[Wed Jun 18 15:34:57 2014] [error] [client 189.121.210.226] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'C:/xampp/htdocs/sgwsphp/www/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/database/sfPropelDatabase.class.php' (include_path='/home/storage/6/8c/8b/sgws11:/home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/plugins/sfPropelPlugin/lib/vendor:.:/usr/share/pear') in /home/storage/6/8c/8b/sgws11/cache/backend/prod/config/config_core_compile.yml.php on line 95
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] PHP Fatal error:  Uncaught exception 'sfCacheException' with message 'Failed to make cache directory "/home/storage/6/8c/8b/sgws11/cache/backend/dev/config" while generating cache for configuration file "config/config_handlers.yml".' in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.class.php:340, referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] Stack trace:, referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] #0 /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.class.php(110): sfConfigCache->writeCacheFile('config/config_h...', '/home/storage/6...', '<?php?// auto-g...'), referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] #1 /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.class.php(197): sfConfigCache->callHandler('config/config_h...', Array, '/home/storage/6...'), referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] #2 /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.class.php(279): sfConfigCache->checkConfig('config/config_h...'), referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] #3 /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.class.php(54): sfConfigCache->loadConfigHandlers(), referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:05:44 2014] [error] [client 189.121.210.226] #4 /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.cla in /home/storage/6/8c/8b/sgws11/lib/vendor/symfony/lib/config/sfConfigCache.class.php on line 340, referer: http://sgws11.hospedagemdesites.ws/backend.php/notificacion
+[Wed Jun 18 16:07:59 2014] [error] [client 201.211.175.134] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Wed Jun 18 16:40:36 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to a member function getName() on a non-object in /home/storage/6/8c/8b/sgws11/apps/backend/modules/despesa/templates/faturamentoSuccess.php on line 211, referer: http://sgws11.hospedagemdesites.ws/backend.php/despesa/index
+[Wed Jun 18 16:40:40 2014] [error] [client 189.121.210.226] PHP Fatal error:  Call to a member function getName() on a non-object in /home/storage/6/8c/8b/sgws11/apps/backend/modules/despesa/templates/faturamentoSuccess.php on line 211, referer: http://sgws11.hospedagemdesites.ws/backend.php/despesa/index
+[Wed Jun 18 17:50:39 2014] [error] [client 201.211.175.134] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Wed Jun 18 17:51:25 2014] [error] [client 201.211.175.134] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico

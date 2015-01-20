@@ -1,0 +1,35 @@
+<?php echo '<?xml version="1.0" ?>' ?>
+
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source><?php echo $this->getModuleName()?></source>
+         <target><?php echo $this->getModuleName()?></target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source><?php echo 'Add new '.$this->getModuleName()?></source>
+         <target><?php echo 'Agregar '.$this->getModuleName()?></target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source><?php echo 'Edit '.$this->getModuleName()?></source>
+         <target><?php echo 'Editar '.$this->getModuleName()?></target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source><?php echo 'List '.$this->getModuleName()?></source>
+         <target><?php echo 'Listar '.$this->getModuleName()?></target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+<?php $i = 4; ?>
+<?php foreach ($this->getTableMap()->getColumns() as $name => $column): ?>
+<?php if ($column->isPrimaryKey()) continue ?>
+<?php $i++; ?>
+     <trans-unit id="<?php echo $i ?>">
+         <source><?php echo sfInflector::humanize(sfInflector::underscore($column->getPhpName())) ?></source>
+         <target><?php echo sfInflector::humanize(sfInflector::underscore($column->getPhpName())) ?></target>
+     </trans-unit>
+    <?php endforeach; ?>
+    </body>
+  </file>
+</xliff>
+

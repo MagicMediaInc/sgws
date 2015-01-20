@@ -1,0 +1,118 @@
+body{margin:0;padding:0;font:10pt Tahoma,Arial,Verdana;color:#333; background:#fff;}
+input{background:#fff;}
+img{border:0;}
+a{color:blue;}
+a:visited{color:blue;}
+#menu{background:#e5d7bc;}
+#marca{float:right;padding:6px;color:#FFF;font-size:80%;}
+#carregando{position:absolute;float:left;margin:5px;padding:2px;border:1px solid black;background-color:yellow;width:150px;text-align:center;}
+
+#topo {background: #F7F7EA url(../images/fundo_topo.jpg) left top no-repeat; height:60px; width:auto; padding:10px 0 0 15px; border-bottom:1px solid #c7c7bd; -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; }
+#topo h1 { margin:0; padding:0; font-size:18px; font-weight: bold; }
+#topo p { margin:0; padding:0; }
+#topo a { color:#333; text-decoration:none; }
+
+#perfil {padding:5px;}
+
+#conteudo { border:1px solid #ccc; background:#fff; display:inherit; width:965px; margin:10px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+#conteudo #tela {  padding:5px; }
+#conteudo #tela a { color:#039; }
+#conteudo #tela .menu {border:0; margin-bottom: 0; padding-bottom: 0;}
+#conteudo #tela .menu a {color:#666;}
+#conteudo #tela .menu a:hover {color:#fff;}
+#conteudo #tela .menu a.ativo:hover {color:#333;}
+#conteudo #tela p.title {color:#3c555d;font-size:1.5em;margin:0;margin-bottom:10px;font-weight:normal;border-bottom:1px solid #DDD;}
+#conteudo #tela li .field {margin-left:10px; }
+#conteudo #tela li {list-style:none}
+
+#rodape {border-top:1px solid #ccc;padding:10px 5px;}
+
+.menu {height:28px;border-bottom:1px solid #ccc;margin:5px 5px;font-size:14px;}
+.menu ul {display:block;margin:0;padding:0;list-style:none;}
+.menu ul li {display:block;float:left;margin:0;padding:0;}
+.menu ul li.rt {float:right;}
+.menu ul li.last {border-right:1px solid #bbb;}
+.menu ul li a {display:block;float:left;border:1px solid #bbb;border-right:0;padding:6px 15px;margin-right:1px;color:#666;font-size:80%;font-weight:bold;text-decoration:none;background:#ddd;}
+.menu ul li a:hover {background:#333;color:#FFF;}
+.menu ul li a.ativo,
+.menu ul li a.ativo:hover {background:#FFF;color:#000;padding-bottom:7px;border:1px solid #ccc;border-bottom:0;}
+
+#topo #atalhos{background:url(../gifs/logo_icase.gif) right 10px no-repeat;height:65px;}
+.stdTable{width:99%;}
+.stdTable td{padding:4px;}
+.stdTable thead{background-color:#ebebeb;}
+
+#baixo{position:absolute;margin-top:-40px;width:100%;height:40px;background:#2767a5;}
+#baixo a{background:#fbfaf8;float:left;padding:5px;margin:5px 0 5px 5px;text-decoration:none;border:1px solid #333;border-top-color:#999;border-right-color:#999;}
+#baixo a:hover{background:#d1c5ad;color:#000;text-decoration:none;border:1px solid #999;border-bottom-color:#666;border-left-color:#666;}
+
+/* Icase Antigo */
+div#opcoes{border:5px double #eee;margin:0;padding:10px;background:#f5f5f5;}
+
+div#loginCaixa{border:1px solid #ebebeb;padding:20px;margin:10px;width:400px;position:relative;left:50%;margin-left:-200px;}
+
+.dlgBox{border:1px solid #000;height:200px;overflow:auto;padding:5px;margin-top:5px;}
+h4 .notice{background:yellow;border:1px solid #000;padding:5px;}
+div:target,div.sftarget{color:#333;/*background:#d7dbe4;*/padding:10px;}
+
+table.resultadoBusca{font-size:85%;}
+table.resultadoBusca thead tr td,
+table.resultadoBusca tbody tr td{padding:5px;margin:0;}
+table.resultadoBusca thead{background:#eee;}
+table.resultadoBusca tbody tr.linhaPar{background:#f5f5f5;}
+table.resultadoBusca thead tr{font-weight:bold;}
+table.centroCustoBuscaResultados tr.header td{border-bottom:1px solid #ccc;background:#fff;}
+table.centroCustoBuscaResultados tr td{background:#f5f5f5;}
+table.fornecedorBuscaResultados tr.header td{border-bottom:1px solid #ccc;background:#fff;}
+table.fornecedorBuscaResultados tr td{background:#f5f5f5;}
+table.caixasBuscaCaixasResultados tr.header td{border-bottom:1px solid #ccc;background:#fff;}
+table.caixasBuscaCaixasResultados tr td{background:#f5f5f5;}
+
+dl.detalhesContasPagar{margin:0;padding:0;}
+dl.detalhesContasPagar dt{float:left;margin:0 5px 0 0;padding:0;font-weight:bold;width:130px;}
+dl.detalhesContasPagar dd{margin:0;padding:0;clear:right;}
+.descricaoRegistroBusca:hover{background-color:yellow;}
+.registroBuscaDetalhes{border:4px solid #ccc;background:#f5f5f5;padding:0;margin:0;}
+ul.inscricoesPagamentos{list-style:none;padding:0;margin:0;}
+ul.inscricoesPagamentos ul li{display:inline;list-style:none;}
+.inscricoesPagamentos li ul{}
+.inscricoesPagamentos li ul li{list-style:none;padding:0;margin:0;margin-bottom:7px;margin-left:10px;}
+
+form.standard{font:11px Tahoma,monospace;text-align:left;}
+form.standard label{width:120px;display:block;float:left;padding-top:5px;}
+form.standard fieldset.boxes{border:none;}
+form.standard fieldset.boxes label{display:inline;float:none;padding:0 5px 0 5px;}
+form.standard fieldset.boxes input{width:auto;}
+form.standard br{clear:left;}
+form.standard fieldset{vertical-align:top;border:1px solid #ccc;}
+form.standard fieldset.buttons{padding:0px;border:none;margin:0 0 0 160px;}
+form.standard fieldset input,
+form.standard fieldset select,
+form.standard fieldset textarea{border:2px solid #ccc;font:11px Tahoma,monospace;margin:5px 0 0 0;}
+form.standard fieldset select{width:70px;}
+form.standard fieldset input {width:140px;}
+form.standard fieldset fieldset{margin:0;padding:0;}
+form.standard fieldset input.digit2{width:25px;}
+form.standard fieldset input.digit4{width:45px;}
+form.standard fieldset input.digit6{width:65px;}
+form.standard fieldset input.digit8{width:85px;}
+form.standard fieldset input.digit10{width:105px;}
+form.standard fieldset input.digit30{width:200px;}
+form.standard fieldset input.desc{width:300px;}
+form.standard fieldset input.boxes{height:auto;border:none;}
+form.standard fieldset legend{padding:3px; _margin:0 0 3px -5px; font-weight:bold; }
+form.standard fieldset.inline,
+form.standard fieldset.inline label{display:inline;}
+form.standard fieldset.block,
+form.standard fieldset.block label{display:block;}
+form.standard fieldset.inline-block{display:inline;}
+form.standard fieldset.inline-block label{display:block;}
+form.standart fieldset.box{border:10px solid #666;}
+form#formTetoUspPreencherCalendarioProfissional div#manha,
+form#formTetoUspPreencherCalendarioProfissional div#tarde,
+form#formTetoUspPreencherCalendarioProfissional div#noite{border:1px solid #555;padding:5px 0 5px 0;margin:5px 0 5px 0;}
+form.dialog input{widht:100px;display:inline;}
+.clickable{cursor:pointer;color:blue;text-decoration:underline;}
+tbody tr:nth-child(even) td, tbody tr.even td {
+  background: #FFF !important;
+}

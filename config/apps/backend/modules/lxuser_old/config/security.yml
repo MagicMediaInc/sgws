@@ -1,0 +1,24 @@
+all:
+  is_secure: on
+
+
+index:
+  credentials: [lx_user_view]
+
+new:
+  credentials: [lx_user_view, lx_user_insert]
+
+create:
+  credentials: [lx_user_view, lx_user_insert]
+
+edit:
+  credentials: [lx_user_view, lx_user_update]
+
+delete:
+  credentials: [lx_user_view, lx_user_delete]
+
+deleteAll:
+  credentials: [lx_user_view, lx_user_delete]
+
+changeStatus:
+  credentials: [lx_user_view, lx_user_update]

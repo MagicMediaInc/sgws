@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>tarefa</source>
+         <target>tarefa</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new tarefa</source>
+         <target>Agregar tarefa</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit tarefa</source>
+         <target>Editar tarefa</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List tarefa</source>
+         <target>Listar tarefa</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Responsavel</source>
+         <target>Responsavel</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Codigoprojeto</source>
+         <target>Codigoprojeto</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Descricao</source>
+         <target>Descricao</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Datairtarefa</source>
+         <target>Datairtarefa</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Datafrtarefa</source>
+         <target>Datafrtarefa</target>
+     </trans-unit>
+         <trans-unit id="10">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+         <trans-unit id="11">
+         <source>Despesaprevista</source>
+         <target>Despesaprevista</target>
+     </trans-unit>
+         <trans-unit id="12">
+         <source>Horasprevistas</source>
+         <target>Horasprevistas</target>
+     </trans-unit>
+         <trans-unit id="13">
+         <source>Observacoes</source>
+         <target>Observacoes</target>
+     </trans-unit>
+         <trans-unit id="14">
+         <source>Informacoes</source>
+         <target>Informacoes</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

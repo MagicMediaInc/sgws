@@ -1,0 +1,32 @@
+# Project files
+/nbproject
+/cache/*
+.cache/*
+/data/*
+/log/*
+/logs/*
+/config/databases.yml
+#/web/*_dev.php
+/web/uploads/*
+/config/ProjectConfiguration.class.php
+
+# SCM files
+.arch-params
+.bzr
+_darcs
+.git
+.hg
+.monotone
+.svn
+CVS
+
+#Archivos de produccion
+includes/
+logs
+php.ini
+public_html/
+tmp/
+.*
+magento/
+magento-1.7.0.0.zip
+unzip.lock

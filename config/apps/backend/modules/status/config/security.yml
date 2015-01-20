@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [status_view]
+
+new:
+  credentials: [status_view, status_insert]
+
+create:
+  credentials: [status_view, status_insert]
+
+edit:
+  credentials: [status_view, status_update]
+
+delete:
+  credentials: [status_view, status_delete]
+
+deleteAll:
+  credentials: [status_view, status_delete]

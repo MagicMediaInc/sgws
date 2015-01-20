@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [sf_album_view]
+
+new:
+  credentials: [sf_album_view, sf_album_insert]
+
+create:
+  credentials: [sf_album_view, sf_album_insert]
+
+edit:
+  credentials: [sf_album_view, sf_album_update]
+
+delete:
+  credentials: [sf_album_view, sf_album_delete]
+
+deleteAll:
+  credentials: [sf_album_view, sf_album_delete]

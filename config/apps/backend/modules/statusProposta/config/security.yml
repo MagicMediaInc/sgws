@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [statusproposta_view]
+
+new:
+  credentials: [statusproposta_view, statusproposta_insert]
+
+create:
+  credentials: [statusproposta_view, statusproposta_insert]
+
+edit:
+  credentials: [statusproposta_view, statusproposta_update]
+
+delete:
+  credentials: [statusproposta_view, statusproposta_delete]
+
+deleteAll:
+  credentials: [statusproposta_view, statusproposta_delete]

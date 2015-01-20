@@ -1,0 +1,53 @@
+table#resultsList
+{
+  border-collapse: collapse; 
+/*      border-top: 0px hidden;
+  border-bottom: 0px hidden;*/
+}
+
+table#resultsList tr
+{
+  border-left: 0px hidden;
+  border-right: 0px hidden;
+}
+
+table#resultsList th
+{
+    padding-left: 4px;
+}
+table#resultsList tbody tr:hover {    
+    background-color: #e1eafe;
+}
+table#resultsList td
+{
+  border: 1px solid #e6e8dd;
+  padding-left: 4px;
+}
+
+ul.tabRelatorio{
+    width: 100%;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #CCC;
+    height: 27px;
+}
+ul.tabRelatorio li{
+    float: left;
+}
+ul.tabRelatorio li a{
+    background-color: #F1F1F1;
+    padding: 10px;
+    border: 1px solid #CCC;
+    margin-right: 2px;
+    border-bottom: 0px;
+    width: 200px;
+}
+ul.tabRelatorio li a:hover{
+    background-color: #5092bd;
+    color: #FFF;
+}
+ul.tabRelatorio li a.selected{
+    background-color: #5092bd;
+    color: #FFF;
+    padding: 10px;
+    border: 1px solid #5092bd;
+}

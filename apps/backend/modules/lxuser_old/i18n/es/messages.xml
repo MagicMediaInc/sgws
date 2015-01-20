@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages"  product-name="messages">
+    <body>
+      <trans-unit id="1">
+         <source>Add new user</source>
+         <target>Agregar usuario</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Edit user</source>
+         <target>Editar usuario</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="3">
+         <source>Profile</source>
+         <target>Perfil</target>
+     </trans-unit>
+     <trans-unit id="4">
+         <source>Last access</source>
+         <target>Último acceso</target>
+     </trans-unit>
+         <trans-unit id="5">
+         <source>Status</source>
+         <target>Estatus</target>
+     </trans-unit>
+     <trans-unit id="6">
+         <source>The new password must have more than 6 characters</source>
+         <target>La nueva contraseña debe tener más de 6 caracteres</target>
+      </trans-unit>
+      <trans-unit id="7">
+         <source>Associate Profile</source>
+         <target>Perfil Asociado</target>
+      </trans-unit>
+       <trans-unit id="8">
+         <source>List user</source>
+         <target>Listar usuarios</target>
+      </trans-unit>
+      <trans-unit id="9">
+         <source>An user with the same "%column%" already exist</source>
+         <target>Un usuario con el mismo "%column%" ya existe</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>
+

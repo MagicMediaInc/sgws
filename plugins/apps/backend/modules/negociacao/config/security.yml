@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [negociacao_view]
+
+new:
+  credentials: [negociacao_view, negociacao_insert]
+
+create:
+  credentials: [negociacao_view, negociacao_insert]
+
+edit:
+  credentials: [negociacao_view, negociacao_update]
+
+delete:
+  credentials: [negociacao_view, negociacao_delete]
+
+deleteAll:
+  credentials: [negociacao_view, negociacao_delete]

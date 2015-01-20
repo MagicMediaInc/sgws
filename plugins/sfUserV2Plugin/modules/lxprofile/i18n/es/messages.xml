@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>Profiles</source>
+         <target>Perfiles</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new profile</source>
+         <target>Agregar perfil</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit profile</source>
+         <target>Editar perfil</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="4">
+         <source>Name profile</source>
+         <target>Nombre del perfil</target>
+     </trans-unit>
+     <trans-unit id="5">
+         <source>List profile</source>
+         <target>Listar perfiles</target>
+     </trans-unit>
+     <trans-unit id="6">
+         <source>Permission</source>
+         <target>Permisos</target>
+     </trans-unit>
+     <trans-unit id="7">
+         <source>Select the permission option in the list to update the privileges</source>
+         <target>Seleccione la opción de permisos en la lista para actualizar los privilegios</target>
+     </trans-unit>
+    <trans-unit id="8">
+         <source>You don't have the proper credentials to access this page</source>
+         <target>Usted no tiene las credenciales adecuadas para acceder a esta página</target>
+     </trans-unit>
+     <trans-unit id="9">
+         <source>Sorry!</source>
+         <target>¡Lo sentimos!</target>
+     </trans-unit>
+     <trans-unit id="10">
+         <source>Activate module</source>
+         <target>Active el módulo</target>
+     </trans-unit>
+     <trans-unit id="11">
+         <source>to update permissions</source>
+         <target>para actualizar los permisos</target>
+     </trans-unit>
+     <trans-unit id="12">
+         <source>Status profile</source>
+         <target>Estatus perfil</target>
+     </trans-unit>
+     <trans-unit id="12">
+         <source>Privileges</source>
+         <target>Privilegios</target>
+     </trans-unit>
+     </body>
+  </file>
+</xliff>
+

@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [horasbillability_view]
+
+new:
+  credentials: [horasbillability_view, horasbillability_insert]
+
+create:
+  credentials: [horasbillability_view, horasbillability_insert]
+
+edit:
+  credentials: [horasbillability_view, horasbillability_update]
+
+delete:
+  credentials: [horasbillability_view, horasbillability_delete]
+
+deleteAll:
+  credentials: [horasbillability_view, horasbillability_delete]

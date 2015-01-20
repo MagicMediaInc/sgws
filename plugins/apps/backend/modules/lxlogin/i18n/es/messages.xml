@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="EN" target-language="es" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>Incorrect User/Password combination or user disabled</source>
+         <target>Combinación incorrecta de usuario/contraseña o usuario desactivado</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>You do not have privileges to access the system</source>
+         <target>No tiene privilegios para ingresar al sistema</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Forgot your password?</source>
+         <target>¿Olvidaste tu contraseña?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
+

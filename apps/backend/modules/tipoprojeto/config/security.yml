@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [tipoprojeto_view]
+
+new:
+  credentials: [tipoprojeto_view, tipoprojeto_insert]
+
+create:
+  credentials: [tipoprojeto_view, tipoprojeto_insert]
+
+edit:
+  credentials: [tipoprojeto_view, tipoprojeto_update]
+
+delete:
+  credentials: [tipoprojeto_view, tipoprojeto_delete]
+
+deleteAll:
+  credentials: [tipoprojeto_view, tipoprojeto_delete]

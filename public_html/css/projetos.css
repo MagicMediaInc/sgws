@@ -1,0 +1,300 @@
+/* Accordion Menu powered by www.menucool.com */
+
+/* ##### Top level items #####*/
+#acdnmenu 
+{
+    /* Note about height: 
+    Set "height:auto;" if flexible height is required. 
+    A fixed height is prefered as content below the menu won't be pulled down/up when the menu is expanding/collapsing. */
+/*    height: 300px;*/
+    width: 240px;
+}
+
+
+#acdnmenu ul.top
+{
+	padding-left:0;
+    background:#FFF;
+    border:1px solid #D8E2F3;
+}
+
+#acdnmenu div.heading, #acdnmenu a.link
+{
+    padding:8px; padding-left:24px;
+    text-align:left;
+    font:normal 12px Verdana;
+    color:#000; 
+    background:#E8FFF8 url(../images/bg.gif) repeat-x 0 0;
+    text-decoration:none;
+    outline:none;
+}
+
+#acdnmenu div.current, #acdnmenu div:hover, #acdnmenu a.link:hover, #acdnmenu div.current a.link
+{
+    color:#000;
+    font-weight:normal;
+    text-decoration:none;  
+    background-position:0 -64px;
+}
+
+/*Top level link without children*/
+#acdnmenu a.current, #acdnmenu a.current:hover
+{
+    color:#336699;
+    text-decoration:none;   
+}
+
+/* arrow image for the top headings */
+#acdnmenu div.arrowImage {
+    width:12px;
+    height:12px;
+    top:9px;
+    left:4px; /* Changing it to "right:8px;" will position the arrow image to the right */
+    background-image:url(../images/arrows.gif);
+    background-position:0 0;
+}
+
+#acdnmenu div.current div.arrowImage {
+    background-position:0 -12px;
+}
+
+#acdnmenu li.separator
+{
+    border-top:1px solid #ccc;
+    border-bottom:none; 
+}
+
+
+/* ##### Sub level items #####*/
+#acdnmenu ul.sub
+{
+	padding-left:75px; /*This determines the hierarchical offset*/ 
+}
+
+#acdnmenu ul.sub div.heading
+{
+    text-align:left;
+    font:normal 12px Arial;
+    padding:5px; padding-left:20px;
+    color:#000;
+    background:none; 
+}
+#acdnmenu ul.sub div.heading a
+{
+    color:#000;
+}
+
+#acdnmenu ul.sub div.current
+{
+    color:#000;
+    background:none; 
+}
+
+#acdnmenu ul.sub a.link
+{
+    font:normal 11px Arial;
+    color:#000;
+    padding:5px; padding-left:20px;
+    text-decoration:none;
+    background:none; 
+}
+
+#acdnmenu ul.sub a.link:hover, #acdnmenu ul.sub a.current, #acdnmenu ul.sub div.heading a:hover, #acdnmenu ul.sub div.heading a.current
+{
+    color:#000;
+    text-decoration:underline;
+    background:none; 
+}
+
+
+#acdnmenu ul.sub div.arrowImage {
+    width:12px;
+    height:12px;
+    top:6px;
+	background-image:url(../images/arrows.gif);
+    left:4px;
+    /*background-image:url(./images/arrows.gif);*/
+    background-position:0 -24px;
+}
+#acdnmenu ul.sub div.current div.arrowImage {
+    background-position:0 -36px;
+}
+
+
+
+/* ##### Followings usually don't need modification ###### */
+/*Hack the font-size:0 bug for IE6 */
+#acdnmenu,  #acdnmenu ul
+{
+    display:block;
+    font-size:0px;
+    line-height:0px;
+}
+#acdnmenu li {font-size:12px; line-height:16px;}
+#acdnmenu:after {content:'.';height:0;clear:both;display:block;visibility:hidden;} 
+
+/*Hack for IE6-7*/
+#acdnmenu ul, #acdnmenu li, #acdnmenu div.heading, #acdnmenu a.smLink, #acdnmenu div.description {*zoom:1;}
+#acdnmenu li {*float:left;*width:100%;}
+
+#acdnmenu ul
+{
+	position:relative;/*!*/
+	overflow:hidden;
+	padding:0;margin:0;list-style-type: none;padding-left:10px;
+}
+#acdnmenu>ul{visibility: hidden;}
+#acdnmenu li {padding:0;margin:0;}
+
+#acdnmenu div.heading, #acdnmenu div.current
+{
+	position:relative;
+    cursor: pointer;
+}
+#acdnmenu div.arrowImage {position:absolute; overflow:hidden;}
+
+
+/** LISTA TOOGLE **/
+#contentPpal {
+width: 1200px !important;
+}
+
+#caption-projetos{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 2px;
+    border: 1px solid #CCC;
+    border-top: 2px solid #666666;
+    font-weight: bold;
+}
+table{
+    min-width: 800px;
+    width: 100%;
+}
+
+#caption-projetos div{
+    float: left;
+}
+
+.toggleLink{
+    float: left !important;
+    top: 4px;
+    width: 12px;
+    margin-left: -94%;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.data-project-fl{
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 37px;
+    padding: 0px 0px 3px 0px;
+    margin-bottom: 0px;
+    border: 1px solid #CCC;
+    border-bottom: 1px solid #E5E5E5;
+    
+}
+
+.data-project-fl div.codigo{
+    width: 6%;
+    font-weight: normal;
+    float: left;
+    margin-left: 20px;
+    border-right: 1px solid #ccc;
+    height: 35px;
+    padding-top: 5px;
+}
+
+.data-project-fl div.tit-projeto{
+    width: 45%;
+    font-weight: normal;
+    color: #008BBC;
+    float: left;
+    border-right: 1px solid #ccc;
+    height: 35px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.data-project-fl div.horas{
+    width: 4%;    
+    font-weight: normal;
+    float: left;
+    border-right:1px solid #ccc;
+    height: 35px;
+    padding-top: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.data-project-fl div.horas-duracion{
+    width: 5%;
+    font-weight: normal;
+    float: left;
+    border-right:1px solid #ccc;    
+    height: 35px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.data-project-fl div.herramientas{
+    width: 20%;
+    
+    font-weight: normal;
+    float: left;
+    height: 35px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.data-project-fl div.herramientas a{
+    width: 10px;
+}
+
+.data-project-fl div.data-projeto{
+    width: 10%;
+    height: 35px;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-weight: normal;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+.data-task-pr{
+    padding: 0px 1px 10px 0px;
+    margin-left: 94px;
+}
+
+table#tarefa{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-left: 6px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-spacing: 0px !important;;
+}
+
+table#tarefa td{
+    padding-left: 5px;
+}
+
+#topSite{
+    width: 100%; margin: auto; background-color: #006699; height: 77px;
+    background-image:url(../images/bck_top.png);
+    background-repeat: repeat-x;
+    background-position: center; 
+    min-width: 1200px; 
+}
+#topMenu{
+    background-image:url(../images/bck_menu_top.png);
+    background-repeat: repeat-x;
+    background-position: center;    
+    width: 100%; margin: auto; background-color: #000;
+    height: 40px;
+    min-width: 1200px;
+}

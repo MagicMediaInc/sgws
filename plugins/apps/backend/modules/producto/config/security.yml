@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [producto_view]
+
+new:
+  credentials: [producto_view, producto_insert]
+
+create:
+  credentials: [producto_view, producto_insert]
+
+edit:
+  credentials: [producto_view, producto_update]
+
+delete:
+  credentials: [producto_view, producto_delete]
+
+deleteAll:
+  credentials: [producto_view, producto_delete]

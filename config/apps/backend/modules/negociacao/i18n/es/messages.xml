@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>negociacao</source>
+         <target>negociacao</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new negociacao</source>
+         <target>Agregar negociacao</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit negociacao</source>
+         <target>Editar negociacao</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List negociacao</source>
+         <target>Listar negociacao</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Nome</source>
+         <target>Nome</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

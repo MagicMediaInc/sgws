@@ -1,0 +1,27 @@
+all:
+  is_secure: on
+
+
+index:
+  credentials: [lx_profile_view]
+
+new:
+  credentials: [lx_profile_view, lx_profile_insert]
+
+create:
+  credentials: [lx_profile_view, lx_profile_insert]
+
+edit:
+  credentials: [lx_profile_view, lx_profile_update]
+
+delete:
+  credentials: [lx_profile_view, lx_profile_delete]
+
+deleteAll:
+  credentials: [lx_profile_view, lx_profile_delete]
+
+changeStatus:
+  credentials: [lx_profile_view, lx_profile_update]
+
+changePrivileges:
+  credentials: [lx_profile_view, lx_profile_update]

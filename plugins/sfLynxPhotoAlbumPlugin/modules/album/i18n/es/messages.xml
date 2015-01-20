@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>album</source>
+         <target>album</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new album</source>
+         <target>Agregar album</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit album</source>
+         <target>Editar album</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="4">
+         <source>Id relation</source>
+         <target>Id relation</target>
+     </trans-unit>
+         <trans-unit id="5">
+         <source>Album name</source>
+         <target>Album name</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

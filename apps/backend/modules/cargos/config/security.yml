@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [cargos_view]
+
+new:
+  credentials: [cargos_view, cargos_insert]
+
+create:
+  credentials: [cargos_view, cargos_insert]
+
+edit:
+  credentials: [cargos_view, cargos_update]
+
+delete:
+  credentials: [cargos_view, cargos_delete]
+
+deleteAll:
+  credentials: [cargos_view, cargos_delete]

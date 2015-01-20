@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>remember</source>
+         <target>remember</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new remember</source>
+         <target>Agregar remember</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit remember</source>
+         <target>Editar remember</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List remember</source>
+         <target>Listar remember</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Email</source>
+         <target>Email</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

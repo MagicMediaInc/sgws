@@ -1,0 +1,157 @@
+/* @override http://localhost/bxslider_v3_plugin/css/styles.css */
+
+/*
+ * To change the color scheme of slider change each 
+ * background property for each of the five styles below
+ */
+ 
+ .bx-window{
+     padding: 0px;
+ }
+
+/*next button*/
+.bx-next {
+	position:absolute;
+	top:40%;
+	right:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+	background: url(../images/frontend/gray_next.png) no-repeat 0 -30px;
+        display: none;
+}
+
+/*previous button*/
+.bx-prev {
+	position:absolute;
+	top:40%;
+	left:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	text-indent: -999999px;
+	background: url(../images/frontend/gray_prev.png) no-repeat 0 -30px;
+        border: 0px solid #000;
+        display: none;
+}
+
+/*pager links*/
+.bx-pager a {
+	margin-right: 5px;
+	color: #333;
+	padding: 3px 8px 3px 6px;
+	font-size: 15px;
+	zoom:1;
+	background: url(../images/frontend/gray_pager.png) no-repeat 0 -20px;
+}
+
+/*auto start button*/
+.bx-auto .start {
+	background: url(../images/frontend/gray_auto.png) no-repeat 0 2px;
+	padding-left: 13px;
+}
+
+/*auto stop button*/
+.bx-auto .stop {
+	background: url(../images/frontend/gray_auto.png) no-repeat 0 -14px;
+	padding-left: 13px;
+}
+
+/*
+ * End color scheme styles
+ */
+
+
+/*next/prev button hover state*/
+.bx-next:hover,
+.bx-prev:hover {
+	background-position: 0 0;
+}
+
+#slider_one .bx-pager {
+    text-align: right;
+    padding-top: -3px;
+    font-size: 15px;
+    color: #666;
+    margin-top: -12px;
+    padding-right: 60px;
+   
+}
+
+#slider_one .bx-pager a{
+    font-size: 14px !important;
+    padding: 3px 8px 3px 8px;
+    
+}
+
+#slider_one .bx-pager .pager-active {
+    background-position: 0 0;
+    color: #C01316;
+    border-left: 1px solid #737374;
+    border-right: 1px solid #737374;
+}
+
+#slider_one .bx-wrapper .bx-window{
+    width: 412px !important;
+}
+
+#slider_two .bx-wrapper .bx-window{
+    width: 240px !important;
+}
+
+#slider_two .bx-pager a{
+    font-size: 11px !important;
+}
+
+#slider_three .bx-pager a{
+    font-size: 11px !important;
+}
+
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	background-position: 0 0;
+        color:#C01316;
+}
+
+/*pager wrapper*/
+.bx-pager {
+	text-align:right;
+	padding-top: 15px;
+	font-size:15px;
+	color:#666;
+        margin-top: -15px;
+        padding-right: 60px;
+}
+
+/*captions*/
+.bx-captions {
+	text-align:center;
+	font-size: 12px;
+	padding: 7px 0;
+	color: #666;
+}
+
+/*auto controls*/
+.bx-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bx-auto a {
+	color: #666;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+

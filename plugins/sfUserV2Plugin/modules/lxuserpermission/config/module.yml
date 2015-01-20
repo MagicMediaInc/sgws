@@ -1,0 +1,4 @@
+all:
+  msn:
+    ppal_permissions: Selecione a opção de permissão na lista para atualizar os privilégios
+    no_permissions: You don't have the proper credentials to access this page

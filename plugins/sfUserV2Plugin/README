@@ -1,0 +1,132 @@
+==================================================================================================================
+sfUserV2Plugin plugin v1.0
+Gallardo Designer. Todos los derechos reservados
+This plugin is part of the CoriCMS (c) 2013 
+
+Developed by:
+Henry Vallenilla    <henryvallenilla@gmail.com>
+The sfUserV2Plugin is developed in Symfony v.1.4
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+==================================================================================================================
+
+El sfUserV2Plugin v.4.0 (Versión traducida al ingles) Symfony Version 1.4
+
+El sfUserV2Plugin es un plugin que proporciona la estructura de módulos, usuarios y permisología de usuarios en un 
+esquema permiso a módulo de acuerdo a un perfil y permiso a módulo personalizado para un usuario
+
+-----------------------------------------------------------------------------------------------------------------
+Tablas utilizadas
+-----------------------------------------------------------------------------------------------------------------
+
+lx_user	(incluida en el plugin)
+info_banco_user	(incluida en el plugin)
+lx_module (incluida en el plugin)
+lx_privilege (incluida en el plugin)
+lx_profile (incluida en el plugin)
+lx_profile_module (incluida en el plugin)
+lx_user_module (incluida en el plugin)
+vinculo_user (incluida en el plugin)
+
+-----------------------------------------------------------------------------------------------------------------
+Instalacion
+-----------------------------------------------------------------------------------------------------------------
+
+  1) Instalar el Plugin
+
+       svn:externals sfUserV2Plugin svn://server.com/sfUserV2Plugin/trunk
+
+  2) El archivo "plugins.sfUserV2Plugin.schema.sql" ubicado en "plugins/sfUserV2Plugin/data/sql/"
+     debe copiarse a la ruta "data/sql" de su proyecto (Es obligatorio para que funcione el punto 4).
+
+  3) Abra el archivo "sqldb.map" ubicado en la ruta "data/sql" de su proyecto. Encontrara las
+    siguientes lineas por defecto (pueden haber otras inclusive)
+        # Sqlfile -> Database map
+	lib.model.schema.sql=propel
+
+        Agregue a continuacion la siguiente linea (obligatorio para que funcione el punto 4):
+        
+        plugins.sfUserV2Plugin.schema.sql=propel
+
+    Atencion: si este archivo no existe en la ruta indicaba; copie el archivo del paso 2 en la carpeta "data/sql"
+
+  4) Actualizacion de la base de datos del proyecto ./symfony propel:insert-sql
+
+     Ó usted puede crear la nueva tabla utilizando el SQL generado en data/sql/plugins.sfUserV2Plugin.schema.sql
+
+    Por favor, verifique que efectivamente se crearon las tablas especificadas anteriormente en la base de datos del proyecto
+    Atencion: la ejecucion de este comando implica la existencia del archivo "schema.yml o schema.xml" en la ruta "config/" de su proyecto.
+    Verifique la existencia del mismo; si no existen se pueden crear en blanco.
+
+  5) Habilitar el modulo en su settings.yml de la aplicacion
+
+    [yml]
+        all:
+            .settings:
+                enabled_modules:
+                    - default
+                    - infobancaria
+                    - infocomplementaria
+                    - lxaccount
+                    - lxchangePassword
+                    - lxmodule
+                    - lxprofile
+                    - lxuser
+                    - lxuserpermission
+                    - permisos
+                    - vinculo
+
+   Posteriormente se debe habilitar en plugin en el proyecto, se modifica el archivo ProjectConfiguration.class.php ubicado en la carpeta config del
+   proyecto, agregando "sfUserV2Plugin" como una accion mas de $this->enablePlugins();
+
+  6) Habilitar en el setting.yml en el entorno de producción
+
+          no_script_name:         false
+
+  9.- Se genera el modelo  ./symfony propel:build-model
+  10.- Se genera el modelo de los formularios ./symfony propel:build-forms
+  11) Elimine la cache con  ./symfony cc
+  12) En caso de necesitar ejecutar el comando "symfony propel:build-schema --xml"; despues de su ejecucion, debe depurar el mismo.
+     Para ello, leer el punto "a" del apendice
+  13) Si todos estos paso fueron ejecutados secuencialmente y con exito; el plugin debe estar instalado correctamente.
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------IMPORTANTE:-------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+
+Para que las tablas creadas tengan formato latino, debe verificar su configuracion de my.ini (Windows) - my.cnf, respectivamente.
+
+#Conjunto de caracteres por defecto que se utilizaron para un nuevo esquema o tabla
+
+default-character-set=latin1
+default-collation = latin1_spanish_ci
+
+# El motor de almacenamiento por defecto que se utilizaron para crear nuevas tablas cuando
+
+default-storage-engine=INNODB
+
+-----------------------------------------------------------------------------------------------------------------
+Apendice
+-----------------------------------------------------------------------------------------------------------------
+
+ 	a) Limpieza del archivo "schema.xml" en la ruta "config/" de su proyecto
+
+	Se debe cortar las lineas que corresponden a las tablas de generacion de este archivo (En este caso la tabla sf_section y sf_section_i18n)
+
+	Lineas contenidas en las siguiente etiquetas xml a borrar:
+
+		<table name="lx_user" idMethod="native">
+		   .
+		   .
+		   .
+		</table>
+                <table name="lx_user_module" idMethod="native">
+		   .
+		   .
+		   .
+		</table>
+                .
+                .
+                .
+    Posteriormente se deben copiar en lynx.schema.xml en la carpeta config del plugin, por ultimo se regenera el modelo y los formularios
+    (./symfony propel:build-model, ./symfony propel:build-forms) para que los cambios sean efectivos

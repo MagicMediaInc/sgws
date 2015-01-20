@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>pedido</source>
+         <target>pedido</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new pedido</source>
+         <target>Agregar pedido</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit pedido</source>
+         <target>Editar pedido</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List pedido</source>
+         <target>Listar pedido</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Id cliente</source>
+         <target>Id cliente</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Id projeto</source>
+         <target>Id projeto</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Numero pedido</source>
+         <target>Numero pedido</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Data</source>
+         <target>Data</target>
+     </trans-unit>
+         <trans-unit id="10">
+         <source>Valor</source>
+         <target>Valor</target>
+     </trans-unit>
+         <trans-unit id="11">
+         <source>Desconto</source>
+         <target>Desconto</target>
+     </trans-unit>
+         <trans-unit id="12">
+         <source>Forma pagamento</source>
+         <target>Forma pagamento</target>
+     </trans-unit>
+         <trans-unit id="13">
+         <source>Peso</source>
+         <target>Peso</target>
+     </trans-unit>
+         <trans-unit id="14">
+         <source>Cartao</source>
+         <target>Cartao</target>
+     </trans-unit>
+         <trans-unit id="15">
+         <source>Num cartao</source>
+         <target>Num cartao</target>
+     </trans-unit>
+         <trans-unit id="16">
+         <source>Venc cartao</source>
+         <target>Venc cartao</target>
+     </trans-unit>
+         <trans-unit id="17">
+         <source>Nome cartao</source>
+         <target>Nome cartao</target>
+     </trans-unit>
+         <trans-unit id="18">
+         <source>Cods cartao</source>
+         <target>Cods cartao</target>
+     </trans-unit>
+         <trans-unit id="19">
+         <source>Parcelas</source>
+         <target>Parcelas</target>
+     </trans-unit>
+         <trans-unit id="20">
+         <source>Data pag</source>
+         <target>Data pag</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

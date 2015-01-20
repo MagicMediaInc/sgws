@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>lxsection</source>
+         <target>lxsection</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new lxsection</source>
+         <target>Agregar lxsection</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit lxsection</source>
+         <target>Editar lxsection</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="4">
+         <source>Id parent</source>
+         <target>Id parent</target>
+     </trans-unit>
+         <trans-unit id="5">
+         <source>Position</source>
+         <target>Position</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Control</source>
+         <target>Control</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Sw menu</source>
+         <target>Sw menu</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Home</source>
+         <target>Home</target>
+     </trans-unit>
+         <trans-unit id="10">
+         <source>Special page</source>
+         <target>Special page</target>
+     </trans-unit>
+         <trans-unit id="11">
+         <source>Show text</source>
+         <target>Show text</target>
+     </trans-unit>
+         <trans-unit id="12">
+         <source>Only complement</source>
+         <target>Only complement</target>
+     </trans-unit>
+         <trans-unit id="13">
+         <source>Delete</source>
+         <target>Delete</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [<?php echo strtolower($this->getModuleName())?>_view]
+
+new:
+  credentials: [<?php echo strtolower($this->getModuleName())?>_view, <?php echo strtolower($this->getModuleName())?>_insert]
+
+create:
+  credentials: [<?php echo strtolower($this->getModuleName())?>_view, <?php echo strtolower($this->getModuleName())?>_insert]
+
+edit:
+  credentials: [<?php echo strtolower($this->getModuleName())?>_view, <?php echo strtolower($this->getModuleName())?>_update]
+
+delete:
+  credentials: [<?php echo strtolower($this->getModuleName())?>_view, <?php echo strtolower($this->getModuleName())?>_delete]
+
+deleteAll:
+  credentials: [<?php echo strtolower($this->getModuleName())?>_view, <?php echo strtolower($this->getModuleName())?>_delete]

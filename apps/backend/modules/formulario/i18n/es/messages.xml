@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>formulario</source>
+         <target>formulario</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new formulario</source>
+         <target>Agregar formulario</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit formulario</source>
+         <target>Editar formulario</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List formulario</source>
+         <target>Listar formulario</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Nome</source>
+         <target>Nome</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Conteudo</source>
+         <target>Conteudo</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Arquivo</source>
+         <target>Arquivo</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

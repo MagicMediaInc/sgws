@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>Add new module</source>
+         <target>Agregar module</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Edit module</source>
+         <target>Editar module</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="3">
+         <source>Module name</source>
+         <target>Module name</target>
+     </trans-unit>
+         <trans-unit id="4">
+         <source>Sf module</source>
+         <target>Sf module</target>
+     </trans-unit>
+         <trans-unit id="5">
+         <source>Credential</source>
+         <target>Credential</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Id parent</source>
+         <target>Id parent</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

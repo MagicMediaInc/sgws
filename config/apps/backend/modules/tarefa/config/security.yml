@@ -1,0 +1,20 @@
+#all:
+#  is_secure: on
+#
+#index:
+#  credentials: [tarefa_view]
+#
+#new:
+#  credentials: [tarefa_view, tarefa_insert]
+#
+#create:
+#  credentials: [tarefa_view, tarefa_insert]
+#
+#edit:
+#  credentials: [tarefa_view, tarefa_update]
+#
+#delete:
+#  credentials: [tarefa_view, tarefa_delete]
+#
+#deleteAll:
+#  credentials: [tarefa_view, tarefa_delete]

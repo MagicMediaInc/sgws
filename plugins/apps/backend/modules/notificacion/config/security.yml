@@ -1,0 +1,20 @@
+#all:
+#  is_secure: on
+#
+#index:
+#  credentials: [notificacion_view]
+#
+#new:
+#  credentials: [notificacion_view, notificacion_insert]
+#
+#create:
+#  credentials: [notificacion_view, notificacion_insert]
+#
+#edit:
+#  credentials: [notificacion_view, notificacion_update]
+#
+#delete:
+#  credentials: [notificacion_view, notificacion_delete]
+#
+#deleteAll:
+#  credentials: [notificacion_view, notificacion_delete]

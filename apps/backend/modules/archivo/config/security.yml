@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [archivo_view]
+
+new:
+  credentials: [archivo_view, archivo_insert]
+
+create:
+  credentials: [archivo_view, archivo_insert]
+
+edit:
+  credentials: [archivo_view, archivo_update]
+
+delete:
+  credentials: [archivo_view, archivo_delete]
+
+deleteAll:
+  credentials: [archivo_view, archivo_delete]

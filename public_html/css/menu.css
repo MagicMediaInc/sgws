@@ -1,0 +1,68 @@
+/* 
+    Document   : menu
+    Created on : 23/03/2010, 11:29:47 AM
+    Author     : hvallenilla
+    Description:
+        Styles only for menu Lynx
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+ /* menu */
+#menu{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    color:#fff;
+    line-height:45px;
+    display:inline-block;
+    float:left;
+    z-index:1000;
+    border: 0px solid black;
+    width: 100%;
+    background-color: #5F99B1;
+    font-family: sans-serif;
+    font-size: 12px;
+    
+}
+#menu a { color:#fff; text-decoration:none; }
+#menu a.titulo
+{
+  font-weight: normal;
+  text-decoration: none;  
+}
+#menu a.titulo:hover {
+  color: #d54e21;
+}
+
+#menu > li {background:#5F99B1 none repeat scroll 0 0; cursor:pointer; float:left; position:relative;padding:0px 15px;}
+#menu > li a:hover {color:#000000;}
+#menu .logo {background:transparent none repeat scroll 0% 0%; padding:0px; background-color:Transparent;}
+/* sub-menus*/
+#menu ul { padding:0px; margin:0px; display:block; display:inline;}
+#menu li ul { position:absolute; left:0px; top:0px; margin-top:45px; width:180px; line-height:16px; background-color:#5F99B1; color:#ffffff; /* for IE */ display:none; z-index: 1; }
+#menu li:hover ul { display:block;}
+#menu li ul li{ display:block; margin:8px 15px; padding: 5px 0px;  border-top: dotted 1px #ffffff; list-style-type:none; }
+#menu li ul li:first-child { border-top: none; }
+#menu li ul li a { display:block; color:#ffffff; }
+#menu li ul li a:hover { color:#000000; }
+/* main submenu */
+#menu #main {width: 150px;  left:0px; top:-16px; padding-top:20px; background-color:#000000; color:#fff; z-index:999;}
+/* search */
+.searchContainer div { background-color:#fff; display:inline; padding:5px;}
+.searchContainer input[type="text"] {border:none;}
+.searchContainer img { vertical-align:middle;}
+/* corners*/
+#menu .corner_inset_left { position:absolute; top:0px; left:-12px;}
+#menu .corner_inset_right { position:absolute; top:0px; left:180px;}
+#menu .last {width: 180px; background:transparent none repeat scroll 0% 0%; margin:0px; padding:0px; border:none; position:relative; height:0px;}
+#menu .corner_left { position:absolute; left:0px; top:0px;}
+#menu .corner_right { position:absolute; left:162px; top:0px;}
+#menu .middle { position:absolute; left:18px; height: 20px; width: 145px; top:0px;}
+/* cornes Logo */
+#menu .corner_left_logo { position:absolute; left:0px; top:0px;}
+#menu .corner_right_logo { position:absolute; left:132px; top:0px;}
+#menu .middle_logo { position:absolute; left:18px; height: 20px; width: 115px; top:0px;}

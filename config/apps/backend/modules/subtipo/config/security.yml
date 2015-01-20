@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [subtipo_view]
+
+new:
+  credentials: [subtipo_view, subtipo_insert]
+
+create:
+  credentials: [subtipo_view, subtipo_insert]
+
+edit:
+  credentials: [subtipo_view, subtipo_update]
+
+delete:
+  credentials: [subtipo_view, subtipo_delete]
+
+deleteAll:
+  credentials: [subtipo_view, subtipo_delete]

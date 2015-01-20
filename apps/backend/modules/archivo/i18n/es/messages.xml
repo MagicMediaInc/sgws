@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>archivo</source>
+         <target>archivo</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new archivo</source>
+         <target>Agregar archivo</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit archivo</source>
+         <target>Editar archivo</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List archivo</source>
+         <target>Listar archivo</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Id seccion</source>
+         <target>Id seccion</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Titulo archivo</source>
+         <target>Titulo archivo</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Archivo</source>
+         <target>Archivo</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

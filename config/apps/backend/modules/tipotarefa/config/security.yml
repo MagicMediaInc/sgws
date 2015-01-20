@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [tipotarefa_view]
+
+new:
+  credentials: [tipotarefa_view, tipotarefa_insert]
+
+create:
+  credentials: [tipotarefa_view, tipotarefa_insert]
+
+edit:
+  credentials: [tipotarefa_view, tipotarefa_update]
+
+delete:
+  credentials: [tipotarefa_view, tipotarefa_delete]
+
+deleteAll:
+  credentials: [tipotarefa_view, tipotarefa_delete]

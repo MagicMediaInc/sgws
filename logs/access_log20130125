@@ -1,0 +1,2 @@
+190.219.24.120 - - [25/Jan/2013:13:12:02 -0200] "GET / HTTP/1.1" 403 5968 "http://painel.locaweb.com.br/painel_controle/detalhes_hospedagem_plano.asp" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.56 Safari/537.17"
+190.219.24.120 - - [25/Jan/2013:13:12:03 -0200] "GET /favicon.ico HTTP/1.1" 404 1045 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.56 Safari/537.17"

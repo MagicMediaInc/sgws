@@ -1,0 +1,41 @@
+all:
+  msn:
+    requerido:             <img  src="%sf_admin_web_dir%/images/error.png" align="left" />&nbsp;O nome da sess&atilde;o &eacute; obrigat&oacute;rio
+    save_paso_uno:   |
+        <img  src="%sf_admin_web_dir%/images/ok.png" align="left" />&nbsp;<b>Dados salvos satisfatoriamente. A continua&ccedil;&atilde;o inclua  a informa&ccedil;&atilde;o publica da sess&atilde;o</b>
+    ayuda_meta_des:        <img  src="%sf_admin_web_dir%/images/help.png" align="left" />&nbsp;Ejemplo. LynxCms de Aberic es un paquete de software desarrollado por Aberic, dise&ntilde;ado espec&iacute;ficamente para administrar los contenidos de un sitio web.
+    ayuda_meta_key:        <img  src="%sf_admin_web_dir%/images/help.png" align="left" />&nbsp;Ejemplo. nombre empresa, actividad principal de la empresa, recursos, herramientas
+    ayuda_muestra_des:     Show section description in the frontend
+    ayuda_control:         <img  src="%sf_admin_web_dir%/images/help.png" align="left" />&nbsp;Indica sim a sess&atilde;o tem link com o conte&uacute;do,  quando aparece no menu
+    ayuda_pag_especial:    <img  src="%sf_admin_web_dir%/images/help.png" align="left" />&nbsp;Faz refer&ecirc;ncia a um componente que se  visualizara no frontend (portal publico do seu neg&oacute;cio).
+    ayuda_oculta_cab:      <img  src="%sf_admin_web_dir%/images/help.png" align="left" />&nbsp;Oculta o titulo descritivo da informa&ccedil;&atilde;o no frontend&nbsp; (portal p&uacute;blico do seu neg&oacute;cio).
+    ayuda_pag_principal:   <img  src="%sf_admin_web_dir%/images/help.png" align="left" />&nbsp;Indica a primeira sess&atilde;o que se mostrara ao  carregar o frontend&nbsp; (portal publico do  seu neg&oacute;cio) pela primeira vez.
+    ayuda_url:              'N&atilde;o pode usar caracteres especiais. Exemplo:  Outros-produtos&rsquo;'
+    ayuda_visible:         "<img  src='%sf_admin_web_dir%/images/help.png' align='left' />&nbsp;Vis&iacute;vel: O conte&uacute;do pode ser visualizado s&oacute;  dentro da URL no navegador.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vis&iacute;vel no menu: mostra o t&iacute;tulo da sess&atilde;o no  menu.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&atilde;o Vis&iacute;vel: N&atilde;o permite o acesso ao conte&uacute;do da  sess&atilde;o de forma alguma"
+    error_url_duplicate:        URL Duplicada. Tente de novo com uma URL destina
+    error_url:                  Recorde que n&atilde;o pode utilizar caracteres  especiais
+    error_home:                 Para cambiar a configura&ccedil;&atilde;o da pagina principal  da sess&atilde;o, primeiro deve colocar outra como principal
+    error_del_seccion_home:     N&atilde;o pode deletar a sess&atilde;o da home
+    error_seccion_home:         A sess&atilde;o n&atilde;o pode estar na home porque tem que  ser uma sess&atilde;o pai
+    error_seccion_home_padre:   A sess&atilde;o da home deve ser pai
+    error_seccion_home_visible: A sess&atilde;o da home n&atilde;o pode desativar
+    
+  control:
+    0:  N&atilde;o, n&atilde;o tem link
+    1:  Sim, sim tem link
+  home:
+    0: 'N&atilde;o '
+    1: 'Sim'
+  cabecera:
+    0: 'N&atilde;o '
+    1: 'Sim'
+  muestra_descripcion:
+    0: 'N&atilde;o '
+    1: 'Sim'
+  status:
+    0: 'Desabilitado'
+    1: 'Habilitado no menu'
+    2: 'Habilitado'
+
+
+                              

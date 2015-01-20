@@ -1,0 +1,30 @@
+all:
+  is_secure: on
+
+
+index:
+  credentials: [[lx_user_view, lx_user_view_2]]
+
+new:
+  credentials: [[lx_user_view, lx_user_insert, [lx_user_view_1, lx_user_insert_1], [lx_user_view_2, lx_user_insert_2]]]
+
+create:
+  credentials: [lx_user_view, lx_user_insert]
+
+edit:
+  credentials: [[lx_user_view, lx_user_insert, [lx_user_view_1], [lx_user_view_2]]]
+
+permisos:
+  credentials: [[lx_user_view, lx_user_insert, [lx_user_view_1, lx_user_insert_1], [lx_user_view_2, lx_user_insert_2]]]
+
+update:
+  credentials: [[lx_user_view, lx_user_insert, [lx_user_view_1, lx_user_insert_1], [lx_user_view_2, lx_user_insert_2]]]
+
+delete:
+  credentials: [[lx_user_view, lx_user_insert, [lx_user_view_1, lx_user_insert_1]]]
+
+deleteAll:
+  credentials: [lx_user_view_1, lx_user_delete_1]
+
+changeStatus:
+  credentials: [lx_user_view, lx_user_update]

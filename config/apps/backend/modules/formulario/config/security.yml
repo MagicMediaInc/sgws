@@ -1,0 +1,20 @@
+all:
+  is_secure: on
+
+index:
+  credentials: [formulario_view]
+
+new:
+  credentials: [formulario_view, formulario_insert]
+
+create:
+  credentials: [formulario_view, formulario_insert]
+
+edit:
+  credentials: [formulario_view, formulario_update]
+
+delete:
+  credentials: [formulario_view, formulario_delete]
+
+deleteAll:
+  credentials: [formulario_view, formulario_delete]

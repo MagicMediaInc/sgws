@@ -1,0 +1,50 @@
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:48 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:41:48 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Tue Sep 24 23:41:49 2013] [error] [client 201.211.86.236] Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'sgws111'@'187.45.195.19' (using password: YES)], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:51:45 2013] [error] [client 201.211.86.236] Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'sgws111'@'187.45.195.19' (using password: YES)], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Tue Sep 24 23:51:47 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:34 2013] [error] [client 201.211.86.236] Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'sgws111'@'187.45.195.19' (using password: YES)], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:06:36 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:07:51 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Sep 25 00:08:07 2013] [error] [client 201.211.86.236] Unable to open PDO connection [wrapped: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Sep 25 00:08:42 2013] [error] [client 201.211.86.236] Unable to open PDO connection [wrapped: SQLSTATE[28000] [1045] Access denied for user 'sgws111'@'187.45.195.19' (using password: YES)], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Sep 25 00:11:20 2013] [error] [client 201.211.86.236]  [wrapped: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lx_user.CPF' in 'field list'], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Sep 25 00:11:22 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:36 2013] [error] [client 201.211.86.236]  [wrapped: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lx_user.CPF' in 'field list'], referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin
+[Wed Sep 25 00:12:38 2013] [error] [client 201.211.86.236] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/lxlogin

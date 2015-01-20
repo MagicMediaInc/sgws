@@ -1,0 +1,1 @@
+<?php echo image_tag('upload', 'border=0 class="borderImage" ');?>

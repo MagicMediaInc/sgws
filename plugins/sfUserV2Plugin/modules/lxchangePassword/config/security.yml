@@ -1,0 +1,6 @@
+all:
+  is_secure: on
+  credentials: [lx_password_view]
+
+  
+

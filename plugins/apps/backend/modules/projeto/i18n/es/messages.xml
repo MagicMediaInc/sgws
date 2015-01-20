@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>projeto</source>
+         <target>projeto</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new projeto</source>
+         <target>Agregar projeto</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit projeto</source>
+         <target>Editar projeto</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List projeto</source>
+         <target>Listar projeto</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Codigo sgws</source>
+         <target>Codigo sgws</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Codigo sgws projeto</source>
+         <target>Codigo sgws projeto</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Id negociacao</source>
+         <target>Id negociacao</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Codigo tipo</source>
+         <target>Codigo tipo</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Data inicio</source>
+         <target>Data inicio</target>
+     </trans-unit>
+         <trans-unit id="10">
+         <source>Data final</source>
+         <target>Data final</target>
+     </trans-unit>
+         <trans-unit id="11">
+         <source>Data ir projeto</source>
+         <target>Data ir projeto</target>
+     </trans-unit>
+         <trans-unit id="12">
+         <source>Data fr projeto</source>
+         <target>Data fr projeto</target>
+     </trans-unit>
+         <trans-unit id="13">
+         <source>Nome proposta</source>
+         <target>Nome proposta</target>
+     </trans-unit>
+         <trans-unit id="14">
+         <source>Cliente</source>
+         <target>Cliente</target>
+     </trans-unit>
+         <trans-unit id="15">
+         <source>Gerente</source>
+         <target>Gerente</target>
+     </trans-unit>
+         <trans-unit id="16">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+         <trans-unit id="17">
+         <source>Id status proposta</source>
+         <target>Id status proposta</target>
+     </trans-unit>
+         <trans-unit id="18">
+         <source>Proposta</source>
+         <target>Proposta</target>
+     </trans-unit>
+         <trans-unit id="19">
+         <source>Valor</source>
+         <target>Valor</target>
+     </trans-unit>
+         <trans-unit id="20">
+         <source>Flag projeto</source>
+         <target>Flag projeto</target>
+     </trans-unit>
+         <trans-unit id="21">
+         <source>Tipo</source>
+         <target>Tipo</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

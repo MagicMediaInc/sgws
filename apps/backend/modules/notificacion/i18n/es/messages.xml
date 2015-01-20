@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>notificacion</source>
+         <target>notificacion</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new notificacion</source>
+         <target>Agregar notificacion</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit notificacion</source>
+         <target>Editar notificacion</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List notificacion</source>
+         <target>Listar notificacion</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Id user</source>
+         <target>Id user</target>
+     </trans-unit>
+         <trans-unit id="6">
+         <source>Asunto</source>
+         <target>Asunto</target>
+     </trans-unit>
+         <trans-unit id="7">
+         <source>Conteudo</source>
+         <target>Conteudo</target>
+     </trans-unit>
+         <trans-unit id="8">
+         <source>Fecha</source>
+         <target>Fecha</target>
+     </trans-unit>
+         <trans-unit id="9">
+         <source>Status</source>
+         <target>Status</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+
