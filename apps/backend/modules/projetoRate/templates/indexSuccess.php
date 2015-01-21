@@ -48,7 +48,7 @@ function saveRate(id)
 
 </script>
 
-<h1 class="tit-principal">Registro de Rate para o Projeto<a href="<?php echo url_for('@default?module=projeto&action=edit&codigo_proposta='.$projeto->getCodigoProposta() ) ?>"><?php echo $projeto->getCodigoSgwsProjeto() ?></a></h1>
+<h1 class="tit-principal">Registro de Rate para o Projeto <a href="<?php echo url_for('@default?module=projeto&action=edit&codigo_proposta='.$projeto->getCodigoProposta() ) ?>"><?php echo $projeto->getCodigoSgwsProjeto() ?></a></h1>
 
 <div class="frameForm">
 
@@ -92,7 +92,15 @@ function saveRate(id)
 
                             <?php if($rateFuncionario): ?>
 
+                              <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>    
+
                                 <input size="8" class="valorgasto" type="text" name="rate" id="rate-<?php echo $rateFuncionario->getId() ?>" value="<?php echo $rateFuncionario ? $rateFuncionario->getRate() : '' ?>" />                            
+
+                              <?php else: ?>
+
+                                <input size="8" class="valorgasto" type="text" name="rate" id="rate-<?php echo $rateFuncionario->getId() ?>" value="<?php echo $rateFuncionario ? $rateFuncionario->getRate() : '' ?>" readonly/>                            
+
+                              <?php endif; ?>
 
                             <?php else: ?>
 
@@ -106,7 +114,13 @@ function saveRate(id)
 
                             <?php if($rateFuncionario): ?>
 
-                            <button name="save_rate_funcionario" id="save-<?php echo $rateFuncionario->getId() ?>" onclick="saveRate(<?php echo $rateFuncionario->getId() ?>)">Salvar</button>
+
+                              <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
+                
+                                <button name="save_rate_funcionario" id="save-<?php echo $rateFuncionario->getId() ?>" onclick="saveRate(<?php echo $rateFuncionario->getId() ?>)">Salvar</button>
+            
+                              <?php endif; ?>
+
 
                             <?php endif; ?>
 
