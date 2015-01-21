@@ -98,7 +98,11 @@
 <?php endif; ?>
     <h1 class="tit-principal">Faturamentos</h1>
     <br><br>
-    <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
+    <?php $projeto = PropostaPeer::getDataByCodProjeto($id); ?>
+    <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
+        <!-- <input type="submit" value="Salvar" /> -->
+        <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
+    <?php endif; ?>
 <div class="frameForm">
     <div id="printdiv" class="printable">
     <form action="<?php echo url_for('@default?module=despesa&action=compensar') ?>" method="POST">
@@ -166,11 +170,11 @@
                         <?php endif; ?>
                         <?php echo html_entity_decode($valor->getDescricaosaida()) ?>                        
                     </td>
-                    <td>
+                    <td attr="cliente">
                         <?php $Proposta = PropostaPeer::retrieveByPK($projeto->getCodigoProjeto()) ?>
                         <?php $cliente = CadastroJuridicaPeer::getNameJuridico($Proposta->getCliente()); ?>
                         <?php if($cliente): ?>
-                                <?php echo $cliente['nome'] ?>
+                            <?php echo $cliente['nome'] ?>
                         <?php endif; ?>
                         <?php $tipo = SubtipoUserPeer::retrieveByPK($valor->getCodigoTipo()) ?>
                         <?php echo $tipo ? $tipo->getSubtipo() : '' ?>   

@@ -303,7 +303,7 @@
                                     <?php $projeto = PropostaPeer::retrieveByPK($id_projeto);?>
                                     <?php $cliente = CadastroJuridicaPeer::getNameJuridico($projeto->getCliente()); ?>
                                     <select name="cliente">
-                                        <option value="<?php $cliente['id']?>"><?php echo $cliente['nome'] ?></option>
+                                        <option value="<?php echo $projeto->getCliente() ?>"><?php echo $cliente['nome'] ?></option>
                                     </select>
                                     <?php echo $form['codigocadastro']->renderError() ?>
                                 </td>
