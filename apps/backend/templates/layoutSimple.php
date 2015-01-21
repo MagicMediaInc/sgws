@@ -13,6 +13,11 @@
             if(nomeProfile != 'Gerente e Responsável Técnico')
                 $('#proposta_nao_conformidade').attr('readonly', 'readonly');
         });
+                var fancybox = $(".frameForm").length;
+                    console.log(fancybox);
+                if(fancybox==0){
+                    $("#contentPpal").removeAttr("style");
+                }
         </script>
     </head>
     <body style="background-color: #FFF; background: none;">

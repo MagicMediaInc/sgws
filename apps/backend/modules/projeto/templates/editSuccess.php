@@ -151,6 +151,38 @@ $(document).ready(function() {
         
 })
 </script>
+
+<style>
+  #contentPpal{
+    min-width: 0px !important;
+    width: 0% !important;
+  }
+  .requerido{
+    display: block;
+    height: 42px;
+    padding:10px 5px;
+  }
+  .container{
+    width: 100%;
+  }
+  .divtitles{
+    margin-right: 10px;
+    display: inline-block;
+    width: 135px;
+    vertical-align: middle !important;
+  }
+  .divcontens{
+    display: inline-block;
+  }
+  .row{
+    /*vertical-align: middle;*/
+    /*margin-bottom: 10px;*/
+    padding:5px 0px 5px 20px;
+  }
+  .grey{
+    background: #eee;
+  }
+</style>
 <?php if ($sf_user->hasFlash('listo')): ?>
     <div class="msn_ready"><?php echo $sf_user->getFlash('listo') ?></div>
 <?php endif; ?>
@@ -174,234 +206,207 @@ $(document).ready(function() {
         <?php if (!$form->getObject()->isNew()): ?>
             <input type="hidden" name="sf_method" value="put" />
         <?php endif; ?>
-        <table width="100%">
-            <tr>
-              <td>
-                  &nbsp;<?php echo __('Os campos marcados com') ?> <span class="required">*</span> <?php echo __('são requeridos')?>
-              </td>
-            </tr>
-            <tr>
-              <td id="errorGlobal">
+        <div class="mensajes">
+              <div class="requerido"><?php echo __('Os campos marcados com') ?> <span class="required">*</span> <?php echo __('são requeridos')?></div>
+              <div id="errorGlobal">
                   <?php echo $form->renderGlobalErrors() ?>
-              </td>
-            </tr>
-
+              </div>
+        </div>
             <?php if($edit): ?>
-            <tfoot>
-              <tr>
-                <td>
-                      <?php echo $form->renderHiddenFields(false) ?>
-                      <table cellspacing="4">
-                        <tr>
-                            <td>
-                                <div class="button">
-                                    <a href="javascript:void(0);" id="voltar-lista" >Voltar à lista</a>    
-                                </div>
-                            </td>            
-                            <?php if (!$form->getObject()->isNew() && aplication_system::esUsuarioRoot()): ?>
-                            <td>
-                                <div class="button">
-                                    <?php echo link_to(__('Eliminar'), 'projeto/delete?codigo_proposta='.$form->getObject()->getCodigoProposta(), array('method' => 'delete', 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'), 'class' => '')) ?>
-                                </div>
-                            </td>
-                            <?php endif; ?>
-                            <td>
-                            <input type="submit" value="<?php echo __('Salvar') ?>" />
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-              </tr>
-            </tfoot>
+        <!-- Div que renderiza los botones de save, delete y back -->
+        <div class="buttons">
+            <div><?php echo $form->renderHiddenFields(false) ?></div>
+              <div class="button">
+                  <a href="javascript:void(0);" id="voltar-lista" >Voltar à lista</a>    
+              </div>
+               <?php if (!$form->getObject()->isNew() && aplication_system::esUsuarioRoot()): ?>
+                    <div class="button">
+                        <?php echo link_to(__('Eliminar'), 'projeto/delete?codigo_proposta='.$form->getObject()->getCodigoProposta(), array('method' => 'delete', 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'), 'class' => '')) ?>
+                    </div>
+                <?php endif; ?>
+              <div class="button">
+                <input type="submit" value="<?php echo __('Salvar') ?>" />
+              </div>
+        </div>
+        <!-- Fin div botones -->
             <?php endif;?>
-            <tbody>
-                <tr>
-                    <td>                
-                        <table cellpadding="0" cellspacing="2" border="0" width="100%" id="table-info">
-                           <?php if(count($responsable) > 0): ?>
-                          <!--segunda division-->
+              <div class="container">
+                <?php if(count($responsable) > 0): ?>
+                  <h1 class="tit-principal">
+                      PROPOSTA
+                  </h1>
+                  <div class="row">
+                    <div class="divtitles"><label>Código Proposta</label></div>
+                    <div class="divcontens">
+                            <?php echo $form['codigo_sgws'] ?>
+                            <?php echo $form['codigo_sgws']->renderError() ?>
+                    </div>
+                  </div>
+                  <div class="row grey">
+                    <div class="divtitles"><?php echo $form['valor']->renderLabel() ?></div>
+                    <div class="divcontens">
+                        <?php echo $form['valor'] ?>
+                        <?php echo $form['valor']->renderError() ?>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="divtitles"><label>Gerente PP:</label></div>
+                    <div class="divcontens">
+                            <select name="responsable" id="responsable">
+                                <?php foreach ($responsable as $id => $value): ?>
+                                <option value="<?php echo $id ?>" ><?php echo $value ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                    </div>
+                  </div>
+                  <div class="row grey">
+                    <div class="divtitles"><?php echo $form['nome_proposta']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['nome_proposta'] ?>
+                      <?php echo $form['nome_proposta']->renderError() ?>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="row">
+                    <div class="divtitles"><?php echo $form['cliente']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['cliente'] ?>
+                      <?php echo $form['cliente']->renderError() ?>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="row grey">
+                    <div class="divtitles"><?php echo $form['data_inicio']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['data_inicio'] ?>
+                      <?php echo $form['data_inicio']->renderError() ?>
+                    </div>
+                    <div class="divtitles" style="margin-left:15px;"><?php echo $form['data_ir_projeto']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['data_ir_projeto'] ?>
+                      <?php echo $form['data_ir_projeto']->renderError() ?>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="divtitles"><?php echo $form['status']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['status'] ?>
+                      <?php echo $form['status']->renderError() ?>
+                    </div>
+                    <div class="divtitles" style="margin-left:70px;"><?php echo $form['id_negociacao']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['id_negociacao'] ?>
+                      <?php echo $form['id_negociacao']->renderError() ?>
+                        <div class="mask-imput hide" id="back_log" style="width: 100px;">
+                            Back Log
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="row grey">
+                    <div class="divtitles" style="vertical-align:top !important; padding-top:60px;"><?php echo $form['proposta']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['proposta'] ?>
+                      <?php echo $form['proposta']->renderError() ?>
+                    </div>
+                    
+                  </div>
+
+                  <hr style="border: 1px solid #09C;">
+                  <h1 class="tit-principal">
+                    PROJETO
+                  </h1>
+                  <?php endif; ?>
+                  <div class="row">
+                    <div class="divtitles"><?php echo $form['id_status_proposta']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['id_status_proposta'] ?>
+                      <?php echo $form['id_status_proposta']->renderError() ?>
+                    </div>
+                  </div>
+                  <div class="row grey">
+                    <div class="divtitles"><label>Código Projeto</label></div>
+                    <div class="divcontens">
+                      <?php echo $form['codigo_sgws_projeto'] ?>
+                      <?php echo $form['codigo_sgws_projeto']->renderError() ?>
+                    </div>
+                    <div class="divtitles" style="margin-left:115px;"><?php echo $form['codigo_centro']->renderLabel() ?></div>
+                    <div class="divcontens">
+                      <?php echo $form['codigo_centro'] ?>
+                      <?php echo $form['codigo_centro']->renderError() ?>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="divtitles"><?php echo $form['gerente']->renderLabel() ?></div>
+                      <div class="divcontens">
+                        <?php echo $form['gerente'] ?>
+                        <?php echo $form['gerente']->renderError() ?>
+                      </div>
+                  </div>
+                  <div class="row grey">
+                       <div class="divtitles"><?php echo $form['codigo_tipo']->renderLabel() ?></div>
+                      <div class="divcontens">
+                        <?php echo $form['codigo_tipo'] ?>
+                        <?php echo $form['codigo_tipo']->renderError() ?>
+                    </div>
+                  </div> 
+                  <div class="row">
+                      <div class="divtitles"><?php echo $form['horas_vendidas']->renderLabel() ?></div>
+                      <div class="divcontens"><?php echo $form['horas_vendidas'] ?>
+                        <?php echo $form['horas_vendidas']->renderError() ?>
+                      </div>
+                      <div class="divtitles" style="margin-left:117px;"><?php echo $form['horas_trabajadas']->renderLabel() ?></div>
+                      <div class="divcontens">
+                        <?php echo $form['horas_trabajadas'] ?>
+                        <?php echo $form['horas_trabajadas']->renderError() ?>
+                      </div>
+                  </div>
+                  <div class="row grey">
+                      <div class="divtitles"><?php echo $form['valor_prev_hh']->renderLabel() ?></div>
+                      <div class="divcontens">
+                            <?php echo $form['valor_prev_hh'] ?>
+                            <?php echo $form['valor_prev_hh']->renderError() ?>
+                      </div> 
+                      <div class="divtitles" style="margin-left:83px;"><?php echo $form['coeficiente']->renderLabel() ?></div>
+                      <div class="divcontens">
+                        <?php echo $form['coeficiente'] ?>
+                        <?php echo $form['coeficiente']->renderError() ?>
+                      </div>
+                  </div>  
+                  <div class="row" id='dataFinalLine'>
+                      <div class="divtitles"><?php echo $form['data_fr_projeto']->renderLabel() ?></div>
+                      <div class="divcontens">
+                        <?php echo $form['data_fr_projeto'] ?>
+                        <?php echo $form['data_fr_projeto']->renderError() ?>
+                      </div>
+                      <div class="divtitles" style="margin-left:15px;"><?php echo $form['apr']->renderLabel() ?></div>
+                      <div class="divcontens">
+                            <?php echo $form['apr'] ?>
+                            <?php echo $form['apr']->renderError() ?>
+                      </div>
+                  </div>
+                  <hr style="border: 1px solid #09C;" />
+                  <?php $gerenteProyecto = PropostaPeer::getGerenteProjeto($form->getObject()->getCodigoProposta());?>
+                  <div class="row">
+                      <div class="divtitles"><?php echo $form['satisfacao_cliente']->renderLabel() ?></div>
+                      <div class="divcontens">
+                            <?php echo $form['satisfacao_cliente'] ?>
+                            <?php echo $form['satisfacao_cliente']->renderError() ?>
+                      </div>
+                      <div class="divtitles" style="margin-left:15px;"><?php echo $form['nao_conformidade']->renderLabel() ?></div>
+                      <div class="divcontens">
+                            <?php echo $form['nao_conformidade'] ?>
+                            <?php echo $form['nao_conformidade']->renderError() ?>
+                      </div>
+                  </div>
+              </div>               
+
+                          <!-- </tbody>
                           <tr>
-                            <td colspan="8">
-                                <h1 class="tit-principal">
-                                    PROPOSTA
-                                </h1>
-                            </td>
-                          </tr>
-                          <tr>
-                                <td style="width: 25%;"><label>Código Proposta</label></td>
-                                <td style="width: 25%;">
-                                        <?php echo $form['codigo_sgws'] ?>
-                                        <?php echo $form['codigo_sgws']->renderError() ?>
-                                </td>
-                                <td style="width: 25%;"><?php echo $form['valor']->renderLabel() ?></td>
-                                <td style="width: 25%;">
-                                    <?php echo $form['valor'] ?>
-                                    <?php echo $form['valor']->renderError() ?>
-                                </td>
-                                
-                          </tr>
-                          <tr>
-                            <td><label>Gerente PP:</label></td>
-                            <td>
-                                    <select name="responsable" id="responsable">
-                                        <?php foreach ($responsable as $id => $value): ?>
-                                        <option value="<?php echo $id ?>" ><?php echo $value ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><?php echo $form['nome_proposta']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['nome_proposta'] ?>
-                                <?php echo $form['nome_proposta']->renderError() ?>
-                              </td>
-                          </tr>
-                           <tr>
-                              <td><?php echo $form['cliente']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['cliente'] ?>
-                                <?php echo $form['cliente']->renderError() ?>
-                            </td>
-                          </tr>
-                           <tr>
-                              <td style="width: 15%;"><?php echo $form['data_inicio']->renderLabel() ?></td>
-                              <td style="width: 37%;">
-                                <?php echo $form['data_inicio'] ?>
-                                <?php echo $form['data_inicio']->renderError() ?>
-                              </td>
-                              <td style="width: 17%;"><?php echo $form['data_ir_projeto']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['data_ir_projeto'] ?>
-                                <?php echo $form['data_ir_projeto']->renderError() ?>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td><?php echo $form['status']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['status'] ?>
-                                <?php echo $form['status']->renderError() ?>
-                              </td>
-                              <td><?php echo $form['id_negociacao']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['id_negociacao'] ?>
-                                <?php echo $form['id_negociacao']->renderError() ?>
-                                  <div class="mask-imput hide" id="back_log" style="width: 100px;">
-                                      Back Log
-                                  </div>
-                              </td>
-                              
-                          </tr>
-                          <tr>
-                              <td><?php echo $form['proposta']->renderLabel() ?></td>
-                              <td colspan="8">
-                                  <?php echo $form['proposta'] ?>
-                                  <?php echo $form['proposta']->renderError() ?> 
-                              </td> 
-                              <td></td><td></td>
-                          </tr>
-                            <!--Tercera division-->
-                          <tr>
-                                <td colspan="8"><hr style="border: 1px solid #09C;" /></td>
-                          </tr>
-                          <tr>
-                            <td colspan="8">
-                                <h1 class="tit-principal">
-                                    PROJETO
-                                </h1>
-                            </td>
-                          </tr>
-                           <?php endif; ?>
-                          <tr>
-                              <td><?php echo $form['id_status_proposta']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['id_status_proposta'] ?>
-                                <?php echo $form['id_status_proposta']->renderError() ?>
-                              </td> 
-                          </tr>
-                          <tbody id="proj_block">
-                          <tr id="cod-centro">
-                               <td><label>Código Projeto</label></td>
-                              <td>
-                                 <?php echo $form['codigo_sgws_projeto'] ?>
-                                 <?php echo $form['codigo_sgws_projeto']->renderError() ?>
-                              </td>
-                            
-                              <td><?php echo $form['codigo_centro']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['codigo_centro'] ?>
-                                <?php echo $form['codigo_centro']->renderError() ?>
-                              </td>
-                          </tr>
-                          
-                          <tr>
-                              <td><?php echo $form['gerente']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['gerente'] ?>
-                                <?php echo $form['gerente']->renderError() ?>
-                              </td>
-                          </tr>
-                          <tr>
-                               <td><?php echo $form['codigo_tipo']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['codigo_tipo'] ?>
-                                <?php echo $form['codigo_tipo']->renderError() ?>
-                            </td>
-                          </tr> 
-                          <tr>
-                              <td><?php echo $form['horas_vendidas']->renderLabel() ?></td>
-                              <td><?php echo $form['horas_vendidas'] ?>
-                                <?php echo $form['horas_vendidas']->renderError() ?>
-                              </td>
-                              <td><?php echo $form['horas_trabajadas']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['horas_trabajadas'] ?>
-                                <?php echo $form['horas_trabajadas']->renderError() ?>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td><?php echo $form['valor_prev_hh']->renderLabel() ?></td>
-                              <td>
-                                    <?php echo $form['valor_prev_hh'] ?>
-                                    <?php echo $form['valor_prev_hh']->renderError() ?>
-                              </td> 
-                              <td><?php echo $form['coeficiente']->renderLabel() ?></td>
-                              <td>
-                                <?php echo $form['coeficiente'] ?>
-                                <?php echo $form['coeficiente']->renderError() ?>
-                              </td>
-                          </tr>  
-                           <tr id='dataFinalLine'>
-                              <td style="width: 4%;"><?php echo $form['data_fr_projeto']->renderLabel() ?></td>
-                              <td style="width: 37%;">
-                                <?php echo $form['data_fr_projeto'] ?>
-                                <?php echo $form['data_fr_projeto']->renderError() ?>
-                              </td>
-                              <td colspan="2">&nbsp;</td>
-                          </tr>
-                          <tr>
-                              <td><?php echo $form['apr']->renderLabel() ?></td>
-                              <td>
-                                    <?php echo $form['apr'] ?>
-                                    <?php echo $form['apr']->renderError() ?>
-                              </td>
-                          </tr>
-                          </tbody>
-                          <tr>
-                              <td colspan="8"><hr style="border: 1px solid #09C;" /></td>
-                          </tr>
-                          <?php $gerenteProyecto = PropostaPeer::getGerenteProjeto($form->getObject()->getCodigoProposta());?>
-                          <tr>
-                              <td colspan="2"><?php echo $form['satisfacao_cliente']->renderLabel() ?>
-                              <br />
-                                    <?php echo $form['satisfacao_cliente'] ?>
-                                    <?php echo $form['satisfacao_cliente']->renderError() ?>
-                              </td>
-                              <td><?php echo $form['nao_conformidade']->renderLabel() ?>
-                                  <br />
-                                    <?php echo $form['nao_conformidade'] ?>
-                                    <?php echo $form['nao_conformidade']->renderError() ?>
-                              </td>
+                              <td colspan="8"></td>
                           </tr>
                           <tr style="display: none;">
                                 <td><label>Secretarias</label></td>
@@ -416,7 +421,7 @@ $(document).ready(function() {
                                     <?php // endforeach; ?>
                                     
                                     
-                                </td>
+                                <!--</td>
                            </tr>
                            <tr>
                                <td colspan="4">&nbsp;</td>
@@ -425,7 +430,7 @@ $(document).ready(function() {
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
         </form>    
         <?php if (!$form->getObject()->isNew() && (aplication_system::esUsuarioRoot() || aplication_system::esGerente() || aplication_system::esSocio())): ?>
         <br /><br />
