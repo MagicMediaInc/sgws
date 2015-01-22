@@ -24,7 +24,7 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=sgws;host=localhost
+      dsn:        mysql:dbname=sgws1;host=localhost
       username:   root
       password:   Siis$%32
       encoding:   utf8

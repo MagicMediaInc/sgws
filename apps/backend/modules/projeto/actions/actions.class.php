@@ -107,15 +107,16 @@ class projetoActions extends sfActions
         }
         if($request->getParameter('q') == 'pj')
         {
+          // var_dump($this->getUser()->getAttribute('idUserPanel'));
+          // die(EquipeTarefaPeer::CODIGOFUNCIONARIO);
             //echo $this->getUser()->getAttribute('idUserPanel');
             //$c->addJoin(PropostaPeer::CODIGO_PROPOSTA, TarefaPeer::CODIGOPROJETO, Criteria::INNER_JOIN);
             //$c->addJoin(TarefaPeer::CODIGOTAREFA, EquipeTarefaPeer::CODIGOTAREFA, Criteria::INNER_JOIN);
-            $c->add(EquipeTarefaPeer::CODIGOFUNCIONARIO, $this->getUser()->getAttribute('idUserPanel'), Criteria::EQUAL);
-            $c->addOr(PropostaPeer::GERENTE, $this->getUser()->getAttribute('idUserPanel') , Criteria::EQUAL);
+            //$c->add(EquipeTarefaPeer::CODIGOFUNCIONARIO, $this->getUser()->getAttribute('idUserPanel'), Criteria::EQUAL);
+            $c->addOr(PropostaPeer::GERENTE, $this->getUser()->getAttribute('idUserPanel'), Criteria::EQUAL);
             $c->addAnd(PropostaPeer::ID_STATUS_PROPOSTA, '2' , Criteria::EQUAL);
             //$c->add($cPj);
             $c->addGroupByColumn(PropostaPeer::CODIGO_PROPOSTA);
-           //die($c);
         }
         if(aplication_system::esFuncionario() && $request->getParameter('q') != 'pj')
         {
@@ -173,7 +174,6 @@ class projetoActions extends sfActions
             $buscador = "";
             $this->bus_pagi = "";
         }
-			
         $pager = new sfPropelPager('Proposta',$limit);
         $pager->setCriteria($c);
         $pager->setPage($this->getRequestParameter('page',1));

@@ -274,8 +274,11 @@ class despesaActions extends sfActions {
     public function executeCompensar(sfWebRequest $request) {
         if ($this->getRequestParameter('chk')) {
             $total = 0;
+            var_dump($this->getRequestParameter('chk'));
             foreach ($this->getRequestParameter('chk') as $gr => $val) {
+             // var_dump($gr);
                 $saida = SaidasPeer::retrieveByPk($val);
+             // var_dump($saida);
                 $saida->setConfirmacao(1);
                 $saida->setConfirmadopor(aplication_system::getUser());
                 $saida->save();
@@ -298,7 +301,10 @@ class despesaActions extends sfActions {
                 $despesa->setCodigofuncionario($request->getParameter('cod_funcionario'));
                 $despesa->setFormapagamento('Transferencia');
                 $despesa->setConfirmacao('1');
-                $despesa->setCodigoprojeto(2016);
+                // $despesa->setCodigoprojeto(2016);
+                // $despesa->setCodigoCadastro(340);
+                $despesa->setCodigoCadastro(340);
+                $despesa->setCodigoprojeto(2329);
                 $despesa->setConfirmadopor(aplication_system::getUser());
                 $despesa->save();
             }
