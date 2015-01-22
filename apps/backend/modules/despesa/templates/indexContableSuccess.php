@@ -94,13 +94,13 @@
 
                         $('.msn_error').hide();
 
-                        $('.no_compensa').hide();
+                        $('.adiantamento').hide();
 
                         $('#totales_ppales').hide();
 
                     }else{
 
-                        $('.no_compensa').show();
+                        $('.adiantamento').show();
 
                         $('.msn_error').show();
 
@@ -114,11 +114,11 @@
 
             }else{
 
-                $('.no_compensa').show();
+                $('.adiantamento').show();
 
-                $('.compensacion').hide();
+                // $('.compensacion').hide();
 
-                $('.compensacion_all').hide();
+                // $('.compensacion_all').hide();
 
                 $('.footer-list').hide();
 
@@ -378,7 +378,7 @@
                 <?php $statusPedido = 0; ?>
 
                 <?php foreach ($result as $valor): ?>
-
+                <?php $valor ?>
                 <?php $classFila = 'no_compensa' ?>
 
                 <?php $clsAdiantamento = '' ?>
@@ -416,7 +416,6 @@
                     <?php $clsCompensacao = 'iscompensacao' ?>
 
                 <?php endif; ?>
-
                 <tr class="<?php echo $classFila.' '.$clsAdiantamento.' '.$clsCompensacao ?>">
 
                     
