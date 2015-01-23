@@ -134,9 +134,9 @@
                     <?php foreach ($result as $valor): ?>
                     <?php $monto = $valor->getSaidas() ?>
                     <?php if($valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento'):?>
-                           <?php $total =  $total + $monto; ?> 
+                           <?php $total =  $total - $monto; ?> 
                             <?php else:?>
-                           <?php $total = $total - $monto; ?>
+                           <?php $total = $total + $monto; ?>
                             <?php endif; ?>
                     <?php $totalGral = $total + $monto ; ?>
                     <tr><?php if($sf_request->getParameter('status') == '0'):?>
@@ -177,9 +177,9 @@
                         </td>
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                             <?php echo $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento' ? 'R$ '.aplication_system::monedaFormat($monto,2,",",".")  : '' ?>&nbsp;
-                            <?php $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento'? $totalSalida = $totalSalida + $monto : '' ?>
+                            <?php $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento'? $totalSalida = $totalSalida - $monto : '' ?>
                         </td>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">R$ <?php echo aplication_system::monedaFormat($total,2,",",".");?></td>
+                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; " data-attr="saldo">R$ <?php echo aplication_system::monedaFormat($total,2,",",".");?></td>
                         <td id="status_<?php echo $valor->getCodigoSaida() ?>" class="no_for_print" >
                             <?php if((aplication_system::esGerente() && !$valor->getConfirmacao())|| aplication_system::esSocio() ): ?>
                                 <?php echo jq_link_to_remote(image_tag(($valor->getBaixa() == 1 ? '1' : '0').'.png','alt="" title="" border=0'), array(
@@ -227,14 +227,10 @@
                     </tr>
                     <?php endforeach; ?>
                     <tr style="font-size: 13px;font-weight: bold;">
-                        <td colspan="6">&nbsp;</td>
+                        <td colspan="5">&nbsp;</td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
-                        <td colspan="3">&nbsp;</td>
-                        
-                    </tr>
-                    <tr style="font-size: 13px;font-weight: bold;">
-                        <td colspan="11" style="text-align: right; padding-right: 48px;">
+                        <td colspan="4" style="text-align: left; padding-right: 48px;">
                             Total Global: R$ <?php echo aplication_system::monedaFormat($total_global)  ?>
                         </td>
                         

@@ -140,7 +140,9 @@ class contasActions extends sfActions
       $this->result = SaidasPeer::doSelect($c);
       
       $this->total_global = SaidasPeer::getTotalPrestacaoContasUsuario(aplication_system::getUser(), $id_proyecto, $st);
-      $this->total_global = $this->total_global['totalS'] - $this->total_global['totalE'];
+      
+      $this->total_global = $this->total_global['totalE'] - $this->total_global['totalS'];
+      // $this->total_global = $this->total_global['totalS'] - $this->total_global['totalE'];
       
       
   }
