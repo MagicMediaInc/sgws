@@ -182,7 +182,7 @@
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">R$ <?php echo aplication_system::monedaFormat($total,2,",",".");?></td>
                         <td id="status_<?php echo $valor->getCodigoSaida() ?>" class="no_for_print" >
                             <?php if((aplication_system::esGerente() && !$valor->getConfirmacao())|| aplication_system::esSocio() ): ?>
-                                <?php echo jq_link_to_remote(image_tag($valor->getBaixa().'.png','alt="" title="" border=0'), array(
+                                <?php echo jq_link_to_remote(image_tag(($valor->getBaixa() == 1 ? '1' : '0').'.png','alt="" title="" border=0'), array(
                                     'update'  =>  'status_'.$valor->getCodigoSaida(),
                                     'url'     =>  'despesa/darBaixa?id='.$valor->getCodigoSaida().'&baixa='.$valor->getBaixa(),
                                     'script'  => true,
@@ -190,15 +190,15 @@
                                 ));
                                 ?>
                             <?php else: ?>
-                                <?php echo image_tag($valor->getBaixa().'.png','alt="" title="" border=0') ?>
+                                <?php echo image_tag(($valor->getBaixa() == 1 ? '1' : '0').'.png','alt="" title="" border=0') ?>
                             <?php endif; ?>
                         </td>
                         <td id="confirma_<?php echo $valor->getCodigoSaida() ?>" class="no_for_print" >
                             
                             <?php if(aplication_system::esContable()): ?>
-                                <?php echo jq_link_to_remote(image_tag($valor->getConfirmacao().'.png','alt="" title="" border=0'), array(
+                                <?php echo jq_link_to_remote(image_tag(($valor->getConfirmacao() == 1 ? '1' : '0').'.png','alt="" title="" border=0'), array(
                                     'update'  =>  'confirma_'.$valor->getCodigoSaida(),
-                                    'url'     =>  'despesa/confirmacion?id='.$valor->getCodigoSaida().'&confirma='.$valor->getConfirmacao(),
+                                    'url'     =>  'despesa/confirmacion?id='.$valor->getCodigoSaida().'&confirma='.($valor->getConfirmacao() == 1 ? '1' : '0'),
                                     'script'  => true,
                                     'before'  => "$('#confirma_".$valor->getCodigoSaida()."').html('". image_tag('preload.gif','title="" alt=""')."');
                                         $('#status_".$valor->getCodigoSaida()."').html('". image_tag('preload.gif','title="" alt=""')."');

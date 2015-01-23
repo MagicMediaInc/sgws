@@ -26,17 +26,27 @@ class contasActions extends sfActions
       // Si se selecciono proyecto o tarefa
       if($request->getParameter('id_projeto'))
       {
+        var_dump('id_projeto: '.$request->getParameter('id_projeto'));
             $c->add(SaidasPeer::CODIGOPROJETO, $request->getParameter('id_projeto'), Criteria::EQUAL);
             $id_proyecto = $request->getParameter('id_projeto');
       }
       
       if ($request->isMethod('post'))
       {
-        if($request->getParameter('status') < 2)
+        var_dump('post ');
+        if($request->getParameter('status') < 1){
+
+          var_dump('status < 1 ');
+            $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::NOT_EQUAL);
+            $c->add(SaidasPeer::CONFIRMACAO, $request->getParameter('status'), Criteria::EQUAL);
+        }
+        elseif($request->getParameter('status') < 2)
         {
+          var_dump('status < 2 ');
             $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::NOT_EQUAL);
             $c->add(SaidasPeer::CONFIRMACAO, $request->getParameter('status'), Criteria::EQUAL);
         }else{
+          var_dump('status > 2 ');
             $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::EQUAL);
             $c->add(SaidasPeer::CONFIRMACAO, 0, Criteria::EQUAL);
             
@@ -44,8 +54,10 @@ class contasActions extends sfActions
         $st = $request->getParameter('status');
         
       }else{
+        var_dump('not post');
         if(!$request->getParameter('status'))
         {
+        var_dump('not parameter status');
             $request->setParameter('status',0);    
             $st = 0;
         }
@@ -55,6 +67,7 @@ class contasActions extends sfActions
       
       if($this->getRequestParameter('from_date'))
         {
+          var_dump('parameter from_date');
             $from = $this->getRequestParameter('from_date');
             $dt = explode('-', $from) ;
             $from = $dt[2].'-'.$dt[1].'-'.$dt[0];
@@ -62,11 +75,15 @@ class contasActions extends sfActions
             $dt = explode('-', $to) ;
             $to = $dt[2].'-'.$dt[1].'-'.$dt[0];
         }else{
+          var_dump('not parameter from_date');
+
             if (aplication_system::isAllAction() || aplication_system::esContable())
             {
+          var_dump('all in action or es contable');
                 $from = date('Y-m-01');
                 $to = date('Y-m-30');
             }else{
+          var_dump('NOT all in action or es contable');
                 $from = date('Y-m-01');
                 $to = date('Y-m-30');
             }            
@@ -75,12 +92,14 @@ class contasActions extends sfActions
         $this->to = date("d-m-Y", strtotime($to));
         if($from)
       {
+          var_dump('from');
         $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, $from,Criteria::GREATER_EQUAL);
         $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, $to, Criteria::LESS_EQUAL));
         $c->add($cFecha);
       }
       if($this->getRequestParameter('buscador'))
       {
+          var_dump('parameter buscador');
             //Desactiva temporalmente el metodo de escape para que funcionen los link de la paginacion
             sfConfig::set('sf_escaping_strategy', false);
             $c->addJoin(SaidasPeer::CODIGOPROJETO, PropostaPeer::CODIGO_PROJETO, Criteria::INNER_JOIN);
@@ -98,6 +117,7 @@ class contasActions extends sfActions
             $buscador = "&buscador=".$this->buscador;
             $this->bus_pagi = "&buscador=".$this->buscador;
       }else{
+          var_dump('NOT parameter buscador');
             $buscador = "";
             $this->bus_pagi = "";
       }

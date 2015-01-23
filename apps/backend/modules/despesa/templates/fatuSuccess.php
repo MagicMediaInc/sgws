@@ -103,7 +103,37 @@
         <!-- <input type="submit" value="Salvar" /> -->
         <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
     <?php endif; ?>
-<div class="frameForm">
+<div class="frameForm"><style>
+  #contentPpal{
+    min-width: 0px !important;
+    width: 0% !important;
+  }
+  .requerido{
+    display: block;
+    height: 42px;
+    padding:10px 5px;
+  }
+  .container{
+    width: 100%;
+  }
+  .divtitles{
+    margin-right: 10px;
+    display: inline-block;
+    width: 135px;
+    vertical-align: middle !important;
+  }
+  .divcontens{
+    display: inline-block;
+  }
+  .row{
+    /*vertical-align: middle;*/
+    /*margin-bottom: 10px;*/
+    padding:5px 0px 5px 20px;
+  }
+  .grey{
+    background: #eee;
+  }
+</style>
     <div id="printdiv" class="printable">
     <form action="<?php echo url_for('@default?module=despesa&action=compensar') ?>" method="POST">
     <table cellpadding="0" cellspacing="0" border="0"  id="resultsList">

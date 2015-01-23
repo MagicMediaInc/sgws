@@ -12,7 +12,37 @@
 <?php if ($sf_user->hasFlash('listo')): ?>
     <div class="msn_ready" style="position: relative; top: 0px;"><?php echo $sf_user->getFlash('listo') ?></div>
 <?php endif; ?>
-    <div class="frameForm">
+    <div class="frameForm"><style>
+  #contentPpal{
+    min-width: 0px !important;
+    width: 0% !important;
+  }
+  .requerido{
+    display: block;
+    height: 42px;
+    padding:10px 5px;
+  }
+  .container{
+    width: 100%;
+  }
+  .divtitles{
+    margin-right: 10px;
+    display: inline-block;
+    width: 135px;
+    vertical-align: middle !important;
+  }
+  .divcontens{
+    display: inline-block;
+  }
+  .row{
+    /*vertical-align: middle;*/
+    /*margin-bottom: 10px;*/
+    padding:5px 0px 5px 20px;
+  }
+  .grey{
+    background: #eee;
+  }
+</style>
         <?php include_partial('global/menuProjeto') ?>
         <table width="100%" cellpadding='0' cellspacing="0" id="resultsList">
             <caption style="padding-bottom: 8px;">
