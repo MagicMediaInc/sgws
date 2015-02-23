@@ -24,9 +24,9 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=sgws111;host=186.202.152.54
-      username:   sgws111
-      password:   andrea1
+      dsn:        mysql:dbname=sgws111;host=localhost
+      username:   root
+      password:   
       encoding:   utf8
       persistent: true
       pooling:    true
