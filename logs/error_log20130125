@@ -1,0 +1,4 @@
+[Fri Jan 25 13:12:02 2013] [error] [client 190.219.24.120] Directory index forbidden by Options directive: /home/storage/6/8c/8b/sgws11/public_html/, referer: http://painel.locaweb.com.br/painel_controle/detalhes_hospedagem_plano.asp
+[Fri Jan 25 13:12:03 2013] [error] [client 190.219.24.120] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Fri Jan 25 13:12:03 2013] [error] [client 190.219.24.120] (24)Too many open files: cannot access type map file: /home/httpd/error/contact.html.var
+[Fri Jan 25 13:12:03 2013] [error] [client 190.219.24.120] unable to include "../contact.html.var" in parsed file /home/httpd/error/include/bottom.html

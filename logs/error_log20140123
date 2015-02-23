@@ -1,0 +1,30 @@
+[Thu Jan 23 15:05:14 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/js/jq/jquery.price_format.1.8.js, referer: http://www.sgws11.hospedagemdesites.ws/
+[Thu Jan 23 15:05:15 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/js/jq/jquery.price_format.1.8.js, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:05 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Thu Jan 23 15:09:07 2014] [error] [client 189.121.218.232] PHP Strict Standards:  Non-static method lynxValida::setCredentialUser() should not be called statically, assuming $this from incompatible context in /home/storage/6/8c/8b/sgws11/apps/backend/modules/lxlogin/actions/actions.class.php on line 60, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php
+[Thu Jan 23 15:09:11 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/home
+[Thu Jan 23 16:30:56 2014] [error] [client 189.121.218.232] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
+[Thu Jan 23 20:36:59 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:00 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/sf, referer: http://sgws11.hospedagemdesites.ws/backend_dev.php/
+[Thu Jan 23 20:37:10 2014] [error] [client 187.123.196.79] File does not exist: /home/storage/6/8c/8b/sgws11/public_html/favicon.ico
