@@ -387,9 +387,9 @@ $(document).ready(function() {
                   </div>
                   <?php if($edit): ?>
                     <!-- Div que renderiza los botones de save, delete y back -->
-                    <div class="buttons">
+                    <div class="buttons" style="text-align:right;">
                         <div><?php echo $form->renderHiddenFields(false) ?></div>
-                          <div class="button">
+                          <div class="button" style="display:inline-block">
                               <a href="javascript:void(0);" id="voltar-lista" >Voltar à lista</a>    
                           </div>
                            <?php if (!$form->getObject()->isNew() && aplication_system::esUsuarioRoot()): ?>
@@ -397,7 +397,7 @@ $(document).ready(function() {
                                     <?php echo link_to(__('Eliminar'), 'projeto/delete?codigo_proposta='.$form->getObject()->getCodigoProposta(), array('method' => 'delete', 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'), 'class' => '')) ?>
                                 </div>
                             <?php endif; ?>
-                          <div class="button">
+                          <div class="button" style="display:inline-block">
                             <input type="submit" value="<?php echo __('Salvar') ?>" />
                           </div>
                     </div>
