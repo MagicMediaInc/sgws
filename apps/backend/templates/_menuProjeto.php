@@ -11,7 +11,7 @@
                     </a>
                 
             </td>
-            <td style="padding-left: 10px; width: 790px;">
+            <td >
                 <a href="<?php echo url_for('@default?module=projeto&action=index&q=pj') ?>">
                     <div class="opcoe-menu <?php echo $module == 'projeto' && $action!='listaAnalisis' && $action!='analisisCritico' && $sf_request->getParameter('q') == 'pj' || $module == 'despesa' ? 'opcoe-menu-active' : '' ?>"  >
                         <?php echo image_tag('icons/subtipo_pessoas') ?><br />
