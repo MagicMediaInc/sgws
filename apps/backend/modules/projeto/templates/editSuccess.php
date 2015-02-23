@@ -212,24 +212,7 @@ $(document).ready(function() {
                   <?php echo $form->renderGlobalErrors() ?>
               </div>
         </div>
-            <?php if($edit): ?>
-        <!-- Div que renderiza los botones de save, delete y back -->
-        <div class="buttons">
-            <div><?php echo $form->renderHiddenFields(false) ?></div>
-              <div class="button">
-                  <a href="javascript:void(0);" id="voltar-lista" >Voltar à lista</a>    
-              </div>
-               <?php if (!$form->getObject()->isNew() && aplication_system::esUsuarioRoot()): ?>
-                    <div class="button">
-                        <?php echo link_to(__('Eliminar'), 'projeto/delete?codigo_proposta='.$form->getObject()->getCodigoProposta(), array('method' => 'delete', 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'), 'class' => '')) ?>
-                    </div>
-                <?php endif; ?>
-              <div class="button">
-                <input type="submit" value="<?php echo __('Salvar') ?>" />
-              </div>
-        </div>
-        <!-- Fin div botones -->
-            <?php endif;?>
+
               <div class="container">
                 <?php if(count($responsable) > 0): ?>
                   <h1 class="tit-principal">
@@ -402,6 +385,24 @@ $(document).ready(function() {
                             <?php echo $form['nao_conformidade']->renderError() ?>
                       </div>
                   </div>
+                  <?php if($edit): ?>
+                    <!-- Div que renderiza los botones de save, delete y back -->
+                    <div class="buttons">
+                        <div><?php echo $form->renderHiddenFields(false) ?></div>
+                          <div class="button">
+                              <a href="javascript:void(0);" id="voltar-lista" >Voltar à lista</a>    
+                          </div>
+                           <?php if (!$form->getObject()->isNew() && aplication_system::esUsuarioRoot()): ?>
+                                <div class="button">
+                                    <?php echo link_to(__('Eliminar'), 'projeto/delete?codigo_proposta='.$form->getObject()->getCodigoProposta(), array('method' => 'delete', 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'), 'class' => '')) ?>
+                                </div>
+                            <?php endif; ?>
+                          <div class="button">
+                            <input type="submit" value="<?php echo __('Salvar') ?>" />
+                          </div>
+                    </div>
+                    <!-- Fin div botones -->
+                  <?php endif;?>
               </div>               
 
                           <!-- </tbody>
