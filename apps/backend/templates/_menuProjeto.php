@@ -59,9 +59,9 @@
             </td>
             <?php if(aplication_system::isALLGerente() || aplication_system::esSocio() || aplication_system::esContable()): ?>
             <td>
-                <p>INCLUIR PROPOSTA</p>
+                <!-- <p>INCLUIR PROPOSTA</p> -->
                 <!--Para criar uma nova proposta deve primeiro ser gerada um-->
-                <a href="<?php echo url_for('@default?module=projeto&action=listaAnalisis') ?>">Análise crítica</a>
+                <!-- <a href="<?php echo url_for('@default?module=projeto&action=listaAnalisis') ?>">Análise crítica</a> -->
                 
             </td>
             <?php endif; ?>
