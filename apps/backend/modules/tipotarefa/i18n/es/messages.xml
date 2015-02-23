@@ -1,29 +1,29 @@
-<?xml version="1.0" ?>
-<xliff version="1.0">
-  <file orginal="global" source-language="en_US" datatype="plaintext">
-    <body>
-      <trans-unit id="1">
-         <source>tipotarefa</source>
-         <target>tipotarefa</target>
-      </trans-unit>
-      <trans-unit id="2">
-         <source>Add new tipotarefa</source>
-         <target>Agregar tipotarefa</target>
-      </trans-unit>
-      <trans-unit id="3">
-         <source>Edit tipotarefa</source>
-         <target>Editar tipotarefa</target>
-      </trans-unit>
-      <trans-unit id="4">
-         <source>List tipotarefa</source>
-         <target>Listar tipotarefa</target>
-      </trans-unit>
-    <!-- Falta traducir -->  
-     <trans-unit id="5">
-         <source>Tarefa</source>
-         <target>Tarefa</target>
-     </trans-unit>
-        </body>
-  </file>
-</xliff>
-
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>tipotarefa</source>
+         <target>tipotarefa</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new tipotarefa</source>
+         <target>Agregar tipotarefa</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit tipotarefa</source>
+         <target>Editar tipotarefa</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List tipotarefa</source>
+         <target>Listar tipotarefa</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Tarefa</source>
+         <target>Tarefa</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

@@ -5,37 +5,7 @@
 <?php if ($sf_user->hasFlash('listo')): ?>
     <div class="msn_ready"><?php echo $sf_user->getFlash('listo') ?></div>
 <?php endif; ?>
-<div class="frameForm"><style>
-  #contentPpal{
-    min-width: 0px !important;
-    width: 0% !important;
-  }
-  .requerido{
-    display: block;
-    height: 42px;
-    padding:10px 5px;
-  }
-  .container{
-    width: 100%;
-  }
-  .divtitles{
-    margin-right: 10px;
-    display: inline-block;
-    width: 135px;
-    vertical-align: middle !important;
-  }
-  .divcontens{
-    display: inline-block;
-  }
-  .row{
-    /*vertical-align: middle;*/
-    /*margin-bottom: 10px;*/
-    padding:5px 0px 5px 20px;
-  }
-  .grey{
-    background: #eee;
-  }
-</style>
+<div class="frameForm">
     <?php echo form_tag('formulario/deleteAll',array('name' => 'frmChk', 'id' => 'frmChk','style'=>'margin:0px')) ?>
     <table border="0">
         <tr>

@@ -35,7 +35,7 @@ class CentroPeer extends BaseCentroPeer {
         //Ejecucion de consulta
         $rs = self::doSelectStmt($c);
         //Se recuperan los registros y se genera arreglo
-        $sections[''] = '';
+        // $sections[''] = '';
         while($res = $rs->fetch())
         {
             $sections[$res['ID']] = $res['CENTRO'];            

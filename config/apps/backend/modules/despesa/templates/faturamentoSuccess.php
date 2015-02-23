@@ -100,7 +100,8 @@
     <div class="msn_error" ><?php echo $sf_user->getFlash('error') ?></div>
 <?php endif; ?>
     
-<div class="frameForm">ing="0" border="0" width="100%">
+<div class="frameForm">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
         <tr>
             <td>
                 <form action="" method="POST" id="filtro-contable">

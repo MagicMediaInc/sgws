@@ -10,37 +10,7 @@
 <!-- Ejecuta Extjs TabPanel -->
 <?php echo javascript_tag("sistemTabs(".$sf_request->getParameter('id').",'".$sf_request->getParameter('language')."');")?>
 <div id="title_module">
-    <div class="frameForm"><style>
-  #contentPpal{
-    min-width: 0px !important;
-    width: 0% !important;
-  }
-  .requerido{
-    display: block;
-    height: 42px;
-    padding:10px 5px;
-  }
-  .container{
-    width: 100%;
-  }
-  .divtitles{
-    margin-right: 10px;
-    display: inline-block;
-    width: 135px;
-    vertical-align: middle !important;
-  }
-  .divcontens{
-    display: inline-block;
-  }
-  .row{
-    /*vertical-align: middle;*/
-    /*margin-bottom: 10px;*/
-    padding:5px 0px 5px 20px;
-  }
-  .grey{
-    background: #eee;
-  }
-</style><h1><?php echo $nombreNucleo->getNameProfile() ?> - <?php echo __('Editar o conteúdo da seção') ?> - <?php echo $sf_section_select['name_section'] ?></h1></div>
+    <div class="frameForm"><h1><?php echo $nombreNucleo->getNameProfile() ?> - <?php echo __('Editar o conteúdo da seção') ?> - <?php echo $sf_section_select['name_section'] ?></h1></div>
 
 <div class="frameForm" >
     <table width="100%">

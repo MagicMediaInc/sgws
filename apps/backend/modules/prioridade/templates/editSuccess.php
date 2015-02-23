@@ -1,4 +1,4 @@
-<h1 class="icono_seguranca"><?php echo __($moduleParent['parent_name'])?> - <a href="<?php echo url_for('prioridade/index') ?>" ><?php echo __('Prioridades')  ?></a> - <?php echo __('Editar Prioridade') ?> </h1>
-<div id="title_module">
-    <?php include_partial('form', array('form' => $form)) ?>
-</div>
+<h1 class="icono_seguranca"><?php echo __($moduleParent['parent_name'])?> - <a href="<?php echo url_for('prioridade/index') ?>" ><?php echo __('Prioridades')  ?></a> - <?php echo __('Editar Prioridade') ?> </h1>
+<div id="title_module">
+    <?php include_partial('form', array('form' => $form)) ?>
+</div>

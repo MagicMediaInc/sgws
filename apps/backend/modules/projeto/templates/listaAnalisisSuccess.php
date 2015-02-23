@@ -13,37 +13,7 @@
 <?php if ($sf_user->hasFlash('listo')): ?>
     <div class="msn_ready" style="position: relative; top: 0px;"><?php echo $sf_user->getFlash('listo') ?></div>
 <?php endif; ?>
-    <div class="frameForm"><style>
-  #contentPpal{
-    min-width: 0px !important;
-    width: 0% !important;
-  }
-  .requerido{
-    display: block;
-    height: 42px;
-    padding:10px 5px;
-  }
-  .container{
-    width: 100%;
-  }
-  .divtitles{
-    margin-right: 10px;
-    display: inline-block;
-    width: 135px;
-    vertical-align: middle !important;
-  }
-  .divcontens{
-    display: inline-block;
-  }
-  .row{
-    /*vertical-align: middle;*/
-    /*margin-bottom: 10px;*/
-    padding:5px 0px 5px 20px;
-  }
-  .grey{
-    background: #eee;
-  }
-</style>
+    <div class="frameForm">
         
         <!--filtro de busqueda-->
         <?php echo form_tag('projeto/listaAnalisis',array('name' => 'frmChk', 'id' => 'frmChk','style'=>'margin:0px')) ?>

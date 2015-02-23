@@ -200,7 +200,7 @@
       <td style="width: 20%"><label>Responsável Comercial</label></td>
         <td colspan="6">
                 <select name="responsable_comercial" id="responsable_comercial">
-                    <option value="">sleccione</option>
+                    <option value="">SELECIONE</option>
                 <?php foreach ($funcionarios as $id => $value): ?>
                     <option value="<?php echo $id ?>" <?php echo is_array($Analisis)  ? $Analisis->getResponsableComercial() : ''  ? 'selected="selected"' : '' ?> ><?php echo $value ?></option>
                 <?php endforeach; ?>
@@ -217,7 +217,7 @@
         <td><label>Gerente e Responsável Técnico</label></td>
     <td colspan="6">
             <select name="responsable_tecnico" id="responsable_tecnico">
-                <option value="">sleccione</option>
+                <option value="">SELECIONE</option>
                 <?php foreach ($responsable as $id => $value): ?>
                 <option value="<?php echo $id ?>" ><?php echo $value ?></option>
                 <?php endforeach; ?>

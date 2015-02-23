@@ -62,9 +62,9 @@ $(document).ready(function() {
 
                     <br />
 
-                    <table style="width: 100%; margin-left: 40px;">
+                    <table style="width: 90%; margin-left: 20px;">
 
-                        
+                        <?php $grey = false ?>
 
                         <?php foreach ($subtipos as $subt) : ?>
 
@@ -74,13 +74,13 @@ $(document).ready(function() {
 
                             <?php $total = $total + $vv ?>
 
-                            <tr>
+                            <tr style="height: 40px;" class="<?php if($grey): echo "grey"; $grey=false; else: $grey=true; endif; ?>">
 
-                                <td style="width: 50%"><?php echo $subt['nome'] ?></td>
+                                <td style="width: 40%"><?php echo $subt['nome'] ?></td>
                                 <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>
-                                    <td><input type="text" class="valorgasto" name="subtipo-<?php echo $subt['id'] ?>" value="<?php echo $valor_gasto ? $valor_gasto->getValor() : '' ?>  " size="8" /></td>
+                                    <td style="text-align:right;"><input type="text" class="valorgasto" name="subtipo-<?php echo $subt['id'] ?>" value="<?php echo $valor_gasto ? $valor_gasto->getValor() : '' ?>  " size="8" /></td>
                                 <?php else: ?>
-                                    <td><input type="text" class="valorgasto" name="subtipo-<?php echo $subt['id'] ?>" value="<?php echo $valor_gasto ? $valor_gasto->getValor() : '' ?>  " size="8" readonly/></td>
+                                    <td style="text-align:right;"><input type="text" class="valorgasto" name="subtipo-<?php echo $subt['id'] ?>" value="<?php echo $valor_gasto ? $valor_gasto->getValor() : '' ?>  " size="8" readonly/></td>
                                 <?php endif; ?>
                             </tr>
 
@@ -93,8 +93,8 @@ $(document).ready(function() {
             
 
             <?php endforeach; ?>
-
-                <table style="width: 100%; margin-left: 40px; margin-top: 10px; font-size: 17px; font-weight: bold;">
+              <div style="display:block; position:relative; height:60px; width 100%;">
+                <table style="position:absolute; right:85px;margin-left: 40px; margin-top: 10px; font-size: 17px; font-weight: bold;">
 
                     <tr>
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
                     </tr>
 
                 </table>
-
+              </div>
         
 
         <?php endif; ?>

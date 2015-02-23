@@ -1,29 +1,29 @@
-<?xml version="1.0" ?>
-<xliff version="1.0">
-  <file orginal="global" source-language="en_US" datatype="plaintext">
-    <body>
-      <trans-unit id="1">
-         <source>status</source>
-         <target>status</target>
-      </trans-unit>
-      <trans-unit id="2">
-         <source>Add new status</source>
-         <target>Agregar status</target>
-      </trans-unit>
-      <trans-unit id="3">
-         <source>Edit status</source>
-         <target>Editar status</target>
-      </trans-unit>
-      <trans-unit id="4">
-         <source>List status</source>
-         <target>Listar status</target>
-      </trans-unit>
-    <!-- Falta traducir -->  
-     <trans-unit id="5">
-         <source>Idstatus</source>
-         <target>Idstatus</target>
-     </trans-unit>
-        </body>
-  </file>
-</xliff>
-
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+         <source>status</source>
+         <target>status</target>
+      </trans-unit>
+      <trans-unit id="2">
+         <source>Add new status</source>
+         <target>Agregar status</target>
+      </trans-unit>
+      <trans-unit id="3">
+         <source>Edit status</source>
+         <target>Editar status</target>
+      </trans-unit>
+      <trans-unit id="4">
+         <source>List status</source>
+         <target>Listar status</target>
+      </trans-unit>
+    <!-- Falta traducir -->  
+     <trans-unit id="5">
+         <source>Idstatus</source>
+         <target>Idstatus</target>
+     </trans-unit>
+        </body>
+  </file>
+</xliff>
+

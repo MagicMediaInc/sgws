@@ -59,8 +59,10 @@
             </td>
             <?php if(aplication_system::esGerente() || aplication_system::esSocio() || aplication_system::esContable()): ?>
             <td>
-                Para criar uma nova proposta deve primeiro ser gerada um
+               <p>INCLUIR PROPOSTA</p>
+                <!--Para criar uma nova proposta deve primeiro ser gerada um
                 <a href="<?php echo url_for('@default?module=projeto&action=listaAnalisis') ?>">Análise crítica</a>
+                -->
             </td>
             <?php endif; ?>
         </tr>

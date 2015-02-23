@@ -53,7 +53,7 @@ class ActivityForm extends sfForm
       
       // Labels              
       $this->widgetSchema->setLabels(array(
-        'horas_trabajadas'   => 'Horas Trabajadas:',
+        'horas_trabajadas'   => 'Horas Trabalhadas:',
         'funcionario'       => 'Responsável:',
         'descricao'       => 'Descrição:',        
       ));

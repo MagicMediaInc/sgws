@@ -4,37 +4,7 @@ $(document).ready(function() {
 });
 </script>
 <h1 class="tit-principal">Gastos Previstos - Projeto <?php echo $projeto->getCodigoSgwsProjeto() ?></h1>
-<div class="frameForm"><style>
-  #contentPpal{
-    min-width: 0px !important;
-    width: 0% !important;
-  }
-  .requerido{
-    display: block;
-    height: 42px;
-    padding:10px 5px;
-  }
-  .container{
-    width: 100%;
-  }
-  .divtitles{
-    margin-right: 10px;
-    display: inline-block;
-    width: 135px;
-    vertical-align: middle !important;
-  }
-  .divcontens{
-    display: inline-block;
-  }
-  .row{
-    /*vertical-align: middle;*/
-    /*margin-bottom: 10px;*/
-    padding:5px 0px 5px 20px;
-  }
-  .grey{
-    background: #eee;
-  }
-</style>
+<div class="frameForm">
     <form action="" method="POST">
         <input type="hidden" name="id_projeto" value="<?php echo $sf_request->getParameter('id_projeto') ?>" />
         <?php if($tipos): ?>

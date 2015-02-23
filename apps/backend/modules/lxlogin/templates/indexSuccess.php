@@ -1,1 +1,1 @@
-<?php include_partial('form', array('form' => $frmLogin)) ?>
+<?php include_partial('form', array('form' => $frmLogin)) ?>
