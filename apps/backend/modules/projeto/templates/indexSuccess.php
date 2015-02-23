@@ -96,14 +96,14 @@
          
            <!--  <table width="100%" border="0" cellspacing="3" cellpadding="0">
                 <tr> -->
-                  <td>
+                  <!-- <td>
                       <label>Tipo</label><br />
                       <select id="tipo_reg" name="tipo_reg">
                           <option value="all" <?php echo $sf_request->getParameter('tipo_reg') == 'all' ? 'selected="selected"' : '' ?>>Todos</option>
                           <option value="2" <?php echo $sf_request->getParameter('tipo_reg') == 2 ? 'selected="selected"' : '' ?> >Projetos</option>
                           <option value="1" <?php echo $sf_request->getParameter('tipo_reg') == 1 || $sf_request->getParameter('q') == 'prop' ? 'selected="selected"' : '' ?>>Propostas</option>
                       </select>
-                  </td>
+                  </td> -->
                   <td >
                       <label>Status</label><br />
                       <select id="proposta_status" name="proposta_status">
