@@ -87,23 +87,7 @@
     
     
 </script>
-<style type="text/css">
-    @import url("/css/main.css");
-</style>
-<?php if ($sf_user->hasFlash('listo')): ?>
-    <div class="msn_ready" ><?php echo $sf_user->getFlash('listo') ?></div>
-<?php endif; ?>
-<?php if ($sf_user->hasFlash('error')): ?>
-    <div class="msn_error" ><?php echo $sf_user->getFlash('error') ?></div>
-<?php endif; ?>
-    <h1 class="tit-principal">Faturamentos</h1>
-    <br><br>
-    <?php $projeto = PropostaPeer::getDataByCodProjeto($id); ?>
-    <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
-        <!-- <input type="submit" value="Salvar" /> -->
-        <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
-    <?php endif; ?>
-<div class="frameForm"><style>
+<style>
   #contentPpal{
     min-width: 0px !important;
     width: 0% !important;
@@ -134,6 +118,25 @@
     background: #eee;
   }
 </style>
+<style type="text/css">
+    @import url("/css/main.css");
+</style>
+
+
+<?php if ($sf_user->hasFlash('listo')): ?>
+    <div class="msn_ready" ><?php echo $sf_user->getFlash('listo') ?></div>
+<?php endif; ?>
+<?php if ($sf_user->hasFlash('error')): ?>
+    <div class="msn_error" ><?php echo $sf_user->getFlash('error') ?></div>
+<?php endif; ?>
+    <h1 class="tit-principal">Faturamentos</h1>
+    <br><br>
+    <?php $projeto = PropostaPeer::getDataByCodProjeto($id); ?>
+    <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
+        <!-- <input type="submit" value="Salvar" /> -->
+        <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
+    <?php endif; ?>
+<div class="frameForm">
     <div id="printdiv" class="printable">
     <form action="<?php echo url_for('@default?module=despesa&action=compensar') ?>" method="POST">
     <table cellpadding="0" cellspacing="0" border="0"  id="resultsList">
