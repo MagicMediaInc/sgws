@@ -127,6 +127,15 @@ class aplication_system {
       return false;
     }
   }
+  
+    static function esRicardo() {
+    $user = sfContext::getInstance()->getUser();
+    if ($user->getAttribute('idUserPanel') == 42) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 
   //Verifica si se esta logeado como usuario franquicia

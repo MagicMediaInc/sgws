@@ -70,11 +70,14 @@ class PropostaForm extends BasePropostaForm
       $this->validatorSchema['apr']  = new sfValidatorString(array('required' => false, 'trim' => true));
       $this->validatorSchema['codigo_centro']  = new sfValidatorString(array('required' => false, 'trim' => true));
       $this->validatorSchema['satisfacao_cliente']  = new sfValidatorString(array('required' => false, 'trim' => false));
+      //$this->widgetSchema['codigo_centro']->setAttributes(array('required' => false, 'trim' => true,'readonly' => true));
 
-      if(aplication_system::esSocio() || aplication_system::esFabricio() ):
+      if(aplication_system::esAdministrador() || aplication_system::esSocio() || aplication_system::esFabricio() || aplication_system::esRicardo() ):
         $this->widgetSchema['satisfacao_cliente'] = new sfWidgetFormChoice(array('choices'  => $satisfacao_cliente,'expanded' => false));
       else:
         $this->widgetSchema['satisfacao_cliente'] = new sfWidgetFormChoice(array('choices'  => $satisfacao_cliente,'expanded' => false),array('disabled'=>true));
+        $this->widgetSchema['nao_conformidade']->setAttributes(array('class' => '','size' => '10','maxlength' => '6', 'disabled' => true));
+        //$this->getWidget('codigo_centro')->setAttribute('readonly', true);//  = new sfValidatorString(array('required' => false, 'trim' => false),array('disabled'=>true));
       endif; 
       
       // Labels              
