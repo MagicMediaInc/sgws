@@ -1,5 +1,5 @@
 <h1 class="tit-principal">Projeto <?php echo $codigoProjeto ?></h1>
-<h2>Equipe da Tarefa: <?php echo $descricao->getTarefa() ?></h2>
+<h2>Equipe da Tarefa sdfgf: <?php echo $descricao->getTarefa() ?></h2>
 <?php if ($sf_user->hasFlash('listo')): ?>
     <div class="msn_ready"><?php echo $sf_user->getFlash('listo') ?></div>
 <?php endif; ?>

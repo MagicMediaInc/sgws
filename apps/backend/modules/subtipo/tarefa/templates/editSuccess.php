@@ -424,7 +424,7 @@ $(document).ready(function() {
 
                       <td colspan="4">
 
-                          <h3>Equipe da Tarefa</h3>
+                          <h3>Equipe da Tarefa dsfg</h3>
 
                           <div id="equipe-tarefa">
 
