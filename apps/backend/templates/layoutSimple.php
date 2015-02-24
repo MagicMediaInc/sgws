@@ -7,18 +7,6 @@
         <link rel="shortcut icon" href="/favicon.ico" />
         <?php include_stylesheets() ?>
         <?php include_javascripts() ?>
-        <script type="text/javascript">
-        $(document).ready(function() {
-            var nomeProfile = "<?php echo $sf_user->getAttribute('nomeProfile') ?>";
-            if(nomeProfile != 'Gerente e Responsável Técnico')
-                $('#proposta_nao_conformidade').attr('readonly', 'readonly');
-        });
-                var fancybox = $(".frameForm").length;
-                    console.log(fancybox);
-                if(fancybox==0){
-                    $("#contentPpal").removeAttr("style");
-                }
-        </script>
     </head>
     <body style="background-color: #FFF; background: none;">
         <div id="contentPpal" style="margin-top: 5px; border: 0px; width: 100% !important; margin-bottom: 0px;">
