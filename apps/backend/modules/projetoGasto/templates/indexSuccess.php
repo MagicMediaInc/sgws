@@ -62,7 +62,7 @@ $(document).ready(function() {
 
                     <br />
 
-                    <table style="width: 90%; margin-left: 20px;">
+                    <table style="width: 70%; margin-left: 100px;">
 
                         <?php $grey = false ?>
 
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
             <?php endforeach; ?>
               <div style="display:block; position:relative; height:60px; width 100%;">
-                <table style="position:absolute; right:85px;margin-left: 40px; margin-top: 10px; font-size: 17px; font-weight: bold;">
+                <table style="position:absolute; right:156px;margin-left: 40px; margin-top: 10px; font-size: 17px; font-weight: bold;">
 
                     <tr>
 

@@ -9,7 +9,7 @@
         <?php include_javascripts() ?>
     </head>
     <body style="background-color: #FFF; background: none;">
-        <div id="contentPpal" style="margin-top: 5px; border: 0px; width: 100% !important; margin-bottom: 0px;">
+        <div id="contentPpal" style="margin-top: 5px; border: 0px; width: 98% !important; margin-bottom: 0px;">
             <div id="conteint">                
                 <div style="margin: auto; width: 100%; height: 500px;">
                     <div id="content" align="center">

@@ -137,9 +137,10 @@
         <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
     <?php endif; ?>
 <div class="frameForm">
+    
     <div id="printdiv" class="printable">
     <form action="<?php echo url_for('@default?module=despesa&action=compensar') ?>" method="POST">
-    <table cellpadding="0" cellspacing="0" border="0"  id="resultsList">
+    <table cellpadding="0" cellspacing="0" border="0"  id="resultsList" width="100%">
         <thead>
             <tr>
             <tr>
