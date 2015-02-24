@@ -204,10 +204,10 @@
                             Fim: <?php echo $val->formatoFechaPT2($Proposta->getDataFrProjeto()) ?>
                         </div>
                         <div class="horas-duracion">
-                            <?php echo $Proposta->getHorasVendidas() ?> 
+                            <?php echo $Proposta->getHorasVendidas() ?>
                         </div>
                         <div class="horas-duracion" id="horas-trabajadas-<?php echo $Proposta->getCodigoProposta() ?>">
-                            <?php echo $horasTrabajadas ?> 
+                            <?php echo $horasTrabajadas ?>
                         </div>
                         <div class="herramientas" >
                             
@@ -255,8 +255,9 @@
 
                                     <div class="toggle data-task-pr" style="display: none;">
                                     <?php $sumHT = 0 ?>
-                                    <?php foreach ($tarefas as $tarefa): ?>                                                 
-                                            <?php if(aplication_system::accessTask($tarefa,$Proposta->getGerente())): ?>
+                                    <?php foreach ($tarefas as $tarefa): ?>    
+                                        <?php //var_dump(aplication_system::accessTask($tarefa,aplication_system::getUser())) ?>                                             
+                                            <?php if(aplication_system::accessTask($tarefa,aplication_system::getUser())): ?>
                                             <table id="tarefa" cellspacing="0" cellpadding="0" >
                                                 <tr>
                                                     <td style="width: 49%; border-right:1px solid #ccc; padding-left: 13px;">
@@ -279,14 +280,14 @@
                                                     <td style="border-right:1px solid #ccc; width: 6%;">
 
                                                         <?php $horastrab = TempotarefaPeer::getHorasTrabajadas($tarefa->getCodigoTarefa()) ?>
-                                                        <?php echo $horastrab ? $horastrab : 0 ?> 
+                                                        <?php echo $horastrab ? $horastrab : 0 ?> horas
                                                         <?php $sumHT = $sumHT + $horastrab ?>
                                                         <script>
                                                             $("#horas-trabajadas-<?php echo $Proposta->getCodigoProposta() ?>").html('<?php echo $sumHT ?>');
                                                         </script>
                                                     </td>
                                                     <td>
-                                                        <?php if(aplication_system::accessTask($tarefa,$Proposta->getGerente())): ?>
+                                                        <?php if(aplication_system::accessTask($tarefa,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser())): ?>
                                                             <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=edit&codigotarefa='.$tarefa->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto) ?>"><?php echo image_tag('icons/mas_info','title="Informações da tarefa"') ?></a>
                                                         <?php endif; ?>&nbsp;
                                                         <a href="<?php echo url_for('@default?module=despesa&action=index&id_projeto='.$cod_projeto.'&id_tarefa='.$tarefa->getCodigoTarefa() ) ?>">
@@ -296,6 +297,20 @@
                                                             <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=equipe&codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/perm_1','width="26" title="Equipe da Tarefa."') ?></a>
                                                         <?php endif; ?>
                                                         <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=listActivity&codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/reg_activity_2','width="26" title="Registrar Atividade"') ?></a>
+                                                        <?php if(($horastrab == null AND empty(TarefaPeer::getTarefasHijas($tarefa->getCodigoTarefa()))) AND (aplication_system::accessTask($tarefa,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser()))): ?>
+                                                            <!-- <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=edit&codigotarefa='.$tarefa->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto) ?>"><?php echo image_tag('icons/mas_info','title="Informações da tarefa"') ?></a> -->
+                                                            <a onclick="myConfirm()" href="#"><?php echo image_tag('icons/delete-icon','width="22" title="Registrar Atividade"') ?></a>
+                                                            <script>
+                                                            function myConfirm() {
+                                                                var url = "<?php echo url_for('tarefa/delete?codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"; 
+                                                                console.log(url); 
+                                                                var conf = confirm("¿Deseja deletar esta tarefa?");
+                                                                if(conf){
+                                                                    window.location.assign(url);
+                                                                }
+                                                            }
+                                                            </script>
+                                                        <?php endif; ?>&nbsp;
                                                     </td>
                                                 </tr>
                                             </table>
@@ -329,7 +344,7 @@
                                                                 <?php echo $horastrab ? $horastrab : 0 ?> horas
                                                             </td>
                                                             <td>
-                                                                <?php if(aplication_system::isAllAction() || aplication_system::esContable()): ?>
+                                                                <?php if(aplication_system::isAllAction() || aplication_system::esContable() || EquipeTarefaPeer::hasFuncionario($cod_projeto, aplication_system::getUser())): ?>
                                                                     <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=edit&codigotarefa='.$tarefahija->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto) ?>"><?php echo image_tag('icons/mas_info','title="Informações da tarefa"') ?></a>
                                                                 <?php endif; ?>&nbsp;
                                                                 <a href="<?php echo url_for('@default?module=despesa&action=index&id_projeto='.$cod_projeto.'&id_tarefa='.$tarefahija->getCodigoTarefa() ) ?>">
@@ -339,6 +354,11 @@
                                                                     <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=equipe&codigotarefa='.$tarefahija->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/perm_1','width="26" title="Equipe da Tarefa."') ?></a>
                                                                 <?php endif; ?>
                                                                 <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=listActivity&codigotarefa='.$tarefahija->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/reg_activity_2','width="26" title="Inclusão de Atividade"') ?></a>
+                                                                <?php if(($horastrab == null) AND (aplication_system::accessTask($tarefahija,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser()))): ?>
+                                                                    <!-- <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=edit&codigotarefa='.$tarefa->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto) ?>"><?php echo image_tag('icons/mas_info','title="Informações da tarefa"') ?></a> -->
+                                                                    <!-- <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=listActivity&codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/delete-icon','width="22" title="Registrar Atividade"') ?></a> -->
+                                                                    <a class="fancybox fancybox.iframe" href="<?php echo url_for('@default?module=tarefa&action=confirmdelete&codigotarefa='.$tarefahija->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto ) ?>"><?php echo image_tag('icons/delete-icon','width="22" title="Registrar Atividade"') ?></a>
+                                                                <?php endif; ?>&nbsp;
                                                             </td>
                                                         </tr>
                                                     </table>

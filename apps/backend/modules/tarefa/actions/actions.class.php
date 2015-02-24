@@ -59,7 +59,6 @@ class tarefaActions extends sfActions {
         $this->forward404Unless($Tarefa = TarefaPeer::retrieveByPk($request->getParameter('codigotarefa')), sprintf('Object Tarefa does not exist (%s).', $request->getParameter('codigotarefa')));
         $this->form = new TarefaForm($Tarefa);
 
-
         if (!aplication_system::compareUserVsResponsable($Tarefa->getResponsavel())):
             $this->edit = false;
             if (aplication_system::esSocio()) {
@@ -107,6 +106,38 @@ class tarefaActions extends sfActions {
         $this->setTemplate('edit');
     }
 
+    public function executeConfirmdelete(sfWebRequest $request) {
+
+        sfConfig::set('sf_escaping_strategy', false);
+        $this->setLayout('layoutSimple');
+        $this->edit = true;
+        $this->getResponse()->setTitle($this->getContext()->getI18N()->__('Edit') . ' tarefa - Lynx Cms');
+        $this->forward404Unless($Tarefa = TarefaPeer::retrieveByPk($request->getParameter('codigotarefa')), sprintf('Object Tarefa does not exist (%s).', $request->getParameter('codigotarefa')));
+        $this->form = new TarefaForm($Tarefa);
+
+        if (!aplication_system::compareUserVsResponsable($Tarefa->getResponsavel())):
+            $this->edit = false;
+            if (aplication_system::esSocio()) {
+                $this->edit = true;
+            }
+        endif;
+        $projeto = PropostaPeer::retrieveByPK($Tarefa->getCodigoprojeto());
+        if (aplication_system::compareUserVsResponsable($projeto->getGerente())):
+            $this->edit = true;
+        endif;
+
+        if (!$request->getParameter('codigo_projeto')) {
+            $this->codigoProjeto = PropostaPeer::getCodSgwsProjeto($Tarefa->getCodigoprojeto());
+        } else {
+            $this->codigoProjeto = PropostaPeer::getCodSgwsProjeto($request->getParameter('codigo_projeto'));
+        }
+
+        //Identifica el modulo padre
+        $idParentModule = LxModulePeer::getParentIdXSfModule($this->getModuleName());
+        $this->arrayProjeto = TarefaPeer::getVerifieProjecto($request->getParameter('codigo_projeto'));
+        $this->moduleParent = LxModulePeer::getParentNameXParentId($idParentModule['parent_id']);
+    }
+
     public function executeDelete(sfWebRequest $request) {
         $this->forward404Unless($Tarefa = TarefaPeer::retrieveByPk($request->getParameter('codigotarefa')), sprintf('Object Tarefa does not exist (%s).', $request->getParameter('codigotarefa')));
         // Elimina las actividades de la tarefa
@@ -124,6 +155,7 @@ class tarefaActions extends sfActions {
             parent.jQuery.fancybox.close();
         </script> 
        ';
+       return $this->redirect('projeto/index');
         return sfView::NONE;
     }
 

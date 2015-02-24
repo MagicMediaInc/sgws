@@ -38,7 +38,7 @@ abstract class BaseTempotarefa extends BaseObject  implements Persistent {
 	 * The value for the codigofuncionario field.
 	 * @var        int
 	 */
-	protected $codigofuncionario;
+	public $codigofuncionario;
 
 	/**
 	 * The value for the dataprevista field.

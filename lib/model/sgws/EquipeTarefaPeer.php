@@ -191,7 +191,17 @@ class EquipeTarefaPeer extends BaseEquipeTarefaPeer {
         return $dato;
     }
     
-    
+    public static function hasFuncionario($id_projeto, $funcionario){
+
+        $lista = self::getFuncionariosProyecto($id_projeto);
+
+        $bool = false;
+
+        foreach ($lista as $key => $value) if($key == $funcionario) $bool = true;
+        
+        return $bool;
+
+    }
     
     
     public static function getFuncionariosProyectoEntrada($id_projeto)

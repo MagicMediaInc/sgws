@@ -179,23 +179,27 @@ class aplication_system {
   {
       if(self::esFuncionario() || self::isALLGerente() )
       {
+        //echo "esFuncionario or isALLGerente";
           if(!$object->getVisualizacao())
           {
+            //echo "getVisualizacao";
               // es publico
               return true;
           }else{
+            //echo "NOT getVisualizacao";
               // es privada la tarea, verifica si esta en el equipo
               if(aplication_system::compareUserVsResponsable($gerente) || EquipeTarefaPeer::getCheck($object->getCodigoTarefa(), self::getUser()))
               {
+                //echo "compareUserVsResponsable";
                   return true;
               }else{
+                //echo "NOT compareUserVsResponsable";
                   return false;
                 }
           }
       }
       if(self::esUsuarioRoot() || self::esContable() || self::esSocio())
       {
-         
           return true;
       }
       return false;

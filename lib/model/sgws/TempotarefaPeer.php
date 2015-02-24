@@ -162,6 +162,22 @@ class TempotarefaPeer extends BaseTempotarefaPeer {
         $c->addDescendingOrderByColumn(self::DATAREAL);
         return self::doSelect($c);
     }
+
+    public static function hasFuncionario( $id, $funcionario ){
+
+        $lista = self::getLista( $id );
+
+        $bool = false;
+
+        foreach( $lista as $elem ):
+            if( $elem->getCodigoFuncionario() == $funcionario ):
+                $bool = true;
+            endif;
+        endforeach;
+
+        return $bool;
+
+    }
     
     static public function getTotalTareasSemana($user, $inicio, $fim)
     {
