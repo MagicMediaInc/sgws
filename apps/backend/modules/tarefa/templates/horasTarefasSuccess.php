@@ -25,11 +25,11 @@
                                 </td>
                                 <td style="width: 9%;">
                                     <label style="color: #333; font-weight: bold;"> <?php echo __('De') ?></label><br />
-                                    <input size="8" required="required" type="text" name="from_date" id="from_date" value="<?php echo $sf_request->getParameter('from_date') ?>" >
+                                    <input size="8" type="text" name="from_date" id="from_date" value="<?php echo $sf_request->getParameter('from_date') ?>" >
                                 </td>
                                 <td style="width: 9%;">
                                     <label style="color: #333; font-weight: bold;"> <?php echo __('Até') ?></label><br />
-                                    <input size="8" required="required" type="text" name="to_date" id="to_date" value="<?php echo $sf_request->getParameter('to_date') ?>" >
+                                    <input size="8" type="text" name="to_date" id="to_date" value="<?php echo $sf_request->getParameter('to_date') ?>" >
                                 </td>
                                 <td align="left"><br />
                                     <input type="submit" name="buscar" id="buscar" value="Buscar" />
