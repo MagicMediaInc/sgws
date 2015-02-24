@@ -389,8 +389,14 @@ class tarefaActions extends sfActions {
 
         $this->start = date("Y-m-d", strtotime($this->getRequestParameter('from_date')));
         $this->end = date("Y-m-d", strtotime($this->getRequestParameter('to_date')));
+
         if( $this->projeto == ""){
-            
+            if($this->getRequestParameter('from_date') == ''):
+                $this->start = date("Y-m-d", strtotime('01-01-2005'));
+            endif;   
+            if($this->getRequestParameter('to_date') == ''):
+                $this->end = date("Y-m-d");
+            endif; 
             // End of the week is simply 6 days from the start
             $this->valida = new lynxValida();
             $this->tarefas = TempotarefaPeer::getTarefasForUserTrabajadas($this->start, $this->end );
