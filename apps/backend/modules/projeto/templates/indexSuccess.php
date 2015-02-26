@@ -152,7 +152,7 @@
                     <div style="width: 5%;text-align: center;">Duração</div>
                     <div style="width: 6%; text-align: center;">Trabalhado</div>
                 </div>
-                <?php $nPro = 0; ?>                                
+                <?php $nPro = 0; ?>                             
                 <?php if ($Propostas->getNbResults()): ?>                                
                     <?php foreach ($Propostas as $Proposta): ?>
                     <?php if($sf_request->getParameter('q')=='all' || ($sf_request->getParameter('q') != 'all' &&  aplication_system::accessProject($Proposta))): ?>
@@ -297,7 +297,8 @@
                                                             <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=equipe&codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/perm_1','width="26" title="Equipe da Tarefa."') ?></a>
                                                         <?php endif; ?>
                                                         <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=listActivity&codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/reg_activity_2','width="26" title="Registrar Atividade"') ?></a>
-                                                        <?php if(($horastrab == null AND empty(TarefaPeer::getTarefasHijas($tarefa->getCodigoTarefa()))) AND (aplication_system::accessTask($tarefa,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser()))): ?>
+                                                        <?php $tarefashijas = TarefaPeer::getTarefasHijas( $tarefa->getCodigoTarefa() ) ?>
+                                                        <?php if( ($horastrab == null AND empty($tarefashijas) ) AND (aplication_system::accessTask($tarefa,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser()))): ?>
                                                             <!-- <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=edit&codigotarefa='.$tarefa->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto) ?>"><?php echo image_tag('icons/mas_info','title="Informações da tarefa"') ?></a> -->
                                                             <a onclick="myConfirm()" href="#"><?php echo image_tag('icons/delete-icon','width="22" title="Registrar Atividade"') ?></a>
                                                             <script>
