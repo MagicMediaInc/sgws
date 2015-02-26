@@ -91,7 +91,7 @@
     <tfoot>
         <tr>
             <td></td>
-            <td>Totales</td>
+            <td>Totais</td>
             <td>R$ <?php echo aplication_system::monedaFormat($tValor) ?></td>
             <td>R$ <?php echo aplication_system::monedaFormat($tDisponivle) ?></td>
             <td>R$ <?php echo aplication_system::monedaFormat($tValorFaturado) ?></td>

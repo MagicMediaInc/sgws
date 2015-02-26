@@ -109,7 +109,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td>TOTALES</td>
+            <td>Totais</td>
             <td>R$ <?php echo aplication_system::monedaFormat($tValor) ?></td>
             <td>R$ <?php echo aplication_system::monedaFormat($tValorFaturado) ?></td>
             <td>R$ <?php echo aplication_system::monedaFormat($tSaldo) ?></td>
