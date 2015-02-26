@@ -56,8 +56,8 @@
         <td width="8%"><label>Emissão</label></td>
         <td style="width: 8%;"><input type="text" name="emision" id="emision" size="6" class="data_analisis" value="<?php echo $Analisis->getDataCreacion()  ?>" /></td>
         <td style="width: 6%;"><label>Proposta</label></td>
-        <!-- <td style="width: 9%;"><input name="id_proposta" type="text" id="id_proposta" readonly="readonly" size="10" value="<?php echo $Analisis->getIdProposta()  ?>" /></td> -->
-        <td style="width: 9%;"><input name="id_proposta" type="text" id="id_proposta" readonly="readonly" size="10" value="<?php echo $proposta_final  ?>" /></td>
+        <td style="width: 9%;"><input name="codigo_proposta" type="text" id="codigo_proposta" readonly="readonly" size="10" value="<?php echo $proposta_final  ?>" /></td>
+        <td style="width: 9%;"><input name="id_proposta" type="hidden" id="id_proposta" readonly="readonly" size="10" value="<?php echo $Analisis->getIdProposta()  ?>" /></td>
         <td style="width: 6%;"><label>Revisão</label></td>
         <td><input name="revision" type="text" disabled="disabled" id="revision" size="7" readonly="readonly" value="<?php echo $Analisis->getId()  ?>"  /></td>
   </tr>
