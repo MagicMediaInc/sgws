@@ -12,7 +12,19 @@ class tarefaActions extends sfActions {
     public function executeIndex(sfWebRequest $request) {
 
         $this->getResponse()->setTitle($this->getContext()->getI18N()->__('List') . ' Tarefa - Lynx Cms');
-        $this->tarefas = TarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel'));
+        $this->tarefas = array();
+        if($tarefas = TarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel'))):
+            foreach ($tarefas as $tarefa):
+                $this->tarefas[] = $tarefa;
+            endforeach;
+        endif;
+        if($tarefas = EquipeTarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel')))
+        foreach ($tarefas as $tarefa):
+            $this->tarefas[] = $tarefa;
+        endforeach;
+        // array_push($this->tarefas, TarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel')), EquipeTarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel')));
+        /*$this->tarefas = TarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel'));
+        $this->tarefas = EquipeTarefaPeer::getMinhasTarefas($this->getUser()->getAttribute('idUserPanel'));*/
         // Crea sesion de la uri al momento
         $this->getUser()->setAttribute('uri_tarefa', 'sort=' . $this->sort . '&by=' . $this->by_page . $buscador);
     }
