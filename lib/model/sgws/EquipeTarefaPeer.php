@@ -237,4 +237,47 @@ class EquipeTarefaPeer extends BaseEquipeTarefaPeer {
         return $dato;
     }
 
+     public static function getMinhasTarefas($id_user){
+
+        $c = new Criteria();
+        $c->clearSelectColumns();
+        $c->add(self::CODIGOFUNCIONARIO, $id_user, Criteria::EQUAL);
+
+        $rs = self::doSelectStmt($c);
+
+        $tarefas = array();
+
+        while($row = $rs->fetch()):
+
+            $c->clearSelectColumns();
+            //Selecciona las columnas
+            $c->addSelectColumn(TarefaPeer::CODIGOTAREFA);
+            $c->addSelectColumn(TarefadescricaoPeer::TAREFA);
+            $c->addSelectColumn(PropostaPeer::CODIGO_SGWS_PROJETO);
+            $c->addSelectColumn(TarefaPeer::DATAIRTAREFA);
+            $c->addSelectColumn(TarefaPeer::DATAFRTAREFA);
+            $c->addSelectColumn(TarefaPeer::HORASPREVISTAS);
+            //Condicion
+            $c->add(TarefaPeer::CODIGOTAREFA, $row['CODIGOTAREFA'], Criteria::EQUAL);
+            $c->addJoin(TarefaPeer::CODIGOPROJETO, PropostaPeer::CODIGO_PROJETO, Criteria::INNER_JOIN);
+            $c->addJoin(TarefaPeer::DESCRICAO, TarefadescricaoPeer::DESCRICAO, Criteria::INNER_JOIN);
+            $tf = TarefaPeer::doSelectStmt($c);
+
+            $res = $tf->fetch();
+
+            $dato['id_tarefa'] = $res['CODIGOTAREFA'];            
+            $dato['tarefa'] = $res['TAREFA'];            
+            $dato['codigo_projeto'] = $res['CODIGO_SGWS_PROJETO'];            
+            $dato['data_inicio'] = $res['DATAIRTAREFA'];            
+            $dato['data_fim'] = $res['DATAFRTAREFA'];            
+            $dato['horas'] = $res['HORASPREVISTAS'];
+
+            $tarefas[] = $dato;
+
+        endwhile;
+
+        return $tarefas;
+
+     }
+
 } // EquipeTarefaPeer
