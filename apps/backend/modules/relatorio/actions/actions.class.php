@@ -62,11 +62,11 @@ class relatorioActions extends sfActions
   public function executeBilability(sfWebRequest $request)
   {
       $this->setLayout('layoutTotalAncho');
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+      $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -124,6 +124,7 @@ class relatorioActions extends sfActions
                 // porcentaje de las horas trabajadas del funcionario en el mes
                 $porcentajeMesFuncionario = $valor * 100 / $horasBilabilityMes;
                 //$r[$funcionario['nome']][$funcionario['cargo']][$nombreMes.' '.$horasBilability->$getMes()] = $valor;
+                if($funcionario['nome']!=""):
                 $r[$funcionario['nome']][$funcionario['cargo']][$nMes] = array($valor,$porcentajeMesFuncionario);
                 if($i == 12)
                 {
@@ -135,6 +136,7 @@ class relatorioActions extends sfActions
                     $r[$funcionario['nome']][$funcionario['cargo']]['Meta'] = $funcionario['meta'];
                     $r[$funcionario['nome']][$funcionario['cargo']]['M. Atingida?'] = 0;
                 }
+                endif;
             }  
           
             
@@ -150,11 +152,11 @@ class relatorioActions extends sfActions
   public function executeNbilability(sfWebRequest $request)
   {
       $this->setLayout('layoutTotalAncho');
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+      $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -211,6 +213,7 @@ class relatorioActions extends sfActions
                 // porcentaje de las horas trabajadas del funcionario en el mes
                 $porcentajeMesFuncionario = $valor * 100 / $horasBilabilityMes;
                 //$r[$funcionario['nome']][$funcionario['cargo']][$nombreMes.' '.$horasBilability->$getMes()] = $valor;
+                if($funcionario['nome']!=""):
                 $r[$funcionario['nome']][$funcionario['cargo']][$nMes] = array($valor,$porcentajeMesFuncionario);
                 if($i == 12)
                 {
@@ -221,6 +224,7 @@ class relatorioActions extends sfActions
                     $r[$funcionario['nome']][$funcionario['cargo']]['Meta'] = $funcionario['meta'];
                     $r[$funcionario['nome']][$funcionario['cargo']]['M. Atingida?'] = 0;
                 }
+                endif;
             }  
           
             
@@ -237,11 +241,11 @@ class relatorioActions extends sfActions
   {
       $t = array('1' => 'Faturamento Realizado', '2' => 'Previsão de Faturamento', '3' => 'Total');
       $r = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+      $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -296,11 +300,11 @@ class relatorioActions extends sfActions
       $this->variables = array('0' => 'Despesas Previstas', '1' => 'Despesas Realizadas');
       $r = array();
       $this->totales = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+      $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -370,11 +374,11 @@ class relatorioActions extends sfActions
       );
       $r = array();
       $this->totales = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+     $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -401,11 +405,11 @@ class relatorioActions extends sfActions
   {
       //$this->setLayout('layoutSimple');
       $r = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+     $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -439,11 +443,11 @@ class relatorioActions extends sfActions
   {
       $r = array();
       $data = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+     $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -480,11 +484,11 @@ class relatorioActions extends sfActions
   {
       $r = array();
       $data = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+     $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');
@@ -518,11 +522,11 @@ class relatorioActions extends sfActions
       
       $r = array();
       $data = array();
-      $this->anos = array(2013 => 2013, 2014 => 2014);
+     $this->anos = array(2013 => 2013, 2014 => 2014, 2015 => 2015);
       if (!$request->isMethod('post'))
       {
-        $this->anoSelected = 2014; 
-        $ano = 2014;
+        $this->anoSelected = 2015; 
+        $ano = 2015;
       }else{
         $this->anoSelected = $request->getParameter('ano');
         $ano = $request->getParameter('ano');

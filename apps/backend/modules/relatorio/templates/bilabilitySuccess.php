@@ -8,7 +8,7 @@
     }
 
     .wmd-view-topscroll { height: 20px; }
-    .wmd-view { height: 2000px; overflow-y: auto;}
+    .wmd-view { height: 1560px; overflow-y: auto;}
     .scroll-div1 { 
         width: 2000px; 
         overflow-x: scroll;
@@ -75,6 +75,7 @@ $(function(){
         </tr>
     </thead>
     <tbody>
+        <?php //var_dump($result); ?>
         <?php foreach ($result as $k => $v): ?>
             <tr>
                 <td><?php echo $k ?></td>
