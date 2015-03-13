@@ -107,6 +107,7 @@
                   <td >
                       <label>Status</label><br />
                       <select id="proposta_status" name="proposta_status">
+                            <option> Selecione</option>
                           <?php foreach ($statusFilter as $key => $value): ?>
                             <option value="<?php echo $key ?>" <?php echo $sf_request->getParameter('proposta_status') == $key ? 'selected="selected"' : '' ?>  ><?php echo $value ?></option>
                           <?php endforeach; ?>

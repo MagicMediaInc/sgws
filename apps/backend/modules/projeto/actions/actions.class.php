@@ -76,20 +76,25 @@ class projetoActions extends sfActions
         if($this->getRequestParameter('tipo_reg') != 'all')
         {
 
+            // var_dump($this->getRequestParameter('tipo_reg'));
             if($this->getRequestParameter('tipo_reg'))
             {
+            // var_dump("if");
                 $c->add(PropostaPeer::ID_STATUS_PROPOSTA, $this->getRequestParameter('tipo_reg'), Criteria::EQUAL);
             }else{
 
+            // var_dump("else");
                 // Inicia con listado de projetos
                 if(!$request->getParameter('proposta_status'))
                 {
+                    // var_dump("proposta");
                    $c->add(PropostaPeer::ID_STATUS_PROPOSTA, '2', Criteria::EQUAL);
-                    $request->setParameter('tipo_reg', 2);
                 }
             }
+            $request->setParameter('tipo_reg', 2);
+            // var_dump($request->getParameter('tipo_reg'));
             $this->statusFilter = StatusPeer::getListStatus($request->getParameter('tipo_reg'));
-
+            // var_dump($this->statusFilter);
         }else{
             $this->bus_q = '';
 
@@ -103,6 +108,7 @@ class projetoActions extends sfActions
         if($request->getParameter('q') == 'prop')
         {
             $c->add(PropostaPeer::ID_STATUS_PROPOSTA, 1, Criteria::EQUAL);
+            var_dump("1");
             $this->statusFilter = StatusPeer::getListStatus(1);
         }
         if($request->getParameter('q') == 'pj')
