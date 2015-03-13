@@ -344,6 +344,10 @@
 
                                                                 <?php $horastrab = TempotarefaPeer::getHorasTrabajadas($tarefahija->getCodigoTarefa()) ?>
                                                                 <?php echo $horastrab ? $horastrab : 0 ?> horas
+                                                                <?php $sumHT = $sumHT + $horastrab ?>
+                                                                <script>
+                                                                    $("#horas-trabajadas-<?php echo $Proposta->getCodigoProposta() ?>").html('<?php echo $sumHT ?>');
+                                                                </script>
                                                             </td>
                                                             <td>
                                                                 <?php if(aplication_system::isAllAction() || aplication_system::esContable() || EquipeTarefaPeer::hasFuncionario($cod_projeto, aplication_system::getUser())): ?>
