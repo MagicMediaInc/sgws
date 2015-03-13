@@ -17,5 +17,20 @@
  * @package    lib.model.sgws
  */
 class Tarefa extends BaseTarefa {
+    
+    public static function getTarefasByProjeto($cod_projeto)
+    {
+        $c = new Criteria();
+        $c->add(TarefaPeer::CODIGOPROJETO, $cod_projeto, Criteria::EQUAL);
+        $c->add(TarefaPeer::TAREFA_PARENT,0, Criteria::EQUAL);
+        return TarefaPeer::doSelect($c);
+    }
+    
+    public static function getTarefasHijas($id_parent)
+    {
+        $c = new Criteria();
+        $c->add(TarefaPeer::TAREFA_PARENT,$id_parent, Criteria::EQUAL);
+        return TarefaPeer::doSelect($c);
+    }
 
 } // Tarefa

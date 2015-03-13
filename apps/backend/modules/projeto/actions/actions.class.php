@@ -108,7 +108,7 @@ class projetoActions extends sfActions
         if($request->getParameter('q') == 'prop')
         {
             $c->add(PropostaPeer::ID_STATUS_PROPOSTA, 1, Criteria::EQUAL);
-            var_dump("1");
+            // var_dump("1");
             $this->statusFilter = StatusPeer::getListStatus(1);
         }
         if($request->getParameter('q') == 'pj')
@@ -490,7 +490,8 @@ class projetoActions extends sfActions
     if($Proposta->getIdStatusProposta() == 1)
     {
         $this->tit = $Proposta->getCodigoSgws(); // es proposta
-    }else{
+    }
+    else{
         $this->tit = $Proposta->getCodigoSgwsProjeto(); // es projeto
     }
    if($request->getParameter('id_analisis')== 'null'){
@@ -514,8 +515,6 @@ class projetoActions extends sfActions
   public function executeUpdateProposta(sfWebRequest $request)
   {
     $this->setLayout('layoutSimple');
-//    echo $request->getParameter('codigo_proposta');
-//    die();
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($Proposta = PropostaPeer::retrieveByPk($request->getParameter('codigo_proposta')), sprintf('Object Proposta does not exist (%s).', $request->getParameter('codigo_proposta')));
     $this->form = new PropostaForm($Proposta);
@@ -539,6 +538,27 @@ class projetoActions extends sfActions
         $this->responsableComercial = $this->analisis->getResponsableComercial();
         $this->responsable = LxUserPeer::getGerentesYFinancieroYSocios();
    }
+   // echo $Proposta->getStatus();
+   $proposta = $request->getParameter('proposta');
+    if($proposta['status'] == 6){
+      $tarefas = Tarefa::getTarefasByProjeto($request->getParameter('codigo_proposta'));
+      if($tarefas):
+        foreach ($tarefas as $tarefa):
+          // var_dump($tarefa->getStatus());
+          $tarefa->setStatus(6);
+          $tarefa->save();
+          // var_dump($tarefa->getStatus());
+          // die('muere');
+          $tarefasHijas = Tarefa::getTarefasHijas($tarefa->getCodigoTarefa());
+          if($tarefasHijas):
+            foreach ($tarefasHijas as $tarefaHija):
+              $tarefaHija->setStatus(6);
+            endforeach;
+          endif;
+          $tarefa->setStatus(6);
+        endforeach;
+      endif;
+    }
 //    $this->analisis = AnalisisPeer::retrieveByPK($request->getParameter('id_analisis'));
 //    $this->analisis->getIdResponsavel();
 //    $this->responsableComercial = $this->analisis->getResponsableComercial();
