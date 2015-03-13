@@ -211,7 +211,7 @@ table{
 }
 
 .data-project-fl div.tit-projeto{
-    width: 45%;
+    width: 35%;
     font-weight: normal;
     color: #008BBC;
     float: left;
@@ -232,7 +232,7 @@ table{
 }
 
 .data-project-fl div.horas-duracion{
-    width: 5%;
+    width: 10%;
     font-weight: normal;
     float: left;
     border-right:1px solid #ccc;    
