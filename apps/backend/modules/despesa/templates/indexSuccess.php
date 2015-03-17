@@ -8,8 +8,16 @@
     <a href="<?php echo url_for('@default_index?module=projeto') ?> ">projetos</a> /
     <?php echo __('Despesas do Projeto') ?> <?php echo $projeto->getCodigoSgwsProjeto() ?> 
 </h1>
-<a class="btn-adicionar fancybox fancybox.iframe" href="<?php echo url_for($this->getModuleName().'/new?id_projeto='.$sf_request->getParameter('id_projeto').($sf_request->getParameter('id_tarefa') ? '&id_tarefa='.$sf_request->getParameter('id_tarefa') : '' )) ?>"><?php echo __('Nova Despesa')?></a>
-
+<?php if( $sf_request->getParameter('id_tarefa') !=  null ): ?>
+    <?php $_taref = TarefaPeer::retrieveByPK($sf_request->getParameter('id_tarefa')); ?>
+    <?php if($projeto->getStatus() < 6 AND $_taref->getStatus() < 6 ): ?>
+        <a class="btn-adicionar fancybox fancybox.iframe" href="<?php echo url_for($this->getModuleName().'/new?id_projeto='.$sf_request->getParameter('id_projeto').($sf_request->getParameter('id_tarefa') ? '&id_tarefa='.$sf_request->getParameter('id_tarefa') : '' )) ?>"><?php echo __('Nova Despesa')?></a>
+    <?php endif; ?>
+<?php else: ?>
+    <?php if($projeto->getStatus() < 6): ?>
+    <a class="btn-adicionar fancybox fancybox.iframe" href="<?php echo url_for($this->getModuleName().'/new?id_projeto='.$sf_request->getParameter('id_projeto').($sf_request->getParameter('id_tarefa') ? '&id_tarefa='.$sf_request->getParameter('id_tarefa') : '' )) ?>"><?php echo __('Nova Despesa')?></a>
+    <?php endif; ?>
+<?php endif; ?>
 
 <?php if ($sf_user->hasFlash('listo')): ?>
     <div class="msn_ready" style="position: relative; top: 0px;"><?php echo $sf_user->getFlash('listo') ?></div>

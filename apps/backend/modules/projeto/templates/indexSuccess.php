@@ -214,7 +214,7 @@
                             
                             <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=projeto&action=edit&codigo_proposta='.$Proposta->getCodigoProposta() .'&id_analisis='.$idAnalisis) ?>"><?php echo image_tag('icons/mas_info','title="Informações do projeto"') ?></a>&nbsp; 
                             <?php #if(aplication_system::compareUserVsResponsable($Proposta->getGerente()) && $Proposta->getIdStatusProposta() > 1 || ( aplication_system::esContable()  ) || aplication_system::esSocio() || aplication_system::esUsuarioRoot()): ?>
-                            <?php if( $Proposta->getIdStatusProposta() > 1 && (aplication_system::compareUserVsResponsable($Proposta->getGerente()) || aplication_system::esContable() || aplication_system::esSocio() || aplication_system::esUsuarioRoot())): ?>
+                            <?php if( $Proposta->getIdStatusProposta() > 1 && $Proposta->getStatus() < 6 && (aplication_system::compareUserVsResponsable($Proposta->getGerente()) || aplication_system::esContable() || aplication_system::esSocio() || aplication_system::esUsuarioRoot())): ?>
                                 <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=new&codigo_projeto='.$cod_projeto.'&status_projeto='.$Proposta->getIdStatusProposta() ) ?>"><?php echo image_tag('icons/icon_tarefa_mini','title="Inclusão de tarefa."') ?></a>&nbsp;
                             <?php endif; ?>
                             <?php if($Proposta->getIdStatusProposta() > 1): ?>
@@ -299,7 +299,7 @@
                                                         <?php endif; ?>
                                                         <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=listActivity&codigotarefa='.$tarefa->getCodigoTarefa() ) ?>"><?php echo image_tag('icons/reg_activity_2','width="26" title="Registrar Atividade"') ?></a>
                                                         <?php $tarefashijas = TarefaPeer::getTarefasHijas( $tarefa->getCodigoTarefa() ) ?>
-                                                        <?php if( ($horastrab == null AND empty($tarefashijas) ) AND (aplication_system::accessTask($tarefa,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser()))): ?>
+                                                        <?php if( ($Proposta->getStatus() < 6 AND $tarefa->getStatus() < 6) AND ($horastrab == null AND empty($tarefashijas) ) AND (aplication_system::accessTask($tarefa,$Proposta->getGerente()) || TempotarefaPeer::hasFuncionario($tarefa->getCodigotarefa(), aplication_system::getUser()))): ?>
                                                             <!-- <a class="fancybox fancybox.iframe"  href="<?php echo url_for('@default?module=tarefa&action=edit&codigotarefa='.$tarefa->getCodigoTarefa().'&status_projeto='.$Proposta->getIdStatusProposta().'&codigo_projeto='.$cod_projeto) ?>"><?php echo image_tag('icons/mas_info','title="Informações da tarefa"') ?></a> -->
                                                             <a onclick="myConfirm()" href="#"><?php echo image_tag('icons/delete-icon','width="22" title="Apagar Atividade"') ?></a>
                                                             <script>

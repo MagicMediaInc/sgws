@@ -132,7 +132,7 @@
     <h1 class="tit-principal">Faturamentos</h1>
     <br><br>
     <?php $projeto = PropostaPeer::getDataByCodProjeto($id); ?>
-    <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
+    <?php if($projeto->getStatus() < 6 AND ($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser())): ?>     
         <!-- <input type="submit" value="Salvar" /> -->
         <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinancieroEntrada?id_projeto='.$id.'') ?>">Inclusão de Entradas</a>
     <?php endif; ?>

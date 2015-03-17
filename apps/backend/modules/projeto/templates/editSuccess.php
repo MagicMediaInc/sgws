@@ -440,7 +440,7 @@ $(document).ready(function() {
         <input type="hidden" name="cliente" id="cliente" value="<?php echo $form->getObject()->getCliente()?>" />
         <table width="100%" cellpadding='0' cellspacing="0" id="resultsList">
             <caption style="padding-bottom: 8px;">
-                <div style="width:50% ; float: left"><h1>Registro de histórico de Análises</h1></div>
+                <div style="width:50% ; float: left"><h1>Registro de histórico de Análises..</h1></div>
                 
                     <div id="nova_revision" class="btn-adicionar-no-relative">Incluir Anexo</div>
                 
@@ -491,7 +491,7 @@ $(document).ready(function() {
                     <td>
 <!--                        <input type="text" readonly="true" size="15" name="responsavel_rev" id="responsavel_rev" value="<?php //echo aplication_system::getNameUser() ?>" />-->
                         <select name="responsavel" id="responsavel" style="width: 200px;">
-                            <?php foreach ($responsables as $id => $value): ?>
+                            <?php foreach ($responsable as $id => $value): ?>
                                 <option value="<?php echo $id ?>" <?php //echo $Analisis->getResponsableComercial()   ? 'selected="selected"' : '' ?> ><?php echo $value ?></option>
                             <?php endforeach; ?>
                         </select>

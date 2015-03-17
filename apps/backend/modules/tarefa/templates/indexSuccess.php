@@ -43,8 +43,12 @@
                </div>
                 <div class="row-actions" style="width: 80px;">
                     <div class="row-actions_<?php echo $i; ?>" style="display: none;">
-                        <a href="<?php echo url_for('tarefa/edit?codigotarefa='.$tarefa['id_tarefa'], $tarefa) ?>" class="fancybox fancybox.iframe"><?php echo __('Editar') ?></a>
-                        &nbsp;&nbsp;
+                        <?php $_trf = TarefaPeer::retrieveByPK($tarefa['id_tarefa']); ?>
+                        <?php if($_trf->getStatus() < 6): ?>
+
+                            <a href="<?php echo url_for('tarefa/edit?codigotarefa='.$tarefa['id_tarefa'], $tarefa) ?>" class="fancybox fancybox.iframe"><?php echo __('Editar') ?></a>
+                            &nbsp;&nbsp;
+                        <?php endif; ?>
                         <?php //echo link_to(__('Excluir'),'tarefa/delete?codigotarefa='.$tarefa['id_tarefa'], array('method' => 'delete', 'class' => 'delete' , 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'))) ?>
                     </div>
                 </div>

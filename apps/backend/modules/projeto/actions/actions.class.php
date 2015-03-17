@@ -391,6 +391,7 @@ class projetoActions extends sfActions
         $newAnalisis->setIdCliente($request->getParameter('cliente'));
         $newAnalisis->setDescricao($request->getParameter('descricao_rev'));
         $newAnalisis->setStatus(0);
+        $newAnalisis->setAprobacionProposta(1);
         $newAnalisis->save();
         $this->redirect('@default?module=projeto&action=edit&codigo_proposta='.$request->getParameter('codigo_proposta').
                 '&id_analisis='.$newAnalisis->getId());   

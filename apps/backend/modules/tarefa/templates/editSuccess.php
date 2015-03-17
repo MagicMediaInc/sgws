@@ -307,11 +307,15 @@ $(document).ready(function() {
 
                     <?php endif; ?>
 
+                    <?php if($projeto->getStatus() < 6): ?>
+
                     <td>
 
                     <input type="submit" value="<?php echo __('Salvar') ?>" />
 
                     </td>
+
+                    <?php endif; ?>
 
                 </tr>
 

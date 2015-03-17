@@ -77,8 +77,8 @@ class tarefaActions extends sfActions {
                 $this->edit = true;
             }
         endif;
-        $projeto = PropostaPeer::retrieveByPK($Tarefa->getCodigoprojeto());
-        if (aplication_system::compareUserVsResponsable($projeto->getGerente())):
+        $this->projeto = PropostaPeer::retrieveByPK($Tarefa->getCodigoprojeto());
+        if (aplication_system::compareUserVsResponsable($this->projeto->getGerente())):
             $this->edit = true;
         endif;
 
@@ -234,6 +234,7 @@ class tarefaActions extends sfActions {
     public function executeListActivity(sfWebRequest $request) {
         $this->setLayout('layoutSimple');
         $this->tarefa = TarefaPeer::retrieveByPK($request->getParameter('codigotarefa'));
+        $this->projeto = PropostaPeer::retrieveByPK($this->tarefa->getCodigoprojeto());
         $this->descricao = TarefadescricaoPeer::retrieveByPK($this->tarefa->getDescricao());
         $this->lista = TempotarefaPeer::getLista($request->getParameter('codigotarefa'));
         $this->valida = new lynxValida();

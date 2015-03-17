@@ -145,7 +145,7 @@ function saveRate(id)
                             <?php if($rateFuncionario): ?>
 
 
-                              <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
+                              <?php if($projeto->getStatus() < 6 AND ($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser())): ?>     
                 
                                 <button name="save_rate_funcionario" id="save-<?php echo $rateFuncionario->getId() ?>" onclick="saveRate(<?php echo $rateFuncionario->getId() ?>)">Salvar</button>
             

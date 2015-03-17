@@ -109,7 +109,7 @@ $(document).ready(function() {
         
 
         <?php endif; ?>
-            <?php if($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser()): ?>     
+            <?php if($projeto->getStatus() < 6 AND ($sf_user->getAttribute('nomeProfile') == 'Socio' || $sf_user->getAttribute('nomeProfile') == 'Administrador' || $sf_user->getAttribute('nomeProfile') == 'Root' || $projeto->getGerente() == aplication_system::getUser())): ?>     
                 <input type="submit" value="Salvar" />
             <?php endif; ?>
 
