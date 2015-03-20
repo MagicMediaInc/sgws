@@ -166,7 +166,7 @@ class despesaActions extends sfActions {
                     $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAEMISSAO, $to, Criteria::LESS_EQUAL));
                     $c->add($cFecha);
                 }
-            } else {
+            } elseif ($request->getParameter('status') == 'Previstas') {
                 $c->add(SaidasPeer::DATAEMISSAO, '0000-00-00', Criteria::EQUAL);
                 if ($from) {
                     $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
@@ -180,6 +180,7 @@ class despesaActions extends sfActions {
             }
             // Caso Palabra claves
             if ($this->getRequestParameter('buscador')) {
+                // die("buscador");
                 $c->addJoin(SaidasPeer::CODIGOPROJETO, PropostaPeer::CODIGO_PROJETO, Criteria::LEFT_JOIN);
                 $c->addJoin(SaidasPeer::CODIGOFUNCIONARIO, LxUserPeer::ID_USER, Criteria::LEFT_JOIN);
                 $c->addJoin(SaidasPeer::CODIGOCADASTRO, CadastroJuridicaPeer::ID_EMPRESA, Criteria::LEFT_JOIN);
@@ -194,6 +195,7 @@ class despesaActions extends sfActions {
                 $c->add($criterio);
             }
         }
+        $c->add($c->getNewCriterion(SaidasPeer::CENTRO, 'compensação', Criteria::NOT_EQUAL));
         $c->add(SaidasPeer::OPERACAO, 'e', Criteria::EQUAL);
         $c->add(SaidasPeer::DATAPREVISTA, '2014-01-01', Criteria::GREATER_EQUAL);
         $sortTemp = SaidasPeer::getFieldNames(BasePeer::TYPE_FIELDNAME);

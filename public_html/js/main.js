@@ -352,7 +352,9 @@ function getTarefas(fila, totfilas , id_projeto, bydefault)
                 //$("#cod_tarefa_" + fila).append("<option value=''>Carregando...</option>");
           },
           success: function(msg){
+                console.log(msg);
                 $("#cod_tarefa_" + fila).attr('disabled',false);  
+                $("#cod_tarefa_" + fila).attr('data-status','disabled');  
                 $("#cod_tarefa_" + fila + " > option").remove();  
                 $("#cod_tarefa_" + fila).html(msg);    
                 if(bydefault)
@@ -442,6 +444,7 @@ function cargaActividades(fila, totfilas)
                   beforeSend: function(objeto){
                     },
                   success: function(msg){
+                    console.log(msg);
                       $("#result").html(msg);
                       calcular_total();
                       actualizaComboTarea(fila, totfilas);

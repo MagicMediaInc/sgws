@@ -64,6 +64,7 @@
                 <?php $totalPrevisto = 0 ?>
                 <?php  $noEntrar  = 0 ?>
                 <?php foreach ($result as $valor): ?>
+                    <?php //echo $valor->getCodigoSaida(); ?>
                 <?php $tipo = SubtipoUserPeer::retrieveByPK($valor->getCodigoTipo()) ?>
                 <?php $subtipo = SubtipoUserPeer::retrieveByPK($valor->getCodigoSubtipo()) ?>
                 <?php $totalNoSubtipoProjeto = SaidasPeer::getSubtiposProjeto($sf_request->getParameter('id_projeto'), 0) ?>
@@ -104,17 +105,19 @@
                          <?php if($tarefa): ?>
                          <?php $name = TarefadescricaoPeer::retrieveByPk($tarefa->getDescricao()) ?>
                          <?php endif; ?>  
-                        <?php echo $name ? $name->getTarefa() : '' ?>
+                        <?php echo $name ? $name->getTarefa() : '---' ?>
                     </td>
                     <td>
                         <?php $func =  lynxValida::datosTipoUsuario($valor->getCodigofuncionario() ? $valor->getCodigofuncionario() : $valor->getConfirmadopor(), 2) ?>
-                        <?php echo $func['nome'] ?>
+                        <?php echo $func['nome'] ? $func['nome'] : '---' ?>
                     </td>
                     <td>
-                        <?php echo $tipo  ?  $tipo->getSubtipo() : '' ?>
+                        <?php //var_dump($valor->getCodigoTipo()) ?>
+                        <?php echo $tipo ?  $tipo->getSubtipo() : '---' ?>
                     </td>
                     <td>
-                        <?php echo $subtipo ? $subtipo->getSubtipo() : '' ?>
+                        <?php //var_dump($valor->getCodigoSubtipo()) ?>
+                        <?php echo $subtipo ? $subtipo->getSubtipo() : '---' ?>
                     </td>
                     <td>
                         <?php $fornecedor =  lynxValida::datosTipoUsuario($valor->getCodigocadastro(), 3) ?>
@@ -123,7 +126,7 @@
                     <td>
                         <?php echo ucfirst($valor->getFormapagamento())  ?>
                     </td>
-                    <td>&nbsp;</td>
+                    <td>---</td>
                     <td>
                         R$ <?php echo aplication_system::monedaFormat($valor->getSaidas())  ?>
                         <?php $total_salida = $total_salida + $valor->getSaidas()  ?>

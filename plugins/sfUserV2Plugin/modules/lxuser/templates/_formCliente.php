@@ -39,7 +39,6 @@
       <tr>
 
         <td id="errorGlobal">
-
             <?php echo $form->renderGlobalErrors() ?>
 
         </td>
@@ -123,6 +122,7 @@
                                           <?php foreach ($tiposCadastro as $tc): ?>
 
                                             <?php $subtipo = SubtipoUserPeer::getTiposTipoCadastro($sf_user->getAttribute('tc_empresa'), $tc->getIdSubtipo()); ?>
+                                            <?php //var_dump($tc->getIdSubtipo()) ?>
 
                                             <?php if($subtipo): ?>
 
@@ -152,7 +152,7 @@
 
                                                                 <input <?php echo $check ?> type="checkbox" id="pp_<?php echo $tc->getIdSubtipo() ?>" class="pp_<?php echo $tc->getIdSubtipo().'-'.$st->getIdSubtipo() ?>" name="chk-<?php echo $tc->getIdSubtipo() ?>[<?php echo $st->getIdSubtipo() ?>]" value="<?php echo $st->getIdSubtipo() ?>" onclick="javascript:check_enable_tc(<?php echo $tc->getIdSubtipo()?>, <?php echo $st->getIdSubtipo() ?>);" >
 
-                                                                <?php echo $st->getSubtipo() ?>
+                                                                <?php echo $st->getSubtipo()/*. ' - '.$st->getIdParent()*/ ?>
 
                                                             </li>
 

@@ -387,6 +387,8 @@ class projetoActions extends sfActions
         $newAnalisis->setIdPropostaAnexo($anexo->getId());
         $newAnalisis->setIdProposta($request->getParameter('codigo_proposta'));
         $newAnalisis->setIdResponsavel($request->getParameter('responsavel'));
+        $newAnalisis->setResponsableComercial($request->getParameter('responsavel'));
+        $newAnalisis->setResponsableTecnico($request->getParameter('responsavel'));
         $newAnalisis->setDataCreacion(date("Y-m-d"));
         $newAnalisis->setIdCliente($request->getParameter('cliente'));
         $newAnalisis->setDescricao($request->getParameter('descricao_rev'));
@@ -503,9 +505,11 @@ class projetoActions extends sfActions
    }else{
        //die('true');
         $this->analisis = AnalisisPeer::retrieveByPK($request->getParameter('id_analisis'));
-        $this->analisis->getIdResponsavel();
-        $this->responsableComercial = $this->analisis->getResponsableComercial();
-        $this->responsable = LxUserPeer::getGerentesYFinancieroYSocios();
+        if($this->analisis):
+          $this->analisis->getIdResponsavel();
+          $this->responsableComercial = $this->analisis->getResponsableComercial();
+          $this->responsable = LxUserPeer::getGerentesYFinancieroYSocios();
+        endif;
    }
    $c = new Criteria();
    $this->ultimo = PropostaPeer::getProjetoUltimo();
@@ -520,6 +524,9 @@ class projetoActions extends sfActions
     $this->forward404Unless($Proposta = PropostaPeer::retrieveByPk($request->getParameter('codigo_proposta')), sprintf('Object Proposta does not exist (%s).', $request->getParameter('codigo_proposta')));
     $this->form = new PropostaForm($Proposta);
     $this->edit = true;
+    $proposta = $request->getParameter('proposta');
+    /*var_dump($proposta);
+    die($proposta);*/
     if(!aplication_system::compareUserVsResponsable($Proposta->getGerente()) ):
         $this->edit = false;
         if(aplication_system::esSocio() )

@@ -146,6 +146,7 @@ class TarefaPeer extends BaseTarefaPeer {
         //Selecciona las columnas
         $c->addSelectColumn(self::CODIGOTAREFA);
         $c->addSelectColumn(self::VISUALIZACAO);
+        $c->addSelectColumn(self::STATUS);
         $c->addSelectColumn(TarefadescricaoPeer::TAREFA);
         //Condicion
         $c->add(self::CODIGOPROJETO, $id_projeto, Criteria::EQUAL);
@@ -157,6 +158,7 @@ class TarefaPeer extends BaseTarefaPeer {
             $dato['id']      = $res['CODIGOTAREFA'];            
             $dato['visual']      = $res['VISUALIZACAO'];            
             $dato['tarefa']  = $res['TAREFA'];            
+            $dato['status']  = $res['STATUS'];            
             $datos[] = $dato;
         }        
         if (!empty($datos)) {

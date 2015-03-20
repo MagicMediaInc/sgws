@@ -82,19 +82,25 @@ function saveRate(id)
   }
 </style>
 
+  <?php $totalHorasTrabajadas = 0; $totalValor = 0; ?>
+
     <table id="resultsList">
 
         <thead>
 
             <tr>
 
-                <th style="padding-left: 5px;width: 36%;">Funcionario</th>
+                <th style="padding-left: 5px;width: 26%;">Funcionario</th>
 
-                <th style="padding-left: 5px;width: 30%;">Cargo</th>
+                <th style="padding-left: 5px;width: 20%;">Cargo</th>
 
                 <th style="padding-left: 5px; width: 12%;">Rate</th>
 
-                <th style="width: 36%;">&nbsp;</th>
+                <th style="padding-left: 5px; width: 12%;">Horas Trabajadas</th>
+
+                <th style="padding-left: 5px; width: 12%;">Valor</th>
+
+                <th style="width: 6%;">&nbsp;</th>
 
             </tr>
 
@@ -140,6 +146,33 @@ function saveRate(id)
 
                         </td>
 
+                        <td style="text-align:right;">
+
+                        <?php
+
+                          $horasTrabajadas = TempotarefaPeer::getHorasTrabajadasFuncionarioProjeto($dato['funcionario'], $sf_request->getParameter('id_projeto'));
+                          $horasTrabajadas != null ? $totalHorasTrabajadas += $horasTrabajadas : $totalHorasTrabajadas += 0;
+                          echo number_format($horasTrabajadas != null ? $horasTrabajadas : 0, 1, ',', '.') ;
+
+                        ?>
+
+                        </td>
+
+                        <td style="text-align:right;">
+
+                            <?php if($rateFuncionario): ?>
+
+                              R$ <?php echo $horasTrabajadas != null ? number_format($horasTrabajadas*$rateFuncionario->getRate(), 2, ',', '.') : '0,00' ?>
+                              <?php $horasTrabajadas != null ? $totalValor += $horasTrabajadas*$rateFuncionario->getRate() : $totalValor += 0 ?>
+
+                            <?php else: ?>
+
+                                <span style="color: red">Usuário não tem rate para este projeto</span>
+
+                            <?php endif; ?>
+
+                        </td>
+
                         <td>
 
                             <?php if($rateFuncionario): ?>
@@ -166,11 +199,20 @@ function saveRate(id)
 
                 <tr>
 
-                    <td colspan="4"></td>
+                    <td colspan="6"></td>
 
                 </tr>
 
             <?php endif; ?>
+
+            <tr>
+              
+              <td style="text-align:left;font-weight:bold;" colspan="3">Total: </td>
+              <td style="text-align:right;font-weight:bold;"><?php echo number_format($totalHorasTrabajadas, 1, ',', '.') ?></td>
+              <td style="text-align:right;font-weight:bold;">R$ <?php echo number_format($totalValor, 2, ',', '.') ?></td>
+              <td></td>
+
+            </tr>
 
         </tbody>
 

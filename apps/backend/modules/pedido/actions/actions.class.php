@@ -78,7 +78,6 @@ class pedidoActions extends sfActions
 
   public function executeUpdate(sfWebRequest $request)
   {
- 
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($this->Pedidos = PedidosPeer::retrieveByPk($request->getParameter('id')), sprintf('Object Pedidos does not exist (%s).', $request->getParameter('id')));
     $this->form = new PedidosForm($this->Pedidos);
@@ -200,16 +199,42 @@ class pedidoActions extends sfActions
          $saida = SaidasPeer::getSaidaPerPedido($Pedidos->getId());
          if($Pedidos->getLoja() == 1 ){
              // Busco la empresa enviromaq
-            $env = CadastroJuridicaPeer::getCodigoCliente('C9999'); 
+            $env = CadastroJuridicaPeer::getCodigoCliente('C9999');  //1730
          }else{
             // Busco la empresa enviromaq
-            $env = CadastroJuridicaPeer::getCodigoCliente('env2014');  
+            $env = CadastroJuridicaPeer::getCodigoCliente('env2014');  //1729
          }
+
+        $tc_empresa = 3;
+        $tiposCadastro = SubtipoUserPeer::getListParentTypeCadastroCliente($tc_empresa);
+
+        $subtipo = null;
+
+        foreach ($tiposCadastro as $tc):
+
+          $subt = SubtipoUserPeer::getTiposTipoCadastro($tc_empresa, $tc->getIdSubtipo());
+
+          if($subt): 
+
+            foreach ($subt as $st):
+
+              $validate = FornecedorSubtipoPeer::checkSubTipoByUser($env->getIdEmpresa(), $st->getIdSubtipo());
+
+              if($validate){
+                $subtipo = $st;
+                break 2;
+              }
+
+            endforeach;
+
+          endif;
+
+        endforeach;
         
          if(!$saida)
          {
             // Busco la empresa enviromaq
-            // $env = CadastroJuridicaPeer::getCodigoCliente('env2014');
+            // $env = CadastroJuridicaPeer::getCodigoCliente('env2014'); 
             // Ahora crea salida contable
             $contavle = new Saidas();
             $contavle->setIdPedido($Pedidos->getId());
@@ -218,8 +243,10 @@ class pedidoActions extends sfActions
             $contavle->setTipo('v');
             $contavle->setCodigoprojeto($Pedidos->getIdProjeto());
             $contavle->setCodigocadastro($env->getIdEmpresa());
-            //$contavle->setCodigofuncionario($Pedidos->getIdCliente());
-            $contavle->setCodigofuncionario(2);
+            $contavle->setCodigoTipo($subtipo != null ? $subtipo->getIdParent() : null);
+            $contavle->setCodigoSubtipo($subtipo != null ? $subtipo->getIdSubtipo() : null);
+            $contavle->setCodigofuncionario($Pedidos->getIdCliente());
+            // $contavle->setCodigofuncionario(2);
             $contavle->setSaidas($Pedidos->getValor());
             $contavle->setSaidaprevista($Pedidos->getValor());
             $contavle->setDatareal($Pedidos->getData());

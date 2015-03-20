@@ -116,6 +116,7 @@ class PropostaForm extends BasePropostaForm
   public function validatePost($validator, $values)
   {
       $values['valor'] = aplication_system::convierteDecimalFormat($values['valor']);
+      $values['valor_prev_hh'] = aplication_system::convierteDecimalFormat($values['valor_prev_hh']);
       $values['horas_vendidas'] = aplication_system::convierteDecimalFormat($values['horas_vendidas']);
       $values['coeficiente'] = aplication_system::convierteDecimalFormat($values['coeficiente']);
       if(!$this->getObject()->isNew())

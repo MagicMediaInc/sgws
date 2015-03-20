@@ -5,6 +5,18 @@
 <script type="text/javascript">
     //var url_fun = 'http://' + location.hostname + '/backend_dev.php';
  var url_fun  ='http://localhost/sgws/public_html/backend_dev.php/';
+
+    var calcular_liquida_prevista = function(){
+        var  prevista = $('#saidas_saidaprevista').val().substr(3);
+        var  impostos = $('#saidas_impostos').val().split(" ");
+        var  saidaprevista = prevista.replace(".","");
+        var  saidaprevista = saidaprevista.replace(",",".");
+        var  saidaimpostos = impostos[0].replace(".","");
+        var  saidaimpostos = saidaimpostos.replace(",",".");
+        var resta = ((eval(100) - eval($.trim(saidaimpostos))) / 100) * eval($.trim(saidaprevista)) ;
+        $("#liquidaPrevista").val("R$ "+resta.toFixed(2));  
+    }
+      
     $(document).ready(function() {
           
         // Calcula Porcentaje previsto
@@ -104,9 +116,12 @@
     cargaFuncionarios('<?php echo aplication_system::getUser() ?>');
 <?php endif; ?>
     
+
     // RUTINAS AL CAMBIAR SELECTORES
     // CAMBIA OPERACAO
     $('#saidas_operacao').change(function(){
+
+        console.log('Change Saidas Operacao');
         
         if ($(this).val() === 'e')
         {
@@ -139,15 +154,18 @@
     
     // CAMBIA TIPOS
     $('.tipos').change(function(){
+            console.log('Change Tipos');
             cargaSubTiposSimple($('#saidas_codigo_tipo').val(),'0');
       });
     
     $('#subtipo').change(function(){
+            console.log('Change Subtipo');
             cargaFornecedor('0',$("#subtipo").val());
       });
       
     // CUANDO VARÍE saidas_centro                             
     $('#saidas_centro').change(function(){          
+        console.log('Change Saidas Centro');  
         switch ($(this).val())
         {
             case 'projeto':
@@ -176,7 +194,6 @@
         }                   
         analisisImpuesto();
       });
-      
 //      // CAMBIA PROJETO
 //      $('#saidas_codigoprojeto').change(function(){            
 //            if (($('#saidas_centro').val() === 'projeto') &&
@@ -184,16 +201,12 @@
 //                cargaClienteProjeto($(this).val());                
 //      });      
           // Calcula porcentasge previsto
-      $('#saidas_impostos').blur(function(){ 
-            var  prevista = $('#saidas_saidaprevista').val().substr(3);
-            var  impostos = $('#saidas_impostos').val().split(" ");
-            var  saidaprevista = prevista.replace(".","");
-            var  saidaprevista = saidaprevista.replace(",",".");
-            var  saidaimpostos = impostos[0].replace(".","");
-            var  saidaimpostos = saidaimpostos.replace(",",".");
-            var resta = ((eval(100) - eval($.trim(saidaimpostos))) / 100) * eval($.trim(saidaprevista)) ;
-            $("#liquidaPrevista").val("R$ "+resta.toFixed(2));             
+      $('#saidas_impostos').blur(function(){  
+        calcular_liquida_prevista();          
       });
+    
+    calcular_liquida_prevista();          
+    
  });   
  
 </script>

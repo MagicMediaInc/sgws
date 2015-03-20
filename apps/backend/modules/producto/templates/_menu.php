@@ -5,7 +5,8 @@
 <table width="100%" border="0" cellspacing="5" cellpadding="0" style="margin-top: 0px; border-bottom:  1px dotted #CCC; margin-bottom: 25px; padding-bottom: 15px;">
     <tr>
         <td >
-            <a href="<?php echo url_for('@productos') ?>">
+            <a href="/backend_dev.php/producto">
+            <!-- <a href="<?php echo url_for('@productos') ?>"> -->
                 <div class="opcoe-menu <?php echo $module == 'producto'  ? 'opcoe-menu-active' : '' ?>"  >
                 <img src="/images/icons/list_pessoas.png"><br>
                 Listagem de Produtos

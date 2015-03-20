@@ -94,8 +94,12 @@
                     <td><?php echo date("d-m-Y", strtotime($item->getData())) ?></td>
                     <td>
                         <?php $proyecto = PropostaPeer::retrieveByPK($item->getIdProjeto())  ?>
-                        <?php echo $proyecto->getCodigoSgwsProjeto() ?> - <?php echo $proyecto->getNomeProposta() ?>
-                        <?php unset($proyecto) ?>
+                        <?php if($proyecto): ?>
+                            <?php echo $proyecto->getCodigoSgwsProjeto() ?> - <?php echo $proyecto->getNomeProposta() ?>
+                            <?php unset($proyecto) ?>
+                        <?php else: ?>
+                            ----
+                        <?php endif; ?>
                     </td>
                     <td>
                         <?php $gerente = LxUserPeer::retrieveByPK($item->getIdCliente())  ?>

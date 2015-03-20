@@ -20,15 +20,16 @@
 
         console.log("ready");
 
-        <?php if($Analisis->getResponsableTecnico() == aplication_system::getUser()): ?>
+
+        <?php //if($Analisis->getResponsableTecnico() == aplication_system::getUser()): ?>
 
             $("#proposta_nao_conformidade").attr('readonly',true);
 
-        <?php else: ?>
+        <?php //else: ?>
 
            $("#proposta_nao_conformidade").attr('readonly',false);
 
-        <?php endif; ?>
+        <?php //endif; ?>
 
     })
 
@@ -92,11 +93,11 @@
 
         <th>Saldo HH</th>
 
-        <th>Previsto HH</th>
+        <th>Previsto R$</th>
 
-        <th>Real HH</th>
+        <th>Real R$</th>
 
-        <th>Saldo HH</th>
+        <th>Saldo R$</th>
 
         
 
@@ -116,7 +117,7 @@
 
             <?php $realHH = TempotarefaPeer::getHorasBillabilityProjeto($data->getCodigoProposta()) ?>
 
-            <?php echo aplication_system::monedaFormat($realHH) ?>
+            R$ <?php echo aplication_system::monedaFormat($realHH) ?>
 
         </td>
 
@@ -124,7 +125,7 @@
 
             <?php $saldoHH = $data->getValorPrevHh() - $realHH ?>
 
-            <?php echo aplication_system::monedaFormat($saldoHH) ?>
+            R$ <?php echo aplication_system::monedaFormat($saldoHH) ?>
 
         </td>
 

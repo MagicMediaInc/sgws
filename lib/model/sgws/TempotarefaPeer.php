@@ -84,6 +84,33 @@ class TempotarefaPeer extends BaseTempotarefaPeer {
         }
     }
     
+    public static function getHorasTrabajadasFuncionarioProjeto($funcionario, $projeto)
+    {
+        $c = new Criteria();
+        //Eliminamos la columnas de seleccion en caso de que esten definidas
+        $c->clearSelectColumns();
+        //Se Agregan las Columnas necesarias
+        $c->addSelectColumn('SUM('.self::TEMPOGASTO.') AS HORAS');
+        $c->add(self::CODIGOFUNCIONARIO, $funcionario, Criteria::EQUAL);
+        $c->add(self::AUTORIZADO, 1, Criteria::EQUAL);
+        $c->addJoin(self::CODIGOTAREFA, TarefaPeer::CODIGOTAREFA, Criteria::INNER_JOIN);
+        $c->addJoin(TarefaPeer::CODIGOPROJETO, PropostaPeer::CODIGO_PROPOSTA, Criteria::INNER_JOIN);
+        $c->add(PropostaPeer::CODIGO_PROPOSTA, $projeto, Criteria::EQUAL);
+        
+        //Ejecucion de consulta
+        $rs = self::doSelectStmt($c);
+        //Se recuperan los registros y se genera arreglo
+        while($res = $rs->fetch())
+        {
+            $datos['horas'] = $res['HORAS'];            
+        }
+        if(!empty($datos)){
+            return $datos['horas'];
+        }else{
+            return false;
+        }
+    }
+    
     public static function getHorasTrabajadasDia($cod, $data)
     {
         $c = new Criteria();

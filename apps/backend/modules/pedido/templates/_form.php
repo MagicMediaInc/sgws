@@ -81,7 +81,7 @@ $(document).ready(function() {
                   <tr>
                       <td><?php echo $form['id_projeto']->renderLabel() ?><br />
                           <div class="mask-imput" style="width: 300px;">
-                              <?php echo $projeto->getCodigoSgwsProjeto()?> - <?php echo $projeto->getNomeProposta() ?>
+                              <?php echo ($projeto) ? $projeto->getCodigoSgwsProjeto(). ' - ' . $projeto->getNomeProposta() : '---' ?>
                           </div>
                     </td>
                   </tr>
