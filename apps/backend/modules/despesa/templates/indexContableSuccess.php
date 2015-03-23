@@ -615,7 +615,8 @@
 
                     <td class="no_print">                        
 
-                        <a href="<?php echo url_for('@default?module=despesa&action=editFinanciero&id='.$valor->getCodigoSaida()) ?>">
+                        <!-- <a href="<?php echo url_for('@default?module=despesa&action=editFinanciero&id='.$valor->getCodigoSaida()) ?>"> -->
+                        <a href="<?php echo url_for('@default?module=despesa&action=editFinanciero&id='.$valor->getCodigoSaida().'&id_projeto='.$valor->getCodigoProjeto()) ?>">
 
                             <?php echo image_tag('icons/informacoe','width=20') ?>
 

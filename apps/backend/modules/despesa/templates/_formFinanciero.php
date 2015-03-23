@@ -244,7 +244,7 @@
                                 <td>
                                     <input type="submit" value="<?php echo __('Salvar') ?>" />
                                 </td>
-                                <?php else:?>
+                                <?php else:?>   
                                         <?php $projeto = PropostaPeer::retrieveByPK($id_projeto);?>
                                         <?php if ($form->getObject()->getConfirmacao() == 0 && $projeto->getGerente() == aplication_system::getUser()):?>
                                                  <?php if (!$form->getObject()->isNew()): ?>
