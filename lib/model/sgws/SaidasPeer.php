@@ -332,6 +332,8 @@ class SaidasPeer extends BaseSaidasPeer {
         $c->add(self::CONFIRMACAO, $status, Criteria::EQUAL);
         //Condicion
         $criterio = $c->getNewCriterion(self::OPERACAO, 'e', Criteria::EQUAL);
+        $lojas = array('1729','1730');
+        $c->addAnd(self::CODIGOCADASTRO, $lojas, Criteria::NOT_IN);
         $criterio->addAnd($c->getNewCriterion(self::CENTRO, 'adiantamento' , Criteria::EQUAL));
         $criterio->addOr($c->getNewCriterion(self::OPERACAO, 's' , Criteria::EQUAL));
         $c->add($criterio);

@@ -159,15 +159,15 @@ class despesaActions extends sfActions {
                 $from = date("Y-m-d", strtotime($this->getRequestParameter('from_date')));
                 $to = date("Y-m-d", strtotime($this->getRequestParameter('to_date')));
             }
-            if ($request->getParameter('status') == 'Faturadas') {
+            if ($request->getParameter('status') == 'Faturados') {
                 $c->add(SaidasPeer::DATAEMISSAO, '0000-00-00', Criteria::GREATER_THAN);
                 if ($from) {
                     $cFecha = $c->getNewCriterion(SaidasPeer::DATAEMISSAO, $from, Criteria::GREATER_EQUAL);
                     $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAEMISSAO, $to, Criteria::LESS_EQUAL));
                     $c->add($cFecha);
                 }
-            } elseif ($request->getParameter('status') == 'Previstas') {
-                $c->add(SaidasPeer::DATAEMISSAO, '0000-00-00', Criteria::EQUAL);
+            } elseif ($request->getParameter('status') == 'Previstos') {
+                $c->add(SaidasPeer::DATAEMISSAO, null, Criteria::EQUAL);
                 if ($from) {
                     $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
                     $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
@@ -221,8 +221,7 @@ class despesaActions extends sfActions {
         $this->id = $this->getRequestParameter('id_projeto');
     }
 
-    public function executePagamentosEnAtraso(sfWebRequest $request) {
-        // $today = date("y-m-d");
+    public function executePagamentos(sfWebRequest $request) {
 
         $c = new Criteria();
         $c->add(SaidasPeer::OPERACAO, 'e', Criteria::EQUAL);
@@ -231,7 +230,36 @@ class despesaActions extends sfActions {
                 $from = date("Y-m-d", strtotime($this->getRequestParameter('from_date')));
                 $to = date("Y-m-d", strtotime($this->getRequestParameter('to_date')));
             }
-            if ($from) {
+            // var_dump($from);
+            // var_dump($to);
+            if ($request->getParameter('status') == 'Pagos') {
+                // var_dump('pagos');
+                $c->add(SaidasPeer::DATAREAL, date("Y-m-d"), Criteria::LESS_THAN);
+                if ($from) {
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    $c->add($cFecha);
+                }
+            } elseif ($request->getParameter('status') == 'Abertos') {
+                // var_dump('abertos');
+                $c->add(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
+                $c->add(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::GREATER_THAN);
+                if ($from) {
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    $c->add($cFecha);
+                }
+            } elseif ($request->getParameter('status') == 'Atrasados') {
+                // var_dump('atrasados');
+                $c->add(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
+                $c->add(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::LESS_THAN);
+                if ($from) {
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    $c->add($cFecha);
+                }
+            }
+            /*if ($from) {
                 $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
                 $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
                 $c->addAnd(SaidasPeer::DATAREAL, '0000-00-00', Criteria::EQUAL);
@@ -241,7 +269,7 @@ class despesaActions extends sfActions {
                 $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, '0000-00-00', Criteria::GREATER_THAN);
                 $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date("y-m-d"), Criteria::LESS_THAN);
                 $c->addAnd(SaidasPeer::DATAREAL, '0000-00-00', Criteria::EQUAL);
-            }
+            }*/
 
             // Caso seleccion funcionario
             if ($this->getRequestParameter('funcionario')) {
@@ -266,8 +294,88 @@ class despesaActions extends sfActions {
             }
         } else {
             $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, '0000-00-00', Criteria::GREATER_THAN);
-            $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date("y-m-d"), Criteria::LESS_THAN);
-            $c->addAnd(SaidasPeer::DATAREAL, '0000-00-00', Criteria::EQUAL);
+            // $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::LESS_THAN);
+            // $c->addAnd(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
+        }
+        $this->result = SaidasPeer::doSelect($c);
+        $this->funcionarios = LxUserPeer::getUsuariosFuncionarios();
+    }
+
+    public function executeSaidas(sfWebRequest $request) {
+
+        $c = new Criteria();
+        $c->add(SaidasPeer::OPERACAO, 's', Criteria::EQUAL);
+        if ($request->isMethod('post')) {
+            if ($this->getRequestParameter('from_date')) {
+                $from = date("Y-m-d", strtotime($this->getRequestParameter('from_date')));
+                $to = date("Y-m-d", strtotime($this->getRequestParameter('to_date')));
+            }
+            // var_dump($from);
+            // var_dump($to);
+            if ($request->getParameter('status') == 'Saidas') {
+                // var_dump('pagos');
+                $c->add(SaidasPeer::DATAREAL, date("Y-m-d"), Criteria::LESS_THAN);
+                if ($from) {
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    $c->add($cFecha);
+                }
+            } elseif ($request->getParameter('status') == 'Abertos') {
+                // var_dump('abertos');
+                $c->add(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
+                $c->add(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::GREATER_THAN);
+                if ($from) {
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    $c->add($cFecha);
+                }
+            } elseif ($request->getParameter('status') == 'Atrasados') {
+                // var_dump('atrasados');
+                $c->add(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
+                $c->add(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::LESS_THAN);
+                if ($from) {
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    $c->add($cFecha);
+                }
+            }
+            /*if ($from) {
+                $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
+                $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                $c->addAnd(SaidasPeer::DATAREAL, '0000-00-00', Criteria::EQUAL);
+                $c->add($cFecha);
+            } else {
+
+                $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, '0000-00-00', Criteria::GREATER_THAN);
+                $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date("y-m-d"), Criteria::LESS_THAN);
+                $c->addAnd(SaidasPeer::DATAREAL, '0000-00-00', Criteria::EQUAL);
+            }*/
+
+            // Caso seleccion funcionario
+            if ($this->getRequestParameter('funcionario')) {
+                $c->add(SaidasPeer::CODIGOFUNCIONARIO, $this->getRequestParameter('funcionario'), Criteria::EQUAL);
+            }
+            // Caso Palabra claves
+            if ($this->getRequestParameter('buscador')) {
+
+                $c->addJoin(SaidasPeer::CODIGOPROJETO, PropostaPeer::CODIGO_PROJETO, Criteria::LEFT_JOIN);
+                $c->addJoin(SaidasPeer::CODIGOFUNCIONARIO, LxUserPeer::ID_USER, Criteria::LEFT_JOIN);
+                $c->addJoin(SaidasPeer::CODIGOCADASTRO, CadastroJuridicaPeer::ID_EMPRESA, Criteria::LEFT_JOIN);
+
+                $criterio = $c->getNewCriterion(SaidasPeer::CODIGO_SAIDA, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE);
+                $criterio->addOr($c->getNewCriterion(PropostaPeer::CODIGO_SGWS_PROJETO, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE));
+                $criterio->addOr($c->getNewCriterion(LxUserPeer::NAME, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE));
+                $criterio->addOr($c->getNewCriterion(CadastroJuridicaPeer::NOME_FANTASIA, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE));
+
+                $criterio->addOr($c->getNewCriterion(SaidasPeer::CENTRO, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE));
+                $criterio->addOr($c->getNewCriterion(SaidasPeer::FORMAPAGAMENTO, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE));
+                $criterio->addOr($c->getNewCriterion(SaidasPeer::DESCRICAOSAIDA, '%' . $this->getRequestParameter('buscador') . '%', Criteria::LIKE));
+                $c->add($criterio);
+            }
+        } else {
+            $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, '0000-00-00', Criteria::GREATER_THAN);
+            // $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::LESS_THAN);
+            // $c->addAnd(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
         }
         $this->result = SaidasPeer::doSelect($c);
         $this->funcionarios = LxUserPeer::getUsuariosFuncionarios();
@@ -276,7 +384,7 @@ class despesaActions extends sfActions {
     public function executeCompensar(sfWebRequest $request) {
         if ($this->getRequestParameter('chk')) {
             $total = 0;
-            var_dump($this->getRequestParameter('chk'));
+            // var_dump($this->getRequestParameter('chk'));
             foreach ($this->getRequestParameter('chk') as $gr => $val) {
              // var_dump($gr);
                 $saida = SaidasPeer::retrieveByPk($val);

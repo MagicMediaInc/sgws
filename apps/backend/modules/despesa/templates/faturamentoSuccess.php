@@ -234,11 +234,11 @@
 
                                     <select name="status" id="status">
 
-                                        <option value="Tudos" <?php echo $sf_request->getParameter('status') == 'Tudos' ? 'selected="selected"' : ''  ?> >Tudos</option>
+                                        <!-- <option value="Tudos" <?php echo $sf_request->getParameter('status') == 'Tudos' ? 'selected="selected"' : ''  ?> >Tudos</option> -->
 
-                                        <option value="Previstas" <?php echo $sf_request->getParameter('status') == 'Previstas' ? 'selected="selected"' : ''  ?> >Previstas</option>
+                                        <option value="Faturados" <?php echo $sf_request->getParameter('status') == 'Faturados' ? 'selected="selected"' : ''  ?> >Faturados</option>
 
-                                        <option value="Faturadas" <?php echo $sf_request->getParameter('status') == 'Faturadas' ? 'selected="selected"' : ''  ?> >Faturadas</option>
+                                        <option value="Previstos" <?php echo $sf_request->getParameter('status') == 'Previstos' ? 'selected="selected"' : ''  ?> >Previstos</option>
 
                                     </select>
 
@@ -247,8 +247,7 @@
                                 <td style="width: 9%;">
 
                                     <label style="color: #333; font-weight: bold;"> <?php echo __('De') ?></label><br />
-
-                                    <input size="8" type="text" name="from_date" id="from_date" value="<?php echo $sf_request->getParameter('from_date') ?>" >
+                                    <input size="8" type="text" name="from_date" id="from_date" value="<?php echo $sf_request->getParameter('from_date') != null ? $sf_request->getParameter('from_date') : date('01-m-Y') ?>" >
 
                                 </td>
 
@@ -256,7 +255,7 @@
 
                                     <label style="color: #333; font-weight: bold;"> <?php echo __('Até') ?></label><br />
 
-                                    <input size="8" type="text" name="to_date" id="to_date" value="<?php echo $sf_request->getParameter('to_date') ?>" >
+                                    <input size="8" type="text" name="to_date" id="to_date" value="<?php echo $sf_request->getParameter('to_date') != null ? $sf_request->getParameter('to_date') : date('t-m-Y') ?>" >
 
                                 </td>
 

@@ -132,6 +132,7 @@
                     <?php $procesaSeleccionados = false; ?>
                     <?php $totalSalida = 0; ?>
                     <?php foreach ($result as $valor): ?>
+                    <?php //if($valor->getCodigocadastro() != 1730 AND $valor->getCodigocadastro() != 1729): //MODIFICAR EN MIGRACION ?> 
                     <?php $monto = $valor->getSaidas() ?>
                     <?php if($valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento'):?>
                            <?php $total =  $total - $monto; ?> 
@@ -225,13 +226,14 @@
                             <?php endif; ?>
                         </td>
                     </tr>
+                    <?php //endif; ?>
                     <?php endforeach; ?>
                     <tr style="font-size: 13px;font-weight: bold;">
-                        <td colspan="5">&nbsp;</td>
+                        <td colspan="<?php echo ($sf_request->getParameter('status') == 1) ? '5' : '6' ?>">&nbsp;</td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
                         <td colspan="4" style="text-align: left; padding-right: 48px;">
-                            Total Global: R$ <?php echo aplication_system::monedaFormat($total_global)  ?>
+                            <?php if($sf_request->getParameter('status') == 1): ?>Total Global: R$ <?php echo aplication_system::monedaFormat($total_global); endif;  ?>
                         </td>
                         
                     </tr>

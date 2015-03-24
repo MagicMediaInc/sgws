@@ -231,7 +231,8 @@
 
                                     </div>
                                 </td> 
-                                <?php if ($form->getObject()->getBaixa()== 0):?>
+                                <?php if ($form->getObject()->getBaixa()== 0 OR $id_projeto == null):?>
+
                                 <?php if (!$form->getObject()->isNew()): ?>
                                     <?php if ($form->getObject()->getCentro() != 'compensação' && aplication_system::esUsuarioRoot()):?>
                                         <td>

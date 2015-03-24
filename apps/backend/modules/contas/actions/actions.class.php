@@ -20,8 +20,8 @@ class contasActions extends sfActions
       
       $id_proyecto = null;
       $c = new Criteria();
-      $lojas = array('1567','1564');
       $c->add(SaidasPeer::CODIGOFUNCIONARIO, aplication_system::getUser(), Criteria::EQUAL);
+      $lojas = array('1729','1730');
       $c->addAnd(SaidasPeer::CODIGOCADASTRO, $lojas, Criteria::NOT_IN);
       // Si se selecciono proyecto o tarefa
       if($request->getParameter('id_projeto'))

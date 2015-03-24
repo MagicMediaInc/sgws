@@ -860,6 +860,8 @@ class lxuserActions extends sfActions {
 
                 $novoUsuario->setPassword($form->getValue('password'));
 
+                $novoUsuario->setStatus(1);
+
                 $novoUsuario->save();
 
                 // Busco el usuario en rate base
@@ -995,6 +997,8 @@ class lxuserActions extends sfActions {
             $Empresa =  $form->save();
 
             $id_user = $Empresa->getIdEmpresa();
+
+            $Empresa->setStatus(1);
 
             if ($this->getRequestParameter('chktipo')) {
 
