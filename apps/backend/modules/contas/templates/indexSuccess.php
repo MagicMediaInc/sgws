@@ -28,6 +28,7 @@
         });
         $("#hrefPrint").click(function() {
             // Print the DIV.
+            $('.for_print').show();
             $('.no_for_print').hide();
             $('#chkTodos').hide();
             $('#datos-func').show();
@@ -35,6 +36,7 @@
             return (false);
         });
         $(".frameForm").mouseover(function(){
+            $('.for_print').hide();
             $('.no_for_print').show();
             $('#chkTodos').show();
             $('#datos-func').hide();
@@ -75,10 +77,10 @@
                                 </td>
                                 <td style="width: 20%;">
                                     <label style="color: #333; font-weight: bold;"> <?php echo __('De') ?></label>
-                                    <input size="8" type="text" name="from_date" id="from_date" value="<?php echo $from ?>" >
+                                    <input size="8" type="text" name="from_date" id="from_date" value="<?php echo $from != null ? date('d-m-Y', strtotime($from)) : date('01-m-Y') ?>" >
                                     &nbsp;&nbsp;
                                     <label style="color: #333; font-weight: bold;"> <?php echo __('Até') ?></label>
-                                    <input size="8" type="text" name="to_date" id="to_date" value="<?php echo $to ?>" >
+                                    <input size="8" type="text" name="to_date" id="to_date" value="<?php echo $to != null ? date('d-m-Y', strtotime($to)) : date('t-m-Y') ?>" >
                                 </td>
                                 <td align="left">
                                     <input type="submit" name="buscar" id="buscar" value="Buscar" />
@@ -109,20 +111,20 @@
                 <br />
             </caption>
             <thead>
-                <?php if($sf_request->getParameter('status') == '0'):?>
+                <?php if($sf_request->getParameter('status') != '1'):?>
                 <th style="background-color: #5092bd; border-bottom: 1px #DDD solid;">&nbsp;<input type="checkbox" id="chkTodos" value="checkbox" onClick="checkTodos(this);" >&nbsp;</th>
                 <?php endif; ?>
-                <th style="width: 6%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Data Real</th>
+                 <th style="width: 6%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Data Real</th>
                 <th style="width: 6%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Projeto</th>
-                <th style="width: 15%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Descrição</th>
-                <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Fornecedor / Cliente</th>
+                <th style="width: 10%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Descrição</th>
+                <th style="width: 30%;font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF; ">Fornecedor / Cliente</th>
                 <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Pagamento</th>
-                <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Entrada</th>
+                <th class="no_for_print" style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Entrada</th>
                 <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Saídas</th>
-                <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Saldo</th>
-                <th class="no_for_print" style="border-bottom: 1px #DDD solid;">GP</th>
+                <th class="no_for_print" style="width: 10%;font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Saldo</th>
+                <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">GP</th>
                 <th class="no_for_print" style="border-bottom: 1px #DDD solid;">ADM</th>
-                <th class="no_for_print" style="border-bottom: 1px #DDD solid;" >&nbsp;</th>
+                <th class="for_print" style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;" >Rubrica</th>
             </thead>
             <tbody>
                 <?php if(count($result)): ?>
@@ -140,7 +142,7 @@
                            <?php $total = $total + $monto; ?>
                             <?php endif; ?>
                     <?php $totalGral = $total + $monto ; ?>
-                    <tr><?php if($sf_request->getParameter('status') == '0'):?>
+                    <tr><?php if($sf_request->getParameter('status') != '1'):?>
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">&nbsp;
                             <?php  $procesaSeleccionados = true; ?>
                             
@@ -148,18 +150,18 @@
                             
                         </td>
                         <?php endif;?>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; "><?php echo date('d/m/Y', strtotime($valor->getDatareal())) ?></td>
+                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; "><?php echo date('d/m/Y', strtotime($valor->getDatareal())) ?></td>
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                             <?php $projeto = PropostaPeer::getDataByCodProjeto($valor->getCodigoprojeto()) ?>
                             <?php echo $projeto ? $projeto->getCodigoSgwsProjeto() : '' ?>
                         </td>
-                        <td style="width: 250px; font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
+                        <td style="width: 150px; font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid;text-transform: lowercase; ">
                             <!-- Descripcion -->
                             <?php $func =  lynxValida::datosTipoUsuario($valor->getCodigofuncionario() ? $valor->getCodigofuncionario() : $valor->getConfirmadopor(), 2) ?>
                             (<?php echo $valor->getCentro() ?>) - <?php echo $func['nome'] ?> - <?php echo html_entity_decode($valor->getDescricaosaida()) ?>
 
                         </td>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
+                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid;text-transform: lowercase;  ">
                             <?php $fornecedor =  lynxValida::datosTipoUsuario($valor->getCodigocadastro(), 3) ?>
                             <?php if($fornecedor): ?>
                             <span style="font-weight: bold;"><?php echo $fornecedor['nome'] ?></span> <br >
@@ -172,11 +174,11 @@
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                              <?php echo ucfirst($valor->getFormapagamento())  ?>
                         </td>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
+                        <td class="no_for_print"style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                             <?php echo $valor->getOperacao() == 's'  && $valor->getCentro() == 'adiantamento' ? 'R$ '.aplication_system::monedaFormat($monto,2,",",".")  : '' ?>&nbsp;
                             <?php $valor->getOperacao() == 's'  && $valor->getCentro() == 'adiantamento'? $totalEntrada = $totalEntrada + $monto : '' ?>
                         </td>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
+                        <td class="no_for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                             <?php echo $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento' ? 'R$ '.aplication_system::monedaFormat($monto,2,",",".")  : '' ?>&nbsp;
                             <?php $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento'? $totalSalida = $totalSalida - $monto : '' ?>
                         </td>
@@ -191,6 +193,7 @@
                                 ));
                                 ?>
                             <?php else: ?>
+                                
                                 <?php echo image_tag(($valor->getBaixa() == 1 ? '1' : '0').'.png','alt="" title="" border=0') ?>
                             <?php endif; ?>
                         </td>
@@ -225,12 +228,28 @@
                                 <?php endif; ?>
                             <?php endif; ?>
                         </td>
+                        <!-- /images/1.png -->
+                        <td class="for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid;">
+                            <?php echo ($valor->getBaixa() == 1 ? 'sim' : 'não') ?>
+                        </td>
+                        <td class="for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid;">
+                            
+                        </td>
                     </tr>
                     <?php //endif; ?>
                     <?php endforeach; ?>
-                    <tr style="font-size: 13px;font-weight: bold;">
+                    <tr class="no_for_print" style="font-size: 13px;font-weight: bold;">
                         <td colspan="<?php echo ($sf_request->getParameter('status') == 1) ? '5' : '6' ?>">&nbsp;</td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td>
+                        <td>R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
+                        <td colspan="4" style="text-align: left; padding-right: 48px;">
+                            <?php if($sf_request->getParameter('status') == 1): ?>Total Global: R$ <?php echo aplication_system::monedaFormat($total_global); endif;  ?>
+                        </td>
+                        
+                    </tr>
+                    <tr class="for_print" style="font-size: 13px;font-weight: bold;">
+                        <td colspan="<?php echo ($sf_request->getParameter('status') == 1) ? '5' : '6' ?>">&nbsp;</td>
+                        <!-- <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td> -->
                         <td>R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
                         <td colspan="4" style="text-align: left; padding-right: 48px;">
                             <?php if($sf_request->getParameter('status') == 1): ?>Total Global: R$ <?php echo aplication_system::monedaFormat($total_global); endif;  ?>

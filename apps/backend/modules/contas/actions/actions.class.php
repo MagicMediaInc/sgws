@@ -33,6 +33,10 @@ class contasActions extends sfActions
       
       if ($request->isMethod('post'))
       {
+        if ($this->getRequestParameter('from_date')) {
+            $this->from = date("Y-m-d", strtotime($this->getRequestParameter('from_date')));
+            $this->to = date("Y-m-d", strtotime($this->getRequestParameter('to_date')));
+        }
         // var_dump('post ');
         if($request->getParameter('status') < 1){
 
@@ -41,16 +45,35 @@ class contasActions extends sfActions
             $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::NOT_EQUAL);
             $c->add(SaidasPeer::CONFIRMACAO, $request->getParameter('status'), Criteria::EQUAL);
             $c->add(SaidasPeer::CENTRO, 'adiantamento', Criteria::NOT_EQUAL);
+            if ($this->from) {
+              // var_dump('pagados 0');
+              $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, $this->from, Criteria::GREATER_EQUAL);
+              $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, $this->to, Criteria::LESS_EQUAL));
+              $c->add($cFecha);
+              }
         }
         elseif($request->getParameter('status') < 2)
         {
           // var_dump('status < 2 ');
+          // var_dump($request->getParameter('status'));
             $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::NOT_EQUAL);
-            $c->add(SaidasPeer::CONFIRMACAO, $request->getParameter('status'), Criteria::EQUAL);
+            $c->add(SaidasPeer::CONFIRMACAO, 1, Criteria::EQUAL);
+            if ($this->from) {
+              // var_dump('saidas');
+              $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, $this->from, Criteria::GREATER_EQUAL);
+              $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, $this->to, Criteria::LESS_EQUAL));
+              $c->add($cFecha);
+              }
         }else{
           // var_dump('status > 2 ');
             $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::EQUAL);
             $c->add(SaidasPeer::CONFIRMACAO, 0, Criteria::EQUAL);
+            if ($this->from) {
+              // var_dump('saidas');
+              $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, $this->from, Criteria::GREATER_EQUAL);
+              $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, $this->to, Criteria::LESS_EQUAL));
+              $c->add($cFecha);
+              }
             
         }
         $st = $request->getParameter('status');
@@ -66,40 +89,43 @@ class contasActions extends sfActions
         $c->add(SaidasPeer::FOR_PRINT, 1, Criteria::NOT_EQUAL);
         $c->add(SaidasPeer::CONFIRMACAO, 0, Criteria::EQUAL);
         $c->add(SaidasPeer::CENTRO, 'adiantamento', Criteria::NOT_EQUAL);
+        $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, date('Y-m-01'),Criteria::GREATER_EQUAL);
+        $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, date('Y-m-t'), Criteria::LESS_EQUAL));
       }
       
-      if($this->getRequestParameter('from_date'))
+      /*if($this->getRequestParameter('from_date'))
         {
-          // var_dump('parameter from_date');
-            $from = $this->getRequestParameter('from_date');
-            $dt = explode('-', $from) ;
-            $from = $dt[2].'-'.$dt[1].'-'.$dt[0];
-            $to = $this->getRequestParameter('to_date');
-            $dt = explode('-', $to) ;
-            $to = $dt[2].'-'.$dt[1].'-'.$dt[0];
-        }else{
-          // var_dump('not parameter from_date');
+          var_dump('parameter from_date');
+            $this->from = $this->getRequestParameter('from_date');
+            $dt = explode('-', $this->from) ;
+            $this->from = $dt[2].'-'.$dt[1].'-'.$dt[0];
+            $this->to = $this->getRequestParameter('to_date');
+            $dt = explode('-', $this->to) ;
+            $this->to = $dt[2].'-'.$dt[1].'-'.$dt[0];
+        }
+      else{
+          var_dump('not parameter from_date');
 
             if (aplication_system::isAllAction() || aplication_system::esContable())
             {
           // var_dump('all in action or es contable');
-                $from = date('Y-m-01');
-                $to = date('Y-m-30');
+                $this->from = date('Y-m-01');
+                $this->to = date('Y-m-30');
             }else{
           // var_dump('NOT all in action or es contable');
-                $from = date('Y-m-01');
-                $to = date('Y-m-30');
+                $this->from = date('Y-m-01');
+                $this->to = date('Y-m-30');
             }            
         }
-        $this->from = date("d-m-Y", strtotime($from));
-        $this->to = date("d-m-Y", strtotime($to));
-        if($from)
+      $this->from = date("d-m-Y", strtotime($this->from));
+      $this->to = date("d-m-Y", strtotime($this->to));
+      if($this->from)
       {
-          // var_dump('from');
-        $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, $from,Criteria::GREATER_EQUAL);
-        $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, $to, Criteria::LESS_EQUAL));
+        var_dump('from');
+        $cFecha = $c->getNewCriterion(SaidasPeer::DATAREAL, $this->from,Criteria::GREATER_EQUAL);
+        $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAREAL, $this->to, Criteria::LESS_EQUAL));
         $c->add($cFecha);
-      }
+      }*/
       if($this->getRequestParameter('buscador'))
       {
           // var_dump('parameter buscador');
@@ -136,7 +162,7 @@ class contasActions extends sfActions
       $c->add($criterio);
       
       
-      $c->add(SaidasPeer::DATAREAL, '2014-01-01', Criteria::GREATER_EQUAL);
+      // $c->add(SaidasPeer::DATAREAL, '2014-01-01', Criteria::GREATER_EQUAL);
       $this->result = SaidasPeer::doSelect($c);
       
       $this->total_global = SaidasPeer::getTotalPrestacaoContasUsuario(aplication_system::getUser(), $id_proyecto, $st);

@@ -182,7 +182,7 @@
 
 </style>
 
-<h1 class="icono_projeto"><?php echo __('Pagamentos em Atraso') ?></h1>
+<h1 class="icono_projeto"><?php echo __('Pagamentos') ?></h1>
 
 <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinanciero') ?>">Inclusão de Entradas/Saídas</a>
 
@@ -237,6 +237,8 @@
                                     <label style="color: #333; font-weight: bold;">Status</label><br />
 
                                     <select name="status" id="status">
+
+                                        <option value=null >Selecione</option>
 
                                         <option value="Pagos" <?php echo $sf_request->getParameter('status') == 'Pagos' ? 'selected="selected"' : ''  ?> >Pagos</option>
 

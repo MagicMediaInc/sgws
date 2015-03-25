@@ -6,6 +6,10 @@
     //var url_fun = 'http://' + location.hostname + '/backend_dev.php';
  var url_fun  ='http://localhost/sgws/public_html/backend_dev.php/';
 
+    var setDecimalPoints = function(locale){
+
+    }
+
     var calcular_liquida_prevista = function(){
         var  prevista = $('#saidas_saidaprevista').val().substr(3);
         var  impostos = $('#saidas_impostos').val().split(" ");
@@ -14,6 +18,7 @@
         var  saidaimpostos = impostos[0].replace(".","");
         var  saidaimpostos = saidaimpostos.replace(",",".");
         var resta = ((eval(100) - eval($.trim(saidaimpostos))) / 100) * eval($.trim(saidaprevista)) ;
+        console.log(resta.toLocaleString());
         $("#liquidaPrevista").val("R$ "+resta.toFixed(2));  
     }
       
@@ -28,7 +33,7 @@
             var  saidaimpostos = saidaimpostos.replace(",",".");
             var resta = ((eval(100) - eval($.trim(saidaimpostos))) / 100) * eval($.trim(saidaprevista)) ;
             if(resta){
-                $("#liquidaPrevista").val("R$ "+resta.toFixed(2));     
+                $("#liquidaPrevista").val("R$ "+resta);     
             }
             
         $('.data-despesa').each(function() {
@@ -42,6 +47,7 @@
 
         formatInputMoneda($('#saidas_saidaprevista'));
         formatInputMoneda($('#saidas_saidas'));
+        formatInputMoneda($('#liquidaPrevista'));
         analisisImpuesto();
    
         if ($('#saidas_operacao').val() === 'e')

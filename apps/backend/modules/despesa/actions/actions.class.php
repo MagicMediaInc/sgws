@@ -313,29 +313,29 @@ class despesaActions extends sfActions {
             // var_dump($from);
             // var_dump($to);
             if ($request->getParameter('status') == 'Saidas') {
-                // var_dump('pagos');
                 $c->add(SaidasPeer::DATAREAL, date("Y-m-d"), Criteria::LESS_THAN);
                 if ($from) {
-                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
-                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    // var_dump('saidas');
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATARECEBIMENTOPRE, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATARECEBIMENTOPRE, $to, Criteria::LESS_EQUAL));
                     $c->add($cFecha);
                 }
-            } elseif ($request->getParameter('status') == 'Abertos') {
-                // var_dump('abertos');
+            } elseif ($request->getParameter('status') == 'Abertas') {
                 $c->add(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
                 $c->add(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::GREATER_THAN);
                 if ($from) {
-                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
-                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    // var_dump('abertos');
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATARECEBIMENTOPRE, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATARECEBIMENTOPRE, $to, Criteria::LESS_EQUAL));
                     $c->add($cFecha);
                 }
-            } elseif ($request->getParameter('status') == 'Atrasados') {
-                // var_dump('atrasados');
+            } elseif ($request->getParameter('status') == 'Atrasadas') {
                 $c->add(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
                 $c->add(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::LESS_THAN);
                 if ($from) {
-                    $cFecha = $c->getNewCriterion(SaidasPeer::DATAPREVISTA, $from, Criteria::GREATER_EQUAL);
-                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATAPREVISTA, $to, Criteria::LESS_EQUAL));
+                    // var_dump('atrasados');
+                    $cFecha = $c->getNewCriterion(SaidasPeer::DATARECEBIMENTOPRE, $from, Criteria::GREATER_EQUAL);
+                    $cFecha->addAnd($c->getNewCriterion(SaidasPeer::DATARECEBIMENTOPRE, $to, Criteria::LESS_EQUAL));
                     $c->add($cFecha);
                 }
             }
@@ -353,11 +353,12 @@ class despesaActions extends sfActions {
 
             // Caso seleccion funcionario
             if ($this->getRequestParameter('funcionario')) {
+                // var_dump("funcionario");
                 $c->add(SaidasPeer::CODIGOFUNCIONARIO, $this->getRequestParameter('funcionario'), Criteria::EQUAL);
             }
             // Caso Palabra claves
             if ($this->getRequestParameter('buscador')) {
-
+                // var_dump("buscador");
                 $c->addJoin(SaidasPeer::CODIGOPROJETO, PropostaPeer::CODIGO_PROJETO, Criteria::LEFT_JOIN);
                 $c->addJoin(SaidasPeer::CODIGOFUNCIONARIO, LxUserPeer::ID_USER, Criteria::LEFT_JOIN);
                 $c->addJoin(SaidasPeer::CODIGOCADASTRO, CadastroJuridicaPeer::ID_EMPRESA, Criteria::LEFT_JOIN);
@@ -373,8 +374,9 @@ class despesaActions extends sfActions {
                 $c->add($criterio);
             }
         } else {
-            $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, '0000-00-00', Criteria::GREATER_THAN);
-            // $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date("Y-m-d"), Criteria::LESS_THAN);
+            // var_dump("not post");
+            $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date('Y-m-01'), Criteria::GREATER_THAN);
+            $c->addAnd(SaidasPeer::DATARECEBIMENTOPRE, date('Y-m-t'), Criteria::LESS_THAN);
             // $c->addAnd(SaidasPeer::DATAREAL, null, Criteria::EQUAL);
         }
         $this->result = SaidasPeer::doSelect($c);
@@ -390,6 +392,7 @@ class despesaActions extends sfActions {
                 $saida = SaidasPeer::retrieveByPk($val);
              // var_dump($saida);
                 $saida->setConfirmacao(1);
+                $saida->setForPrint(0);
                 $saida->setConfirmadopor(aplication_system::getUser());
                 $saida->save();
                 $total = $total + $saida->getSaidas();

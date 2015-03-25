@@ -114,6 +114,7 @@ class CadastroJuridicaPeer extends BaseCadastroJuridicaPeer {
         //Se Agregan las Columnas necesarias
         $c->addSelectColumn(self::NOME_FANTASIA); 
         $c->addSelectColumn(self::ID_EMPRESA); 
+        $c->addAscendingOrderByColumn(self::NOME_FANTASIA);
         $rs = self::doSelectStmt($c);
         //Se recuperan los registros y se genera arreglo  
         while($res = $rs->fetch())

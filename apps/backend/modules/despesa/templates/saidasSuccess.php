@@ -182,7 +182,7 @@
 
 </style>
 
-<h1 class="icono_projeto"><?php echo __('Pagamentos em Atraso') ?></h1>
+<h1 class="icono_projeto"><?php echo __('Saidas') ?></h1>
 
 <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinanciero') ?>">Inclusão de Entradas/Saídas</a>
 
@@ -237,6 +237,8 @@
                                     <label style="color: #333; font-weight: bold;">Status</label><br />
 
                                     <select name="status" id="status">
+
+                                        <option value=null>Selecione</option>
 
                                         <option value="Saidas" <?php echo $sf_request->getParameter('status') == 'Saidas' ? 'selected="selected"' : ''  ?> >Saidas</option>
 
@@ -323,7 +325,7 @@
 
                 <th style="width: 8%;">Data Prevista</th>
 
-                <th style="width: 10%;">Data Faturamento</th>
+                <th style="width: 10%;">Data Real</th>
 
                 <th style="width: 7%;">Projeto</th>
 
@@ -387,9 +389,9 @@
 
                     <td>&nbsp;</td>
 
-                    <td><?php echo date('d/m/Y', strtotime($valor->getDataprevista())) ?></td>
+                    <td><?php echo date('d/m/Y', strtotime($valor->getDatarecebimentopre())) ?></td>
 
-                    <td><?php echo $valor->getDataemissao() ? date('d/m/Y', strtotime($valor->getDataemissao())) : '' ?></td>
+                    <td><?php echo $valor->getDatareal() ? date('d/m/Y', strtotime($valor->getDatareal())) : '' ?></td>
 
                     <td>
 

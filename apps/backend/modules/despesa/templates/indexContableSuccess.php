@@ -96,6 +96,8 @@
 
                         $('.adiantamento').hide();
 
+                        $('.no_compensa').hide();
+
                         $('#totales_ppales').hide();
 
                     }else{
@@ -400,7 +402,7 @@
 
                 <?php endif; ?>
 
-                <?php if($valor->getOperacao() == 's' && !$valor->getConfirmacao()): ?>
+                <?php if($valor->getOperacao() == 's' && !$valor->getConfirmacao() && ($valor->getCodigocadastro() != 1729 && $valor->getCodigocadastro() != 1730)): ?>
 
                     <?php $classFila = 'for_compensa' ?>
 
@@ -434,7 +436,6 @@
                     <td style="width: 250px;">
 
                         <!-- Descripcion -->
-
                         <?php $func = LxUserPeer::getCurrentPassword($valor->getCodigofuncionario() ? $valor->getCodigofuncionario() : $valor->getConfirmadopor()) ?>
 
                         <?php if($valor->getCentro() == 'compensação'): ?>
