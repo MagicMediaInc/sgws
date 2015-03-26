@@ -552,7 +552,7 @@
 
                         <?php $dBaixa = $valor->getBaixa() ? $valor->getBaixa() : '0' ?>
 
-                        <?php if((aplication_system::esGerente() && $projeto ? aplication_system::compareUserVsResponsable($projeto->getGerente()) : 1) || (aplication_system::esSocio()) && !$valor->getConfirmacao()): ?>
+                        <?php if(((aplication_system::esGerente()) && ($projeto ? aplication_system::compareUserVsResponsable($projeto->getGerente()) : 1)) || aplication_system::esSocio()): ?>
 
                             <?php echo jq_link_to_remote(image_tag($dBaixa.'.png','alt="" title="" border=0'), array(
 
@@ -576,23 +576,23 @@
 
                     </td>
 
-                    <td class="no_print" id="confirma_<?php echo $valor->getCodigoSaida() ?>" >
+                    <td class="no_print" id="confirmado_<?php echo $valor->getCodigoSaida() ?>" >
 
                         <?php $dConfirmacao = $valor->getConfirmacao() ? $valor->getConfirmacao() : '0' ?>
 
-                        <?php if(aplication_system::esContable()): ?>
+                        <?php if(aplication_system::esContable() || aplication_system::esSocio()): ?>
 
                             <?php if($statusPedido == 4 || $statusPedido == 0): ?>
 
                                 <?php echo jq_link_to_remote(image_tag($dConfirmacao.'.png','alt="" title="" border=0'), array(
 
-                                    'update'  =>  'confirma_'.$valor->getCodigoSaida(),
+                                    'update'  =>  'confirmado_'.$valor->getCodigoSaida(),
 
-                                    'url'     =>  'despesa/confirmacion?id='.$valor->getCodigoSaida().'&confirma='.$dConfirmacao,
+                                    'url'     =>  'despesa/confirmacion?id='.$valor->getCodigoSaida().'&confirmado='.$dConfirmacao,
 
                                     'script'  => true,
 
-                                    'before'  => "$('#confirma_".$valor->getCodigoSaida()."').html('". image_tag('preload.gif','title="" alt=""')."');"
+                                    'before'  => "$('#confirmado_".$valor->getCodigoSaida()."').html('". image_tag('preload.gif','title="" alt=""')."');"
 
                                 ),array('class' => 'opcoe_adm'));
 

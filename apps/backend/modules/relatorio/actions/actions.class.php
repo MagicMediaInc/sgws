@@ -51,6 +51,7 @@ class relatorioActions extends sfActions
   public function executeFluxo(sfWebRequest $request)
   {
       $this->data = PropostaPeer::retrieveByPK($request['id']);
+      // var_dump($request['id']);
       $this->despesa = SaidasPeer::getSaidaPerProjeto($request['id']);
   }
   
@@ -282,7 +283,7 @@ class relatorioActions extends sfActions
       {
           $nMes = globalFunctions::zerofill($i,2);
           $ttotalFile = $tt['total1'][$i] + $tt['total2'][$i];
-          $r['Total'][$nMes] = aplication_system::monedaFormat($ttotalFile);
+          $r['Saldo'][$nMes] = aplication_system::monedaFormat($ttotalFile);
           unset($ttotalFile);
       }
 //      echo "<pre>";

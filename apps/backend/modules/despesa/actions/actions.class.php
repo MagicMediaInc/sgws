@@ -446,13 +446,13 @@ class despesaActions extends sfActions {
 
     public function executeConfirmacion(sfWebRequest $request) {
         $this->forward404Unless($this->Despesa = SaidasPeer::retrieveByPk($request->getParameter('id')), sprintf('Object Despesa does not exist (%s).', $request->getParameter('id')));
-        if ($request->getParameter('confirma')) {
+        if ($request->getParameter('confirmado')) {
             $this->Despesa->setConfirmacao(0);
-            $this->Despesa->setBaixa(0);
+            // $this->Despesa->setBaixa(0);
             $this->Despesa->setConfirmadopor(0);
         } else {
-            $this->Despesa->setBaixa(1);
-            $this->Despesa->setConfirmacao('1');
+            // $this->Despesa->setBaixa(1);
+            $this->Despesa->setConfirmacao(1);
             $this->Despesa->setConfirmadopor(aplication_system::getUser());
         }
         $this->Despesa->save();

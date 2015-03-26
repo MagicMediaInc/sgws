@@ -87,12 +87,14 @@
                     <?php $tRealDesp = $tRealDesp + $realDespesa ?>
                 </td>
                 <td class="left-cel">
-                    <?php $resultado = ($rs['valor_hh'] - $realHH) + ($prevDespesa + $realDespesa) ?>
+                    <?php $resultado = ($rs['valor_hh'] - $realHH) + ($prevDespesa - $realDespesa) ?>
                     <?php echo aplication_system::monedaFormat($resultado) ?>
                     <?php $tResultado = $tResultado + $resultado ?>
                 </td>
                 <td class="left-cel">
-                    <?php $divisor = $realHH + $realDespesa ?>
+                    <?php $divisor = $rs['valor_hh'] + $prevDespesa;
+                          $resultado = $resultado * 100; 
+                    //$divisor = $realHH + $realDespesa ?>
                     <?php $resultadoPer = $divisor > 0 ? $resultado / $divisor : 0 ?> 
                     <?php echo aplication_system::monedaFormat($resultadoPer) ?> %
                     
@@ -118,6 +120,11 @@
             <td>R$ <?php echo aplication_system::monedaFormat($tPrevDesp) ?></td>
             <td>R$ <?php echo aplication_system::monedaFormat($tRealDesp) ?></td>
             <td>R$ <?php echo aplication_system::monedaFormat($tResultado) ?></td>
+            <td><?php 
+                $tResultado = $tResultado * 100;
+                $tDisvisor = $tValorHH + $tPrevDesp;
+                echo number_format($tResultado/ $tDisvisor, 2). " %";
+            ?></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

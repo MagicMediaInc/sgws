@@ -32,7 +32,12 @@
             $('.no_for_print').hide();
             $('#chkTodos').hide();
             $('#datos-func').show();
-            $("#printdiv").print();
+            $('.chk-print').each(function(){
+                if(!$(this).is(':checked')) $(this).closest('tr').hide();
+            });
+            $("#printdiv").print({
+                noPrintSelector: ".no-print",
+            });
             return (false);
         });
         $(".frameForm").mouseover(function(){
@@ -112,7 +117,7 @@
             </caption>
             <thead>
                 <?php if($sf_request->getParameter('status') != '1'):?>
-                <th style="background-color: #5092bd; border-bottom: 1px #DDD solid;">&nbsp;<input type="checkbox" id="chkTodos" value="checkbox" onClick="checkTodos(this);" >&nbsp;</th>
+                <th class="no-print" style="background-color: #5092bd; border-bottom: 1px #DDD solid;">&nbsp;<input type="checkbox" id="chkTodos" value="checkbox" onClick="checkTodos(this);" >&nbsp;</th>
                 <?php endif; ?>
                  <th style="width: 6%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Data Real</th>
                 <th style="width: 6%; border-bottom: 1px #DDD solid; font-size: 11px; background-color: #5092bd; color: #FFF;">Projeto</th>
@@ -143,10 +148,10 @@
                             <?php endif; ?>
                     <?php $totalGral = $total + $monto ; ?>
                     <tr><?php if($sf_request->getParameter('status') != '1'):?>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">&nbsp;
+                        <td class="no-print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">&nbsp;
                             <?php  $procesaSeleccionados = true; ?>
                             
-                            <input type="checkbox" id="chk_<?php echo $valor->getCodigoSaida() ?>" name="chk[<?php echo $valor->getCodigoSaida() ?>]" value="<?php echo $valor->getCodigoSaida() ?>">
+                            <input class="chk-print" type="checkbox" id="chk_<?php echo $valor->getCodigoSaida() ?>" name="chk[<?php echo $valor->getCodigoSaida() ?>]" value="<?php echo $valor->getCodigoSaida() ?>">
                             
                         </td>
                         <?php endif;?>

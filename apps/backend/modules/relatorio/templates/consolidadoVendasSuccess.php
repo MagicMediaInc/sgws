@@ -90,7 +90,7 @@ include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelecte
                 <tr id="plus-<?php echo $mes ?>" style="display: none;">
 
                     <?php $servicios = PropostaPeer::getTipoServicioAnoMes($ano, $mes); ?>
-
+                    
                     <td colspan="7">
 
                         <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; margin-bottom: 25px;" id="servicios">

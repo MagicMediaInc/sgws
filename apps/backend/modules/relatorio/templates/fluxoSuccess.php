@@ -47,7 +47,13 @@
 
         <th>Saldo (a Faturar)</th>
 
-        <th colspan="3"></th>
+        <th>Previsto Horas Vendidas</th>
+
+        <th>Real Horas Trabalhadas</th>
+
+        <th>Saldo Horas</th>
+
+        <!-- <th colspan="3"></th> -->
 
         
 
@@ -67,11 +73,11 @@
 
         <td>R$ <?php echo aplication_system::monedaFormat($data->getValor() - $valorFaturado) ?></td>
 
-        <td></td>
+        <td><?php echo $data->getHorasVendidas() ?> HH</td>
 
-        <td></td>
+        <td><?php echo $data->getHorasTrabajadas() ?> HH</td>
 
-        <td></td>
+        <td><?php echo $data->getHorasVendidas() - $data->getHorasTrabajadas() ?> HH</td>
 
         <td></td>
 
@@ -87,17 +93,23 @@
 
     <tr>
 
-        <th>Previsto HH</th>
+        <!-- <th>Previsto HH</th>
 
         <th>Real HH</th>
 
+        <th>Saldo HH</th> -->
+
+        <th>Valor Previsto HH</th>
+
+        <th>Valor Real HH</th>
+
         <th>Saldo HH</th>
 
-        <th>Previsto R$</th>
+        <th>Previsto Desp.</th>
 
-        <th>Real R$</th>
+        <th>Real Desp.</th>
 
-        <th>Saldo R$</th>
+        <th>Saldo Desp.</th>
 
         
 
@@ -105,11 +117,11 @@
 
     <tr>
 
-        <td><?php echo $data->getHorasVendidas() ?> HH</td>
+        <!-- <td><?php echo $data->getHorasVendidas() ?> HH</td>
 
         <td><?php echo $data->getHorasTrabajadas() ?> HH</td>
 
-        <td><?php echo $data->getHorasVendidas() - $data->getHorasTrabajadas() ?> HH</td>
+        <td><?php echo $data->getHorasVendidas() - $data->getHorasTrabajadas() ?> HH</td> -->
 
         <td>R$ <?php echo aplication_system::monedaFormat($data->getValorPrevHh()) ?></td>
 
@@ -128,14 +140,36 @@
             R$ <?php echo aplication_system::monedaFormat($saldoHH) ?>
 
         </td>
+        <td>
 
+            <?php $prevDespesa = ProjetoSubtipoGastoPeer::getPrevistoDespesa($data->getCodigoProposta()) ?>
+
+            R$ <?php echo aplication_system::monedaFormat($prevDespesa)  ?>
+
+        </td>
+
+        <td>
+
+            <?php $realDespesa = SaidasPeer::getSumaDespesasRealesProjeto($data->getCodigoProposta())  ?>
+
+            R$ <?php echo aplication_system::monedaFormat($realDespesa)  ?>
+
+        </td>
+
+        <td>
+
+            <?php $saldoDespesa = $prevDespesa - $realDespesa  ?>
+
+            R$ <?php echo aplication_system::monedaFormat($saldoDespesa)  ?>
+
+        </td>
         <td></td>
 
         <td></td>
 
     </tr>
 
-    <tr>
+    <!-- <tr>
 
         <th colspan="3"></th>
 
@@ -145,9 +179,9 @@
 
         <th>Saldo Desp</th>
 
-    </tr>
+    </tr> -->
 
-    <tr>
+ <!--    <tr>
 
         <td></td>
 
@@ -179,7 +213,7 @@
 
         </td>
 
-    </tr>
+    </tr> -->
 
     </thead>
 
@@ -426,7 +460,12 @@
                 </tr>
 
                 <?php endforeach; ?>
-
+            
+                <tr>
+                    <td colspan="3">
+                    <td style="font-weight:700;font-size:12px;">TOTAIS</td>
+                    <td style="font-weight:700;font-size:12px;"><?php echo 'R$ '.aplication_system::monedaFormat(abs($total)); ?></td>
+                </tr>
             <?php else: ?>
 
                 <tr>
