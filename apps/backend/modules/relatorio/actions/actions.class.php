@@ -76,7 +76,7 @@ class relatorioActions extends sfActions
       $this->ano = $ano;
       if(!$this->getRequestParameter('by'))
       {
-        $this->by = 'desc';               // Variable para el orden de los registros
+        $this->by = 'asc';               // Variable para el orden de los registros
         $this->by_page = "asc";           // Variable para el paginador y las flechas de orden
         $this->sort = 'name';      // Nombre del campo que por defecto se ordenara
       }
@@ -166,7 +166,7 @@ class relatorioActions extends sfActions
       $this->ano = $ano;
       if(!$this->getRequestParameter('by'))
       {
-        $this->by = 'desc';               // Variable para el orden de los registros
+        $this->by = 'asc';               // Variable para el orden de los registros
         $this->by_page = "asc";           // Variable para el paginador y las flechas de orden
         $this->sort = 'name';      // Nombre del campo que por defecto se ordenara
       }

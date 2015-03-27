@@ -25,15 +25,16 @@
               <br /><br />
           </td>        
       </tr>
-      <tr>
           <td align="left" width="9%">
             <table width="100%" border="0" cellspacing="3" cellpadding="0">
                 <tr>
                   <td width="9%" align="left">
                       <label>Tipo</label><br />
                       <select id="tipo_busqueda" name="tipo_busqueda">  
-                          <option value="1">Gerente</option>
-                          <option value="2" >Cliente</option>
+                          <option value="1" <?php echo $sf_request->getParameter('tipo_busqueda') == 1 ? 'selected' : '' ?>>Gerente</option>
+                          <option value="2" <?php echo $sf_request->getParameter('tipo_busqueda') == 2 ? 'selected' : '' ?>>Cliente</option>
+                          <option value="3" <?php echo $sf_request->getParameter('tipo_busqueda') == 3 ? 'selected' : '' ?>>Responsável Técnico</option>
+                          <option value="4" <?php echo $sf_request->getParameter('tipo_busqueda') == 4 ? 'selected' : '' ?>>Responsável Comercial</option>
                       </select>
                   </td>
                 </tr>
@@ -96,7 +97,7 @@
                             <?php $status = $revision->getAprobacionProposta() ? '1' : '0' ?>
                             <td>
                                 <?php $status = StatusPeer::retrieveByPK($revision->getAprobacionProposta()) ?>
-                                <?php echo $status ? $status->getIdstatus() : ''?>
+                                <?php echo $status ? (($status->getStatus() > 3) ? 'Vendida' : $status->getIdstatus()) : ''?>
                             </td>
                             <td><?php echo image_tag($revision->getAnalisisPpal().'.png','alt="" title="" border=0') ?></td>
                             <td><a class="fancybox fancybox.iframe" href="<?php echo url_for('@default?module=projeto&action=editAnalisisCritico&id_analisis='.$revision->getId()) ?>">Ver Detalhe</a></td>

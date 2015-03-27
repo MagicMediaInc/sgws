@@ -80,12 +80,20 @@ class AnalisisPeer extends BaseAnalisisPeer {
     
          public static function getAnalisisNameUser($arrayIdUsers,$tipo)
     {
+        // var_dump(self::RESPONSABLE_COMERCIAL);
         $c = new Criteria();
-        if($tipo == 1){
-        $c->add(self::ID_RESPONSAVEL, $arrayIdUsers, Criteria::IN);
-        }else{
-        $c->add(self::ID_CLIENTE, $arrayIdUsers, Criteria::IN);   
-        }
+        if($tipo == 1):
+            $c->add(self::ID_RESPONSAVEL, $arrayIdUsers, Criteria::IN);
+
+        elseif($tipo == 2):
+            $c->add(self::ID_CLIENTE, $arrayIdUsers, Criteria::IN);   
+        elseif($tipo == 3):
+            $c->add(self::RESPONSABLE_TECNICO, $arrayIdUsers, Criteria::IN);
+            // $c->add(self::ID_CLIENTE, $arrayIdUsers, Criteria::IN);   
+        else:
+            $c->add(self::RESPONSABLE_COMERCIAL, $arrayIdUsers, Criteria::IN);
+            // $c->add(self::ID_CLIENTE, $arrayIdUsers, Criteria::IN);   
+        endif;
         return self::doSelect($c);
     }
     

@@ -409,28 +409,36 @@ class projetoActions extends sfActions
   
   public function executeListaAnalisis(sfWebRequest $request)
   {
-    if ($request->isMethod('post'))
-    {
+    if ($request->isMethod('post')):
         $request->getParameter('buscador');
         $tipo = $request->getParameter('tipo_busqueda');
-        if($request->getParameter('tipo_busqueda') == 2){
-            $this->users = CadastroJuridicaPeer::getListClientsNames($request->getParameter('buscador'));
-        $arryIdUser = array();
-        foreach ($this->users as $idUser){
-            $arryIdUser[] = $idUser->getIdEmpresa();
-        }
-        }else{
-        $this->users = LxUserPeer::getListUserNames($request->getParameter('buscador'));
-        $arryIdUser = array();
-        foreach ($this->users as $idUser){
-            $arryIdUser[] = $idUser->getIdUser();
-        }
-        }
+
+        if($request->getParameter('tipo_busqueda') == 2):
+
+          $this->users = CadastroJuridicaPeer::getListClientsNames($request->getParameter('buscador'));
+          $arryIdUser = array();
+
+          foreach ($this->users as $idUser):
+              $arryIdUser[] = $idUser->getIdEmpresa();
+          endforeach;
+
+        else:
+
+          $this->users = LxUserPeer::getListUserNames($request->getParameter('buscador'));
+          $arryIdUser = array();
+
+          foreach ($this->users as $idUser):
+              $arryIdUser[] = $idUser->getIdUser();
+          endforeach;
+
+        endif;
+
         $this->revisiones = AnalisisPeer::getAnalisisNameUser($arryIdUser,$tipo);
         
-    }else{
+    else:
       $this->revisiones = AnalisisPeer::getListaRevisiones();
-    }
+    endif;
+    
   }
 
   public function executeEditAnexo(sfWebRequest $request)

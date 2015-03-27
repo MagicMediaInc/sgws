@@ -72,7 +72,8 @@ class PropostaForm extends BasePropostaForm
       $this->validatorSchema['satisfacao_cliente']  = new sfValidatorString(array('required' => false, 'trim' => false));
       //$this->widgetSchema['codigo_centro']->setAttributes(array('required' => false, 'trim' => true,'readonly' => true));
 
-      if(aplication_system::esAdministrador() || aplication_system::esSocio() || aplication_system::esFabricio() || aplication_system::esRicardo() ):
+      #if(aplication_system::esAdministrador() || aplication_system::esSocio() || aplication_system::esFabricio() || aplication_system::esRicardo() ):
+      if(aplication_system::esSocio() || aplication_system::esFabricio()):
         $this->widgetSchema['satisfacao_cliente'] = new sfWidgetFormChoice(array('choices'  => $satisfacao_cliente,'expanded' => false));
       else:
         $this->widgetSchema['satisfacao_cliente'] = new sfWidgetFormChoice(array('choices'  => $satisfacao_cliente,'expanded' => false),array('disabled'=>true));

@@ -628,8 +628,8 @@ class LxUserPeer extends BaseLxUserPeer {
         $c->add(self::ID_PROFILE, 2, Criteria::GREATER_THAN);
         $c->add(self::STATUS, 1 ,Criteria::EQUAL);
         $c->addGroupByColumn(self::ID_USER);
-        $c->addDescendingOrderByColumn(RatePeer::RATE);
-        $c->addAscendingOrderByColumn(CargosPeer::NOME);
+        // $c->addDescendingOrderByColumn(RatePeer::RATE);
+        // $c->addAscendingOrderByColumn(CargosPeer::NOME);
         $c->addAscendingOrderByColumn(LxUserPeer::NAME);
         
         $rs = self::doSelectStmt($c);
@@ -667,27 +667,35 @@ class LxUserPeer extends BaseLxUserPeer {
         
         if($sort)
         {
+                // var_dump('by: '.$by);
             switch ($by) {
                 case 'desc':
+                    // var_dump('case: desc');
                     if($sort == 'name')
                     {
                         $c->addDescendingOrderByColumn(self::NAME);
-                    }else{
+                    }else if($sort == 'cargo'){
                         $c->addDescendingOrderByColumn(CargosPeer::NOME);
                     }
                     
                     break;
-                default:
+                case 'asc':
+                    // var_dump('case: asc');
                     if($sort == 'name')
                     {
                         $c->addAscendingOrderByColumn(self::NAME);
-                    }else{
+                    }else if($sort == 'cargo'){
                         $c->addAscendingOrderByColumn(CargosPeer::NOME);
                     }
                     
                     break;
+                default:
+                    // var_dump('default');
+                    $c->addAscendingOrderByColumn(self::NAME);
+                    break;
             }
         }else{
+            // var_dump('else');
             $c->addAscendingOrderByColumn(self::NAME);
         }
         

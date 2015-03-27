@@ -339,7 +339,7 @@ $(document).ready(function() {
 
                   <tr class="grey">
 
-                      <?php if(count($arrayProjeto)>0):?>
+                      <!--<?php if(count($arrayProjeto)>0):?>
 
                       <td><?php echo $form['tarefa_parent']->renderLabel() ?></td>
 
@@ -351,7 +351,7 @@ $(document).ready(function() {
 
                       </td>
 
-                      <?php endif; ?>
+                      <?php endif; ?>-->
 
                       <td><?php echo $form['Descricao']->renderLabel() ?></td>
 

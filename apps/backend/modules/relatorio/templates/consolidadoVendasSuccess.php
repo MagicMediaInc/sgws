@@ -31,9 +31,9 @@ include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelecte
 
 <ul id="tabRelatorio" class="tabRelatorio">
 
-    <li><a href="<?php echo url_for('@default?module=relatorio&action=consolidadoVendas') ?>" class="selected" >Consolidado de Vendas</a></li>
+    <li><a href="<?php echo url_for('@default?module=relatorio&action=consolidadoVendas') ?>" class="selected" >Funil de Vendas</a></li>
 
-    <li><a href="<?php echo url_for('@default?module=relatorio&action=funilVendas') ?>" >Funil de Vendas</a></li>
+    <li><a href="<?php echo url_for('@default?module=relatorio&action=funilVendas') ?>" >Backlog</a></li>
 
     <li><a href="<?php echo url_for('@default?module=relatorio&action=hot') ?>" >Hot</a></li>
 

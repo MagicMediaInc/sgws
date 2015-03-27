@@ -178,7 +178,7 @@ class lxuserActions extends sfActions {
 
             }
 
-            $c->addAscendingOrderByColumn(CadastroJuridicaPeer::CODIGO_CLIENTE);
+            $c->addAscendingOrderByColumn(CadastroJuridicaPeer::NOME_FANTASIA);
 
             $pager = new sfPropelPager('CadastroJuridica',20);
 

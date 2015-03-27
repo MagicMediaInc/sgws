@@ -284,3 +284,5 @@
         </form>
     </div>
 </div>
+
+<div style="text-align:right;color: #919191"><i><em>(Saldo positivo significa o valor que o funcionário deve para ADM)</em></i></div>
