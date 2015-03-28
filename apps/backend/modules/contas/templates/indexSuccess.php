@@ -2,6 +2,7 @@
 <?php use_stylesheet('/js/fancybox/jquery.fancybox.css') ?>
 <?php use_javascript('fancybox/jquery.fancybox.js') ?>
 <script type="text/javascript">
+    var valor_seleccionado = 0;
     $(document).ready(function() {
         $('#resultsList td').addClass('borderBottomDarkGray');
         $("#from_date").datepicker({   
@@ -12,7 +13,14 @@
             onClose: function( selectedDate ) {
                 $( "#to_date" ).datepicker( "option", "minDate", selectedDate );
             }
-        });    
+        });  
+        $('.chk-print').on('change', function(event) {
+            console.log($(this).closest('tr').attr('data-valor'));
+            if($(this).is(':checked')) valor_seleccionado += parseFloat($(this).closest('tr').attr('data-valor'));
+            else valor_seleccionado += parseFloat($(this).closest('tr').attr('data-valor'));
+            $('#total-to-print').html('R$ ' + valor_seleccionado.toLocaleString());
+            /* Act on the event */
+        });
         $("#to_date").datepicker({
             defaultDate: "+1w",
             dateFormat: 'dd-mm-yy',          
@@ -147,7 +155,7 @@
                            <?php $total = $total + $monto; ?>
                             <?php endif; ?>
                     <?php $totalGral = $total + $monto ; ?>
-                    <tr><?php if($sf_request->getParameter('status') != '1'):?>
+                    <tr data-valor="<?php echo $valor->getSaidas(); ?>"><?php if($sf_request->getParameter('status') != '1'):?>
                         <td class="no-print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">&nbsp;
                             <?php  $procesaSeleccionados = true; ?>
                             
@@ -246,7 +254,7 @@
                     <tr class="no_for_print" style="font-size: 13px;font-weight: bold;">
                         <td colspan="<?php echo ($sf_request->getParameter('status') == 1) ? '5' : '6' ?>">&nbsp;</td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td>
-                        <td>R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
+                        <td id="total-to-print">R$ <?php echo ($sf_request->getParameter('status') == 1) ? aplication_system::monedaFormat($totalSalida) : '0,00' ?></td>
                         <td colspan="4" style="text-align: left; padding-right: 48px;">
                             <?php if($sf_request->getParameter('status') == 1): ?>Total Global: R$ <?php echo aplication_system::monedaFormat($total_global); endif;  ?>
                         </td>

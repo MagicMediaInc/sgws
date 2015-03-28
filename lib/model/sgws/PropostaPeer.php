@@ -136,6 +136,7 @@ class PropostaPeer extends BasePropostaPeer {
         
         $c->add(self::ID_STATUS_PROPOSTA, 2, Criteria::EQUAL);
         $c->addJoin(self::GERENTE, LxUserPeer::ID_USER, Criteria::INNER_JOIN);
+        // $c->addJoin(self::RESPONSABLE_COMERCIAL, LxUserPeer::ID_USER, Criteria::INNER_JOIN);
         $c->addJoin(self::CLIENTE, CadastroJuridicaPeer::ID_EMPRESA, Criteria::INNER_JOIN);
         $c->addJoin(self::CODIGO_TIPO, ProjetotipoPeer::CODIGOTIPO, Criteria::LEFT_JOIN);
         
@@ -149,8 +150,10 @@ class PropostaPeer extends BasePropostaPeer {
         //Se recuperan los registros y se genera arreglo
         
         while($res = $rs->fetch()) {
+            // var_dump($res['RESPONSABLE_COMERCIAL']);
             $dato['projeto'] = $res['CODIGO_SGWS_PROJETO'];
             $dato['gerente'] = $res['NAME'] ;
+            // $dato['comercial'] = $res['RESPONSABLE_COMERCIAL'] ;
             $dato['cliente'] = $res['NOME_FANTASIA'] ;
             $dato['tipo'] = $res['TIPO'] ;
             $dato['data'] = date("d-m-Y", strtotime($res['DATA_IR_PROJETO'])) ;

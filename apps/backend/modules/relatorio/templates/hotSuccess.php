@@ -6,11 +6,11 @@
 <div class="clear"></div>
 <ul id="tabRelatorio" class="tabRelatorio">
 
-    <li><a href="<?php echo url_for('@default?module=relatorio&action=consolidadoVendas') ?>" class="selected" >Funil de Vendas</a></li>
+    <li><a href="<?php echo url_for('@default?module=relatorio&action=consolidadoVendas') ?>" >Funil de Vendas</a></li>
 
     <li><a href="<?php echo url_for('@default?module=relatorio&action=funilVendas') ?>" >Backlog</a></li>
 
-    <li><a href="<?php echo url_for('@default?module=relatorio&action=hot') ?>" >Hot</a></li>
+    <li><a href="<?php echo url_for('@default?module=relatorio&action=hot') ?>" class="selected" >Hot</a></li>
 
     <li><a href="<?php echo url_for('@default?module=relatorio&action=emNegociacao') ?>" >Em Negociação</a></li>
     

@@ -7,9 +7,9 @@
 
 <ul id="tabRelatorio" class="tabRelatorio">
 
-    <li><a href="<?php echo url_for('@default?module=relatorio&action=funilVendas') ?>" class="selected" >Funil de Vendas</a></li>
+    <li><a href="<?php echo url_for('@default?module=relatorio&action=funilVendas') ?>">Funil de Vendas</a></li>
 
-    <li><a href="<?php echo url_for('@default?module=relatorio&action=backlog') ?>" >Backlog</a></li>
+    <li><a href="<?php echo url_for('@default?module=relatorio&action=backlog') ?>" class="selected" >Backlog</a></li>
 
     <li><a href="<?php echo url_for('@default?module=relatorio&action=hot') ?>" >Hot</a></li>
 

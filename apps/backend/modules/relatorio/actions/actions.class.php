@@ -476,6 +476,14 @@ class relatorioActions extends sfActions
       
       $projetos = PropostaPeer::getFunilVendasProjetos($ano, $this->sort, $this->by);
 
+      $r = array(
+        );
+
+      foreach($projetos as $projeto):
+          $r[date('n', strtotime($projeto['data']))][] = $projeto;
+      endforeach;
+
+      $this->r = $r;
       
       $this->result =  $projetos;
       
