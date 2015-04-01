@@ -25,7 +25,28 @@ $(document).ready(function() {
 <?php 
 // var_dump($anos);
 
-include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelected)) ?>
+#include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelected)) ?>
+<form method="POST" action="">
+    <table>
+        <tr>
+            <td>
+                <label>Ano</label>&nbsp;
+                <select id="by_ano" name="ano">
+                    <?php foreach ($anos as $key => $value): ?>
+                      <option value="<?php echo $key ?>" <?php echo $anoSelected == $key ? 'selected="selected"' : '' ?>  ><?php echo $value ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </td>
+            <td align="left" width="90%">
+                <label>Palavra Chave</label>
+                <span class="propiedades propiedades-extend" style="width: 450px; border-left: 1px #ccc dotted; height: 120px;">
+                    <input type="text" style="width: 290px;" placeholder="Tipo de Serviço" name="buscador" id="funkystyling" value="<?php echo $sf_request->getParameter('buscador') ?>" />
+                    <input type="submit" name="search" id="busca" value="Buscar" />
+                </span>
+            </td>
+        </tr>
+    </table>
+</form>
 
 <div class="clear"></div>
 
@@ -105,6 +126,7 @@ include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelecte
 
                                 <td style="width: 20%">
 
+                                    <?php var_dump($serv) ?>
                                     <?php echo $serv['tipo'] ?>
 
                                 </td>

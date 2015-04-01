@@ -74,12 +74,13 @@ class PropostaPeer extends BasePropostaPeer {
         return self::doSelect($c);
     }
     
-    public static function getFunilVendasProjetos($ano, $sort, $by)
+    public static function getFunilVendasProjetos($ano, $sort, $by, $search = null)
     {
         $c =  new Criteria();
         //Eliminamos la columnas de seleccion en caso de que esten definidas
         $c->clearSelectColumns();
         //Selecciona las columnas
+        $c->addSelectColumn(self::CODIGO_PROPOSTA);
         $c->addSelectColumn(self::CODIGO_SGWS_PROJETO);
         $c->addSelectColumn(LxUserPeer::NAME);
         $c->addSelectColumn(CadastroJuridicaPeer::NOME_FANTASIA);
@@ -133,12 +134,33 @@ class PropostaPeer extends BasePropostaPeer {
         }
         
         
-        
         $c->add(self::ID_STATUS_PROPOSTA, 2, Criteria::EQUAL);
         $c->addJoin(self::GERENTE, LxUserPeer::ID_USER, Criteria::INNER_JOIN);
         // $c->addJoin(self::RESPONSABLE_COMERCIAL, LxUserPeer::ID_USER, Criteria::INNER_JOIN);
         $c->addJoin(self::CLIENTE, CadastroJuridicaPeer::ID_EMPRESA, Criteria::INNER_JOIN);
         $c->addJoin(self::CODIGO_TIPO, ProjetotipoPeer::CODIGOTIPO, Criteria::LEFT_JOIN);
+        if($search){
+            $comercial = new Criteria();
+            $comercial->addSelectColumn(LxUserPeer::ID_USER);
+            $comercial->addSelectColumn(AnalisisPeer::ID);
+            $comercial->addSelectColumn(AnalisisPeer::RESPONSABLE_COMERCIAL);
+            $comercial->addSelectColumn(AnalisisPeer::ID_PROPOSTA);
+            $comercial->addJoin(AnalisisPeer::RESPONSABLE_COMERCIAL, LxUserPeer::ID_USER, Criteria::INNER_JOIN);
+            $comercial = $comercial->add(LxUserPeer::NAME, '%'.$search.'%', Criteria::LIKE);
+            $comercial = LxUserPeer::doSelectStmt($comercial);
+
+            $analisis = array();
+            while($res = $comercial->fetch()) {
+                var_dump($res['ID']);
+                $analisis[] = $res['ID_PROPOSTA'];
+            }
+            $criterio = $c->getNewCriterion(LxUserPeer::NAME, '%'.$search.'%', Criteria::LIKE);
+            $criterio->addOr($c->getNewCriterion(CadastroJuridicaPeer::NOME_FANTASIA, '%'.$search.'%', Criteria::LIKE));
+            $criterio->addOr($c->getNewCriterion(PropostaPeer::CODIGO_PROPOSTA, $analisis, Criteria::IN));
+            $criterio->addOr($c->getNewCriterion(PropostaPeer::CODIGO_SGWS_PROJETO, '%'.$search.'%', Criteria::LIKE));
+            $criterio->addOr($c->getNewCriterion(ProjetotipoPeer::TIPO, '%'.$search.'%', Criteria::LIKE));
+            $c->add($criterio);
+        }
         
         $inicio   = $ano.'-01-01';
         $fim      = $ano.'-12-31';
@@ -151,6 +173,7 @@ class PropostaPeer extends BasePropostaPeer {
         
         while($res = $rs->fetch()) {
             // var_dump($res['RESPONSABLE_COMERCIAL']);
+            $dato['id'] = $res['CODIGO_PROPOSTA'];
             $dato['projeto'] = $res['CODIGO_SGWS_PROJETO'];
             $dato['gerente'] = $res['NAME'] ;
             // $dato['comercial'] = $res['RESPONSABLE_COMERCIAL'] ;
@@ -537,8 +560,8 @@ class PropostaPeer extends BasePropostaPeer {
         //Eliminamos la columnas de seleccion en caso de que esten definidas
         $c->clearSelectColumns();
         //Selecciona las columnas
-        $c->addSelectColumn(ProjetotipoPeer::CODIGOTIPO);
-        $c->addSelectColumn(ProjetotipoPeer::TIPO);
+        // $c->addSelectColumn(ProjetotipoPeer::CODIGOTIPO);
+        // $c->addSelectColumn(ProjetotipoPeer::TIPO);
         
         //Condicion
         $inicio   = $ano.'-'.$mes.'-01';
@@ -555,6 +578,7 @@ class PropostaPeer extends BasePropostaPeer {
         $total = 0;
         $con = 0;
         while($res = $rs->fetch()) {
+            var_dump($res);
             $data['id'] = $res['CODIGOTIPO'];
             $data['tipo'] = $res['TIPO'];
             $datos[] = $data;

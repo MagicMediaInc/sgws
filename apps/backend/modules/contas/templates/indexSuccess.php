@@ -17,8 +17,14 @@
         $('.chk-print').on('change', function(event) {
             console.log($(this).closest('tr').attr('data-valor'));
             if($(this).is(':checked')) valor_seleccionado += parseFloat($(this).closest('tr').attr('data-valor'));
-            else valor_seleccionado += parseFloat($(this).closest('tr').attr('data-valor'));
-            $('#total-to-print').html('R$ ' + valor_seleccionado.toLocaleString());
+            else valor_seleccionado -= parseFloat($(this).closest('tr').attr('data-valor'));
+            console.log(valor_seleccionado.toLocaleString().indexOf(','));
+            var total_print = '';
+            if(valor_seleccionado.toLocaleString().indexOf(',') < 0) total_print = valor_seleccionado.toLocaleString() + ',00';
+            else if((valor_seleccionado.toLocaleString().indexOf(',') + 2) == valor_seleccionado.toLocaleString().length) total_print = valor_seleccionado.toLocaleString() + '0';
+            else if((valor_seleccionado.toLocaleString().indexOf(',') + 3) == valor_seleccionado.toLocaleString().length) total_print = valor_seleccionado.toLocaleString();
+            else if((valor_seleccionado.toLocaleString().indexOf(',') + 4) == valor_seleccionado.toLocaleString().length) total_print = valor_seleccionado.substring(0, valor_seleccionado.length-1);
+            $('#total-to-print').html('R$ ' + total_print);
             /* Act on the event */
         });
         $("#to_date").datepicker({

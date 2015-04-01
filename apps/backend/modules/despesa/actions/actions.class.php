@@ -383,6 +383,25 @@ class despesaActions extends sfActions {
         $this->funcionarios = LxUserPeer::getUsuariosFuncionarios();
     }
 
+    public function executeContas(sfWebRequest $request) {
+
+        $this->funcionarios = LxUserPeer::getUsuariosFuncionarios();
+        $result = array();
+        foreach ($this->funcionarios as $funcionario):
+            # code...
+            $prestacoes_funcionario = SaidasPeer::getTotalPrestacaoContasFuncionario($funcionario['id'], null, 1, $request->getParameter('from_date'), $request->getParameter('to_date'));
+            // if($funcionario['id'] == 19) var_dump($prestacoes_funcionario);
+            $result[] = array(
+                'id_user' => $funcionario['id'],
+                'funcionario' => $funcionario['nome'],
+                'entradas' => $prestacoes_funcionario['totalE'],
+                'saidas' => $prestacoes_funcionario['totalS'],
+                );
+        endforeach;
+        $this->result = $result;
+
+    }
+
     public function executeCompensar(sfWebRequest $request) {
         if ($this->getRequestParameter('chk')) {
             $total = 0;
@@ -395,7 +414,9 @@ class despesaActions extends sfActions {
                 $saida->setForPrint(0);
                 $saida->setConfirmadopor(aplication_system::getUser());
                 $saida->save();
-                $total = $total + $saida->getSaidas();
+                if($saida->getIdCompensacao==null):
+                    $total = $total + $saida->getSaidas();
+                endif;
             }
             // creo registro de compensación
             $total = aplication_system::convierteDecimalFormat($total);
@@ -447,6 +468,11 @@ class despesaActions extends sfActions {
     public function executeConfirmacion(sfWebRequest $request) {
         $this->forward404Unless($this->Despesa = SaidasPeer::retrieveByPk($request->getParameter('id')), sprintf('Object Despesa does not exist (%s).', $request->getParameter('id')));
         if ($request->getParameter('confirmado')) {
+            if($this->Despesa->getIdCompensacao != null):
+                $compensacao = SaidasPeer::retrieveByPk($this->Despesa->getIdCompensacao);
+                $compensacao->setSaidas($compensacao->getSaidas()-$this->Despesa->getSaidas());
+                $compensacao->save();
+            endif;
             $this->Despesa->setConfirmacao(0);
             // $this->Despesa->setBaixa(0);
             $this->Despesa->setConfirmadopor(0);

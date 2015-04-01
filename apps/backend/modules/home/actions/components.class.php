@@ -62,6 +62,7 @@ class homeComponents extends sfComponents {
                        <li>".link_to('Faturamentos','@default?module=despesa&action=faturamento','style="padding-right: 30px !important;"')."</li>
                        <li>".link_to('Pagamentos','@default?module=despesa&action=pagamentos','style="padding-right: 30px !important;"')."</li>
                        <li>".link_to('Saidas','@default?module=despesa&action=saidas','style="padding-right: 30px !important;"')."</li>
+                       <li>".link_to('Prestações de Contas','@default?module=despesa&action=contas','style="padding-right: 30px !important;"')."</li>
                     </ul>
                 ";
             

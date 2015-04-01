@@ -358,6 +358,84 @@ class SaidasPeer extends BaseSaidasPeer {
         
     }
     
+    public static function getTotalPrestacaoContasFuncionario($id, $projeto = null, $status, $from = null, $to = null) {
+        $c =  new Criteria();
+        //Eliminamos la columnas de seleccion en caso de que esten definidas
+        $c->clearSelectColumns();
+        //Selecciona las columnas
+        $c->addSelectColumn(self::CODIGO_SAIDA);
+        $c->addSelectColumn(self::SAIDAS);
+        $c->addSelectColumn(self::OPERACAO);
+        $c->addSelectColumn(self::CENTRO);
+        $c->addSelectColumn(self::BAIXA);
+        $c->addSelectColumn(self::CONFIRMACAO);
+        $c->addSelectColumn(self::DATAREAL);
+        if($projeto)
+        {
+            $c->add(self::CODIGOPROJETO, $projeto, Criteria::EQUAL);
+        }
+        if($status < 2)
+        {
+            $c->add(self::CONFIRMACAO, $status, Criteria::EQUAL);
+        }else{
+            $c->add(self::FOR_PRINT, 1, Criteria::EQUAL);
+            $c->add(self::CONFIRMACAO, 0, Criteria::EQUAL);
+            
+        }
+        $c->add(self::CONFIRMACAO, $status, Criteria::EQUAL);
+        //Condicion
+        /*$criterio = $c->getNewCriterion(self::OPERACAO, 'e', Criteria::EQUAL);
+        $criterio->addOr($c->getNewCriterion(SaidasPeer::CENTRO, 'compensação', Criteria::EQUAL));
+        $lojas = array('1729','1730');
+        $c->addAnd(self::CODIGOCADASTRO, $lojas, Criteria::NOT_IN);
+        $criterio->addOr($c->getNewCriterion(self::CENTRO, 'adiantamento' , Criteria::EQUAL));
+        $criterio->addOr($c->getNewCriterion(self::OPERACAO, 's' , Criteria::EQUAL));*/
+        if($from){
+            if($id == 4) echo "FROM: ".date('Y-m-d', strtotime($from)).'<br>';
+            $c->add(self::DATAREAL, date('Y-m-d', strtotime($from)),Criteria::GREATER_EQUAL);
+        }
+        
+        else{
+            $c->add(self::DATAREAL, '2014-01-01',Criteria::GREATER_EQUAL);
+        }
+        
+        if($to){
+            if($id == 4) echo "TO: ".date('Y-m-d', strtotime($to)).'<br>';
+            $c->add(self::DATAREAL, date('Y-m-d', strtotime($to)),Criteria::LESS_EQUAL);            
+        }
+        
+        $lojas = array('1729','1730');
+        $c->addAnd(self::CODIGOCADASTRO, $lojas, Criteria::NOT_IN);
+
+        $criterioCompensacao = $c->getNewCriterion(self::OPERACAO, 'e', Criteria::EQUAL);
+        $criterioCompensacao->addAnd($c->getNewCriterion(SaidasPeer::CENTRO, 'compensação', Criteria::EQUAL));
+        
+        $criterioAdiantamiento = $c->getNewCriterion(self::OPERACAO, 's', Criteria::EQUAL);
+        $criterioAdiantamiento->addAnd($c->getNewCriterion(self::CENTRO, 'adiantamento' , Criteria::EQUAL));
+
+        $c->addOr($criterioCompensacao);
+        $c->addOr($criterioAdiantamiento);
+        
+        $c->add(self::CODIGOFUNCIONARIO, $id, Criteria::EQUAL);
+        //Ejecucion de consulta
+        $rs = self::doSelectStmt($c);
+        //Se recuperan los registros y se genera arreglo
+        $totalE = 0;
+        $totalS = 0;
+        while($res = $rs->fetch()) {
+            if($res['OPERACAO'] == 's')
+            {
+                $totalS = $totalS + $res['SAIDAS'];
+            }else{
+                $totalE = $totalE + $res['SAIDAS'];
+            }
+            // if($id == 4) echo "ID SAIDA: ".$res['CODIGO_SAIDA'].'. MONTO: '.$res['SAIDAS'].'. CENTRO: '.$res['CENTRO'].' OPERACAO: '.$res['OPERACAO'].' DATA REAL: '.$res['DATAREAL'].' CONFIRMACAO: '.$res['CONFIRMACAO'].'<br>';
+            
+        }
+        return array('totalE' => $totalE, 'totalS' => $totalS);
+        
+    }
+    
     public static function getAlertaDespesasPorAprobar() {
         $c =  new Criteria();
         //Eliminamos la columnas de seleccion en caso de que esten definidas

@@ -20,7 +20,32 @@ $(document).ready(function() {
 </script>
 <h1 class="icono_projeto">Vendas</h1>
 <br />
-<?php include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelected)) ?>
+<?php #include_partial('filtroAno', array('anos' => $anos, 'anoSelected' => $anoSelected)) ?>
+<form method="POST" action="">
+    <table>
+        <tr>
+            <td>
+                <label>Ano</label>&nbsp;
+                <select id="by_ano" name="ano">
+                    <?php foreach ($anos as $key => $value): ?>
+                      <option value="<?php echo $key ?>" <?php echo $anoSelected == $key ? 'selected="selected"' : '' ?>  ><?php echo $value ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </td>
+            <td align="left" width="90%">
+                <label>Palavra Chave</label>
+                <span class="propiedades propiedades-extend" style="width: 450px; border-left: 1px #ccc dotted; height: 120px;">
+                    <input type="text" style="width: 290px;" placeholder="Codigo Projeto, Cliente, Gerente, Serviço, etc" name="buscador" id="funkystyling" value="<?php echo $sf_request->getParameter('buscador') ?>" />
+                    <input type="submit" name="search" id="busca" value="Buscar" />
+                </span>
+            </td>
+            <td style="vertical-align: bottom; padding-bottom: 4px;">
+                <input type="submit" value="Filtrar" />
+            </td>
+        </tr>
+    </table>
+</form>
+
 <br />
 <div class="clear"></div>
 
@@ -56,6 +81,11 @@ $(document).ready(function() {
             </th>
             <th style="width: 20%;" class="">
                 Gerente
+                <?php #echo link_to('Gerente','@default?module=relatorio&action=funilVendas&sort=NAME&by='.$by) ?>
+                <?php #if($sort == "NAME"){ echo image_tag($by_page); }?>
+            </th>
+            <th style="width: 20%;" class="">
+                Gerente Comercial
                 <?php #echo link_to('Gerente','@default?module=relatorio&action=funilVendas&sort=NAME&by='.$by) ?>
                 <?php #if($sort == "NAME"){ echo image_tag($by_page); }?>
             </th>
@@ -124,7 +154,19 @@ $(document).ready(function() {
                                     <td style="width: 6%;"><?php echo $dato['projeto'] ?></td>
                                     <td style="width: 20%;"><?php echo $dato['cliente'] ?></td>
                                     <td style="width: 20%;"><?php echo $dato['gerente'] ?></td>
-                                    <!-- <td><?php echo $dato['comercial'] ?></td> -->
+                                    <td style="width: 20%;">
+                                        <?php 
+                                            $analisis = AnalisisPeer::getAnalisis($dato['id']);
+                                            // if($analisis[0):                                                     # En caso de que sea la primera analisis critica
+                                            if($analisis[count($analisis)-1]->getResponsableComercial() != 0):      # En caso de que sea la ultima analisis critica
+                                                $responsable = LxUserPeer::retrieveByPK($analisis[count($analisis)-1]->getResponsableComercial());
+                                                echo $responsable->getName();
+                                            else:
+                                                ?> --- <?php
+                                            endif;
+                                            
+                                        ?>
+                                    </td>
                                     <td style="width: 20%;"><?php echo $dato['tipo'] ?></td>
                                     <td style="width: 10%;"><?php echo $dato['valor'] ? 'R$ '.aplication_system::monedaFormat($dato['valor']) : '' ?></td>
 

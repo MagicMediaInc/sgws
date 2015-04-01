@@ -474,10 +474,13 @@ class relatorioActions extends sfActions
             }
       }
       
-      $projetos = PropostaPeer::getFunilVendasProjetos($ano, $this->sort, $this->by);
+      $projetos = PropostaPeer::getFunilVendasProjetos($ano, $this->sort, $this->by, $this->getRequestParameter('buscador'));
 
       $r = array(
         );
+
+      $c = new Criteria();
+      $c->clearSelectColumns();
 
       foreach($projetos as $projeto):
           $r[date('n', strtotime($projeto['data']))][] = $projeto;
