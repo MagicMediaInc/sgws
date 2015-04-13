@@ -1,0 +1,580 @@
+Updatecheck<|||>3<|||>1
+DoUsageStatistics<|||>3<|||>1
+UpdatecheckLastrun<|||>1<|||>2015-04-13 10:22:43
+LastUsageStatisticCall<|||>1<|||>2015-04-13 10:22:45
+LastSessions<|||>1<|||>SGWS
+LastActiveSession<|||>1<|||>SGWS
+SessionManager_WindowWidth<|||>3<|||>510
+ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,10
+ColsVisible_connform.ListSessions<|||>1<|||>0
+ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
+ColSort_connform.ListSessions<|||>1<|||>0,0
+ColWidths_frmTableEditor.listColumns<|||>1<|||>38,278,156,90,60,120,50,166,130,140,100,100
+ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
+ColWidths_frmTableEditor.treeIndexes<|||>1<|||>338,100,80
+ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2
+ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2
+ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>73,80,128,80,80,80
+ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
+CoolBand0Index<|||>3<|||>0
+CoolBand0Break<|||>3<|||>1
+CoolBand0Width<|||>3<|||>1914
+CoolBand1Index<|||>3<|||>1
+CoolBand1Break<|||>3<|||>1
+CoolBand1Width<|||>3<|||>1914
+dbtreewidth<|||>3<|||>377
+MainWinMaximized<|||>3<|||>1
+MainWinOnMonitor<|||>3<|||>0
+ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
+ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColSort_MainForm.ListDatabases<|||>1<|||>0,0
+ColWidths_MainForm.ListVariables<|||>1<|||>160,200,275
+ColsVisible_MainForm.ListVariables<|||>1<|||>0,1,2
+ColPositions_MainForm.ListVariables<|||>1<|||>0,1,2
+ColSort_MainForm.ListVariables<|||>1<|||>0,0
+ColWidths_MainForm.ListStatus<|||>1<|||>160,275,100,100
+ColsVisible_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColPositions_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColSort_MainForm.ListStatus<|||>1<|||>0,0
+ColWidths_MainForm.ListProcesses<|||>1<|||>70,80,80,80,80,50,50,145
+ColsVisible_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColPositions_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColSort_MainForm.ListProcesses<|||>1<|||>0,1
+ColWidths_MainForm.ListCommandStats<|||>1<|||>120,100,100,100,215
+ColsVisible_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColPositions_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColSort_MainForm.ListCommandStats<|||>1<|||>1,1
+ColWidths_MainForm.ListTables<|||>1<|||>484,70,70,120,120,70,100,50,70,70,70,70,70,90,120,70,70,70,50
+ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
+ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ColSort_MainForm.ListTables<|||>1<|||>0,0
+MemoEditorWidth<|||>3<|||>1102
+MemoEditorHeight<|||>3<|||>331
+ExportSQL_CreateDatabases<|||>3<|||>1
+ExportSQL_CreateTables<|||>3<|||>1
+ExportSQL_DataHow<|||>3<|||>2
+ExportSQL_Filenames<|||>1<|||>C:\wamp\www\gallardodesignerprojects\abge\abge-org-01-03-2015-2pm.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\abge\abge-org-01-03-2015-11am.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\abge\abge-org-01-03-2015-11am.sql<{{{><}}}>C:\wamp\www\sgws\respaldo.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\abge\database-19-02-15.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\abge\database-11-01-15.sql<{{{><}}}>C:\wamp\www\sgws\database.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\valmir\database.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\valmir\database.sql<{{{><}}}>C:\wamp\www\gallardodesignerprojects\melhoresonibus\database.sql<{{{><}}}>C:\Users\BACKEND\Desktop\ecobed.sql<{{{><}}}>C:\Users\BACKEND\Desktop\ecobed.sql<{{{><}}}>C:\Users\BACKEND\Desktop\ecobed.sql<{{{><}}}>C:\Users\BACKEND\Desktop\abge.com<{{{><}}}>C:\Users\BACKEND\Desktop\abge.com<{{{><}}}>
+MainWinLeft<|||>3<|||>440
+MainWinTop<|||>3<|||>459
+MainWinWidth<|||>3<|||>957
+MainWinHeight<|||>3<|||>533
+DateTimeEditor_CursorPos_Type4<|||>3<|||>0
+TableTools_TreeWidth<|||>3<|||>186
+SessionManager_WindowHeight<|||>3<|||>508
+sqloutheight<|||>3<|||>83
+SQLFile0<|||>1<|||>C:\Users\BACKEND\Downloads\pages.sql
+querymemoheight<|||>3<|||>578
+Servers\abge.com\SessionCreated<|||>1<|||>2014-09-19 11:58:00
+Servers\abge.com\Host<|||>1<|||>186.202.152.19
+Servers\abge.com\WindowsAuth<|||>3<|||>0
+Servers\abge.com\User<|||>1<|||>abge
+Servers\abge.com\Password<|||>1<|||>6E706B6A3D3A393B9
+Servers\abge.com\LoginPrompt<|||>3<|||>0
+Servers\abge.com\Port<|||>1<|||>3306
+Servers\abge.com\NetType<|||>3<|||>0
+Servers\abge.com\Compressed<|||>3<|||>0
+Servers\abge.com\LocalTimeZone<|||>3<|||>0
+Servers\abge.com\FullTableStatus<|||>3<|||>1
+Servers\abge.com\Databases<|||>1<|||>abge
+Servers\abge.com\Comment<|||>1<|||>
+Servers\abge.com\StartupScriptFilename<|||>1<|||>
+Servers\abge.com\SSHtunnelHost<|||>1<|||>
+Servers\abge.com\SSHtunnelHostPort<|||>3<|||>0
+Servers\abge.com\SSHtunnelUser<|||>1<|||>
+Servers\abge.com\SSHtunnelPassword<|||>1<|||>1
+Servers\abge.com\SSHtunnelTimeout<|||>3<|||>4
+Servers\abge.com\SSHtunnelPrivateKey<|||>1<|||>
+Servers\abge.com\SSHtunnelPort<|||>3<|||>3307
+Servers\abge.com\SSL_Active<|||>3<|||>0
+Servers\abge.com\SSL_Key<|||>1<|||>
+Servers\abge.com\SSL_Cert<|||>1<|||>
+Servers\abge.com\SSL_CA<|||>1<|||>
+Servers\abge.com\ServerVersionFull<|||>1<|||>5.1.68-rel14.5-log - Percona Server (GPL), 14.5, Revision 513
+Servers\abge.com\ConnectCount<|||>3<|||>20
+Servers\abge.com\ServerVersion<|||>3<|||>50168
+Servers\abge.com\LastConnect<|||>1<|||>2015-04-08 16:54:57
+Servers\abge.com\lastUsedDB<|||>1<|||>abge
+Servers\abge.com\abge|inscriptions\Sort<|||>1<|||>0_id_usertype|
+Servers\abge.com\abge|participants\Sort<|||>1<|||>0_name|
+Servers\abge.com\abge|users\Sort<|||>1<|||>0_id|
+Servers\abge.com\QueryHistory\1<|||>1<|||>2015-03-09 12:13:05|abge|484|select * from associates where email = 'alencarbacarji@gmail.com'
+Servers\abge.com\QueryHistory\3<|||>1<|||>2015-03-09 12:13:13|abge|390|select * from users where email = 'alencarbacarji@gmail.com'
+Servers\abge.com\QueryHistory\2<|||>1<|||>2015-03-09 12:13:19|abge|234|select * from participants where email = 'alencarbacarji@gmail.com'
+Servers\abge.com\QueryHistory\4<|||>1<|||>2015-03-09 12:17:05|abge|390|select * from participants where name LIKE '%alencar%'
+Servers\abge.org\SessionCreated<|||>1<|||>2014-09-17 09:18:52
+Servers\abge.org\Host<|||>1<|||>186.202.152.54
+Servers\abge.org\WindowsAuth<|||>3<|||>0
+Servers\abge.org\User<|||>1<|||>abge13
+Servers\abge.org\Password<|||>1<|||>48696E6C3A393F373E3B3A7
+Servers\abge.org\LoginPrompt<|||>3<|||>0
+Servers\abge.org\Port<|||>1<|||>3306
+Servers\abge.org\NetType<|||>3<|||>0
+Servers\abge.org\Compressed<|||>3<|||>0
+Servers\abge.org\LocalTimeZone<|||>3<|||>0
+Servers\abge.org\FullTableStatus<|||>3<|||>1
+Servers\abge.org\Databases<|||>1<|||>abge13
+Servers\abge.org\Comment<|||>1<|||>
+Servers\abge.org\StartupScriptFilename<|||>1<|||>
+Servers\abge.org\SSHtunnelHost<|||>1<|||>
+Servers\abge.org\SSHtunnelHostPort<|||>3<|||>0
+Servers\abge.org\SSHtunnelUser<|||>1<|||>
+Servers\abge.org\SSHtunnelPassword<|||>1<|||>5
+Servers\abge.org\SSHtunnelTimeout<|||>3<|||>4
+Servers\abge.org\SSHtunnelPrivateKey<|||>1<|||>
+Servers\abge.org\SSHtunnelPort<|||>3<|||>3307
+Servers\abge.org\SSL_Active<|||>3<|||>0
+Servers\abge.org\SSL_Key<|||>1<|||>
+Servers\abge.org\SSL_Cert<|||>1<|||>
+Servers\abge.org\SSL_CA<|||>1<|||>
+Servers\abge.org\ServerVersionFull<|||>1<|||>5.1.71-rel14.9-log - Percona Server (GPL), 14.9, Revision 589
+Servers\abge.org\ConnectCount<|||>3<|||>39
+Servers\abge.org\ServerVersion<|||>3<|||>50171
+Servers\abge.org\LastConnect<|||>1<|||>2015-04-10 09:06:55
+Servers\abge.org\lastUsedDB<|||>1<|||>abge13
+Servers\abge.org\abge13|anuidade_asosiado\Sort<|||>1<|||>1_ano|
+Servers\abge.org\abge13|asociados\Sort<|||>1<|||>0_area_de_especializacion|
+Servers\abge.org\abge13|asociados\Filter<|||>1<|||>`id_asociado` IN ('5691')
+Servers\abge.org\abge13|asociados\RecentFilters\1<|||>1<|||>`id_asociado` IN ('5691')
+Servers\abge.org\abge13|participantes_curso\Sort<|||>1<|||>0_nome|
+Servers\abge.org\abge13|usuario_cartografia\Sort<|||>1<|||>0_username|
+Servers\abge.org\QueryHistory\1<|||>1<|||>2015-02-25 09:28:32|abge13|203|UPDATE asociados SET area_de_especializacion = '0' WHERE area_de_especializacion = '1'
+Servers\abge.org\QueryHistory\3<|||>1<|||>2015-02-25 09:34:03|abge13|187|UPDATE asociados SET area_de_especializacion = '4' WHERE area_de_especializacion = '5'
+Servers\abge.org\QueryHistory\4<|||>1<|||>2015-02-25 09:38:23|abge13|187|UPDATE asociados SET area_de_especializacion = '2' WHERE area_de_especializacion = '7'
+Servers\abge.org\QueryHistory\6<|||>1<|||>2015-02-25 09:40:41|abge13|188|UPDATE asociados SET area_de_especializacion = '0' WHERE area_de_especializacion = '11'
+Servers\abge.org\QueryHistory\7<|||>1<|||>2015-02-25 09:41:17|abge13|203|UPDATE asociados SET area_de_especializacion = '0' WHERE area_de_especializacion = '10'
+Servers\abge.org\QueryHistory\8<|||>1<|||>2015-03-03 08:34:24|abge13|234|SELECT * FROM anuidade_asosiado WHERE ano = '2015' AND valor_pago > 0
+Servers\abge.org\QueryHistory\2<|||>1<|||>2015-03-09 12:15:36|abge13|1170|select * from participantes where email = 'alencarbacarji@gmail.com'
+Servers\abge.org\QueryHistory\5<|||>1<|||>2015-03-09 12:16:16|abge13|328|select * from participantes where nome LIKE '%alencar%'
+Servers\abge.org\QueryHistory\9<|||>1<|||>2015-03-10 10:46:46|abge13|219|select * from participantes where email like '%henry%'
+Servers\Amagen\SessionCreated<|||>1<|||>2015-01-28 17:29:40
+Servers\Amagen\Host<|||>1<|||>mysql02.hstbr.net 
+Servers\Amagen\WindowsAuth<|||>3<|||>0
+Servers\Amagen\User<|||>1<|||>amagen
+Servers\Amagen\Password<|||>1<|||>3676377C386A39775
+Servers\Amagen\LoginPrompt<|||>3<|||>0
+Servers\Amagen\Port<|||>1<|||>3306
+Servers\Amagen\NetType<|||>3<|||>0
+Servers\Amagen\Compressed<|||>3<|||>0
+Servers\Amagen\LocalTimeZone<|||>3<|||>0
+Servers\Amagen\FullTableStatus<|||>3<|||>1
+Servers\Amagen\Databases<|||>1<|||>banco_amagen
+Servers\Amagen\Comment<|||>1<|||>
+Servers\Amagen\StartupScriptFilename<|||>1<|||>
+Servers\Amagen\SSHtunnelHost<|||>1<|||>
+Servers\Amagen\SSHtunnelHostPort<|||>3<|||>0
+Servers\Amagen\SSHtunnelUser<|||>1<|||>
+Servers\Amagen\SSHtunnelPassword<|||>1<|||>4
+Servers\Amagen\SSHtunnelTimeout<|||>3<|||>4
+Servers\Amagen\SSHtunnelPrivateKey<|||>1<|||>
+Servers\Amagen\SSHtunnelPort<|||>3<|||>3307
+Servers\Amagen\SSL_Active<|||>3<|||>0
+Servers\Amagen\SSL_Key<|||>1<|||>
+Servers\Amagen\SSL_Cert<|||>1<|||>
+Servers\Amagen\SSL_CA<|||>1<|||>
+Servers\Amagen\RefusedCount<|||>3<|||>3
+Servers\BettinaSchutze\SessionCreated<|||>1<|||>2014-09-02 10:03:23
+Servers\BettinaSchutze\Host<|||>1<|||>186.202.152.189
+Servers\BettinaSchutze\WindowsAuth<|||>3<|||>0
+Servers\BettinaSchutze\User<|||>1<|||>bettinaschutze11
+Servers\BettinaSchutze\Password<|||>1<|||>63667575353231331
+Servers\BettinaSchutze\LoginPrompt<|||>3<|||>0
+Servers\BettinaSchutze\Port<|||>1<|||>3306
+Servers\BettinaSchutze\NetType<|||>3<|||>0
+Servers\BettinaSchutze\Compressed<|||>3<|||>0
+Servers\BettinaSchutze\LocalTimeZone<|||>3<|||>0
+Servers\BettinaSchutze\FullTableStatus<|||>3<|||>1
+Servers\BettinaSchutze\Databases<|||>1<|||>bettinaschutze11
+Servers\BettinaSchutze\Comment<|||>1<|||>
+Servers\BettinaSchutze\StartupScriptFilename<|||>1<|||>
+Servers\BettinaSchutze\SSHtunnelHost<|||>1<|||>
+Servers\BettinaSchutze\SSHtunnelHostPort<|||>3<|||>0
+Servers\BettinaSchutze\SSHtunnelUser<|||>1<|||>
+Servers\BettinaSchutze\SSHtunnelPassword<|||>1<|||>5
+Servers\BettinaSchutze\SSHtunnelTimeout<|||>3<|||>4
+Servers\BettinaSchutze\SSHtunnelPrivateKey<|||>1<|||>
+Servers\BettinaSchutze\SSHtunnelPort<|||>3<|||>3307
+Servers\BettinaSchutze\SSL_Active<|||>3<|||>0
+Servers\BettinaSchutze\SSL_Key<|||>1<|||>
+Servers\BettinaSchutze\SSL_Cert<|||>1<|||>
+Servers\BettinaSchutze\SSL_CA<|||>1<|||>
+Servers\BettinaSchutze\RefusedCount<|||>3<|||>4
+Servers\BettinaSchutze\ServerVersionFull<|||>1<|||>5.6.16-64.1-1.ctbanco7-log - (Debian)
+Servers\BettinaSchutze\ConnectCount<|||>3<|||>12
+Servers\BettinaSchutze\ServerVersion<|||>3<|||>50616
+Servers\BettinaSchutze\LastConnect<|||>1<|||>2014-11-11 10:02:58
+Servers\BettinaSchutze\lastUsedDB<|||>1<|||>bettinaschutze11
+Servers\BettinaSchutze\bettinaschutze11|wp_posts\Sort<|||>1<|||>1_ID|
+Servers\BettinaSchutze\QueryHistory\2<|||>1<|||>2014-11-05 08:45:44|bettinaschutze11|343|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_item'
+Servers\BettinaSchutze\QueryHistory\1<|||>1<|||>2014-11-06 10:43:27|bettinaschutze11|374|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_item' ORDER BY `menu_order`
+Servers\BettinaSchutze\QueryHistory\3<|||>1<|||>2014-11-06 10:43:59|bettinaschutze11|390|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_item' AND `post_parent` = 312 ORDER BY `menu_order`
+Servers\BettinaSchutze\QueryHistory\5<|||>1<|||>2014-11-06 11:17:52|bettinaschutze11|280|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_item' AND `post_parent` = 312 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\4<|||>1<|||>2014-11-06 11:42:59|bettinaschutze11|281|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_item' AND `post_parent` = 343 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\6<|||>1<|||>2014-11-06 11:43:10|bettinaschutze11|328|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photos' AND `post_parent` = 343 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\8<|||>1<|||>2014-11-06 11:43:46|bettinaschutze11|359|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 329 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\9<|||>1<|||>2014-11-06 11:44:13|bettinaschutze11|281|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 349 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\12<|||>1<|||>2014-11-06 11:49:53|bettinaschutze11|297|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 365 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\13<|||>1<|||>2014-11-06 11:50:06|bettinaschutze11|296|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 371 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\14<|||>1<|||>2014-11-06 11:50:14|bettinaschutze11|312|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 375 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\15<|||>1<|||>2014-11-06 11:50:31|bettinaschutze11|375|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 445 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\16<|||>1<|||>2014-11-06 11:50:46|bettinaschutze11|219|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 451 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\17<|||>1<|||>2014-11-06 11:51:11|bettinaschutze11|219|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 457 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\19<|||>1<|||>2014-11-06 11:51:48|bettinaschutze11|266|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 475 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\20<|||>1<|||>2014-11-06 11:52:25|bettinaschutze11|297|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 487 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\21<|||>1<|||>2014-11-06 11:52:48|bettinaschutze11|234|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 493 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\22<|||>1<|||>2014-11-06 11:52:56|bettinaschutze11|359|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 495 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\23<|||>1<|||>2014-11-06 11:53:05|bettinaschutze11|328|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 497 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\24<|||>1<|||>2014-11-06 12:18:56|bettinaschutze11|280|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 353 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\10<|||>1<|||>2014-11-06 12:22:46|bettinaschutze11|358|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 343 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\7<|||>1<|||>2014-11-06 12:30:45|bettinaschutze11|296|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 361 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\11<|||>1<|||>2014-11-06 14:14:44|bettinaschutze11|234|SELECT * FROM `wp_posts` WHERE `wp_posts`.`post_type` = 'gl_photo' AND `post_parent` = 463 ORDER BY `menu_order` ASC
+Servers\BettinaSchutze\QueryHistory\18<|||>1<|||>2014-11-11 10:30:07|bettinaschutze11|234|SELECT * FROM `wp_posts` WHERE `wp_posts`.post_type = 'gl_video'
+Servers\BettinaSchutze\QueryHistory\25<|||>1<|||>2014-11-11 10:30:15|bettinaschutze11|219|SELECT * FROM `wp_posts` WHERE `wp_posts`.post_type = 'gl_videos'
+Servers\BettinaSchutze\QueryHistory\26<|||>1<|||>2014-11-11 10:30:38|bettinaschutze11|218|SELECT * FROM `wp_posts` WHERE `wp_posts`.post_type = 'gl_gl_videos'
+Servers\BettinaSchutze\QueryHistory\27<|||>1<|||>2014-11-11 10:30:54|bettinaschutze11|265|SELECT * FROM `wp_posts` WHERE post_type = 'gl_gl_videos'
+Servers\BettinaSchutze\QueryHistory\28<|||>1<|||>2014-11-11 10:31:03|bettinaschutze11|218|SELECT * FROM `wp_posts` WHERE post_type = 'gl_gl_video'
+Servers\Carapicuiba\SessionCreated<|||>1<|||>2015-01-29 09:42:07
+Servers\Carapicuiba\Host<|||>1<|||>186.202.152.71
+Servers\Carapicuiba\WindowsAuth<|||>3<|||>0
+Servers\Carapicuiba\User<|||>1<|||>carapicuiba
+Servers\Carapicuiba\Password<|||>1<|||>786E796A6866776675363736385
+Servers\Carapicuiba\LoginPrompt<|||>3<|||>0
+Servers\Carapicuiba\Port<|||>1<|||>3306
+Servers\Carapicuiba\NetType<|||>3<|||>0
+Servers\Carapicuiba\Compressed<|||>3<|||>0
+Servers\Carapicuiba\LocalTimeZone<|||>3<|||>0
+Servers\Carapicuiba\FullTableStatus<|||>3<|||>1
+Servers\Carapicuiba\Databases<|||>1<|||>carapicuiba
+Servers\Carapicuiba\Comment<|||>1<|||>
+Servers\Carapicuiba\StartupScriptFilename<|||>1<|||>
+Servers\Carapicuiba\SSHtunnelHost<|||>1<|||>
+Servers\Carapicuiba\SSHtunnelHostPort<|||>3<|||>0
+Servers\Carapicuiba\SSHtunnelUser<|||>1<|||>
+Servers\Carapicuiba\SSHtunnelPassword<|||>1<|||>2
+Servers\Carapicuiba\SSHtunnelTimeout<|||>3<|||>4
+Servers\Carapicuiba\SSHtunnelPrivateKey<|||>1<|||>
+Servers\Carapicuiba\SSHtunnelPort<|||>3<|||>3307
+Servers\Carapicuiba\SSL_Active<|||>3<|||>0
+Servers\Carapicuiba\SSL_Key<|||>1<|||>
+Servers\Carapicuiba\SSL_Cert<|||>1<|||>
+Servers\Carapicuiba\SSL_CA<|||>1<|||>
+Servers\Carapicuiba\ServerVersionFull<|||>1<|||>5.1.73-rel14.11-log - (Percona Server (GPL), 14.11)
+Servers\Carapicuiba\ConnectCount<|||>3<|||>1
+Servers\Carapicuiba\ServerVersion<|||>3<|||>50173
+Servers\Carapicuiba\LastConnect<|||>1<|||>2015-01-29 09:42:41
+Servers\Carapicuiba\lastUsedDB<|||>1<|||>carapicuiba
+Servers\Ecobed\SessionCreated<|||>1<|||>2014-09-01 10:20:10
+Servers\Ecobed\Host<|||>1<|||>186.202.152.189
+Servers\Ecobed\WindowsAuth<|||>3<|||>0
+Servers\Ecobed\User<|||>1<|||>ecobed
+Servers\Ecobed\Password<|||>1<|||>6D6B7D3C39383A8
+Servers\Ecobed\LoginPrompt<|||>3<|||>0
+Servers\Ecobed\Port<|||>1<|||>3306
+Servers\Ecobed\NetType<|||>3<|||>0
+Servers\Ecobed\Compressed<|||>3<|||>0
+Servers\Ecobed\LocalTimeZone<|||>3<|||>0
+Servers\Ecobed\FullTableStatus<|||>3<|||>1
+Servers\Ecobed\Databases<|||>1<|||>ecobed
+Servers\Ecobed\Comment<|||>1<|||>
+Servers\Ecobed\StartupScriptFilename<|||>1<|||>
+Servers\Ecobed\SSHtunnelHost<|||>1<|||>
+Servers\Ecobed\SSHtunnelHostPort<|||>3<|||>0
+Servers\Ecobed\SSHtunnelUser<|||>1<|||>
+Servers\Ecobed\SSHtunnelPassword<|||>1<|||>3
+Servers\Ecobed\SSHtunnelTimeout<|||>3<|||>4
+Servers\Ecobed\SSHtunnelPrivateKey<|||>1<|||>
+Servers\Ecobed\SSHtunnelPort<|||>3<|||>3307
+Servers\Ecobed\SSL_Active<|||>3<|||>0
+Servers\Ecobed\SSL_Key<|||>1<|||>
+Servers\Ecobed\SSL_Cert<|||>1<|||>
+Servers\Ecobed\SSL_CA<|||>1<|||>
+Servers\Ecobed\ServerVersionFull<|||>1<|||>5.6.16-64.1-1.ctbanco7-log - (Debian)
+Servers\Ecobed\ConnectCount<|||>3<|||>2
+Servers\Ecobed\ServerVersion<|||>3<|||>50616
+Servers\Ecobed\LastConnect<|||>1<|||>2014-10-15 15:37:54
+Servers\Ecobed\lastUsedDB<|||>1<|||>ecobed
+Servers\Imoveis\SessionCreated<|||>1<|||>2014-12-09 13:12:41
+Servers\Imoveis\Host<|||>1<|||>imoveisnapraiadegua1.hospedagemdesites.ws
+Servers\Imoveis\WindowsAuth<|||>3<|||>0
+Servers\Imoveis\User<|||>1<|||>imoveisnapraia
+Servers\Imoveis\Password<|||>1<|||>66776677363332342
+Servers\Imoveis\LoginPrompt<|||>3<|||>0
+Servers\Imoveis\Port<|||>1<|||>3306
+Servers\Imoveis\NetType<|||>3<|||>0
+Servers\Imoveis\Compressed<|||>3<|||>0
+Servers\Imoveis\LocalTimeZone<|||>3<|||>0
+Servers\Imoveis\FullTableStatus<|||>3<|||>1
+Servers\Imoveis\Databases<|||>1<|||>imoveisnapraia
+Servers\Imoveis\Comment<|||>1<|||>
+Servers\Imoveis\StartupScriptFilename<|||>1<|||>
+Servers\Imoveis\SSHtunnelHost<|||>1<|||>
+Servers\Imoveis\SSHtunnelHostPort<|||>3<|||>0
+Servers\Imoveis\SSHtunnelUser<|||>1<|||>
+Servers\Imoveis\SSHtunnelPassword<|||>1<|||>3
+Servers\Imoveis\SSHtunnelTimeout<|||>3<|||>4
+Servers\Imoveis\SSHtunnelPrivateKey<|||>1<|||>
+Servers\Imoveis\SSHtunnelPort<|||>3<|||>3307
+Servers\Imoveis\SSL_Active<|||>3<|||>0
+Servers\Imoveis\SSL_Key<|||>1<|||>
+Servers\Imoveis\SSL_Cert<|||>1<|||>
+Servers\Imoveis\SSL_CA<|||>1<|||>
+Servers\Imoveis\RefusedCount<|||>3<|||>1
+Servers\Imoveis\lastUsedDB<|||>1<|||>
+Servers\ironmanrecovery\SessionCreated<|||>1<|||>2014-11-18 09:59:53
+Servers\ironmanrecovery\Host<|||>1<|||>mysql01.ironmanrecovery.hospedagemdesites.ws
+Servers\ironmanrecovery\WindowsAuth<|||>3<|||>0
+Servers\ironmanrecovery\User<|||>1<|||>ironmanrecovery
+Servers\ironmanrecovery\Password<|||>1<|||>707976753B3837397
+Servers\ironmanrecovery\LoginPrompt<|||>3<|||>0
+Servers\ironmanrecovery\Port<|||>1<|||>3306
+Servers\ironmanrecovery\NetType<|||>3<|||>0
+Servers\ironmanrecovery\Compressed<|||>3<|||>0
+Servers\ironmanrecovery\LocalTimeZone<|||>3<|||>0
+Servers\ironmanrecovery\FullTableStatus<|||>3<|||>1
+Servers\ironmanrecovery\Databases<|||>1<|||>ironmanrecovery
+Servers\ironmanrecovery\Comment<|||>1<|||>
+Servers\ironmanrecovery\StartupScriptFilename<|||>1<|||>
+Servers\ironmanrecovery\SSHtunnelHost<|||>1<|||>
+Servers\ironmanrecovery\SSHtunnelHostPort<|||>3<|||>0
+Servers\ironmanrecovery\SSHtunnelUser<|||>1<|||>
+Servers\ironmanrecovery\SSHtunnelPassword<|||>1<|||>9
+Servers\ironmanrecovery\SSHtunnelTimeout<|||>3<|||>4
+Servers\ironmanrecovery\SSHtunnelPrivateKey<|||>1<|||>
+Servers\ironmanrecovery\SSHtunnelPort<|||>3<|||>3307
+Servers\ironmanrecovery\SSL_Active<|||>3<|||>0
+Servers\ironmanrecovery\SSL_Key<|||>1<|||>
+Servers\ironmanrecovery\SSL_Cert<|||>1<|||>
+Servers\ironmanrecovery\SSL_CA<|||>1<|||>
+Servers\ironmanrecovery\ServerVersionFull<|||>1<|||>5.6.16-64.1-1.ctbanco7-log - (Debian)
+Servers\ironmanrecovery\ConnectCount<|||>3<|||>5
+Servers\ironmanrecovery\ServerVersion<|||>3<|||>50616
+Servers\ironmanrecovery\LastConnect<|||>1<|||>2014-12-17 12:32:01
+Servers\ironmanrecovery\lastUsedDB<|||>1<|||>ironmanrecovery
+Servers\ironmanrecovery\RefusedCount<|||>3<|||>1
+Servers\ironmanrecovery\ironmanrecovery|wp_mymail_subscribers\Sort<|||>1<|||>0_email|
+Servers\ironmanrecovery\QueryHistory\1<|||>1<|||>2014-12-11 16:25:48|ironmanrecovery|265|select * from wp_postmeta where wp_postmeta.post_id = '2039';
+Servers\ironmanrecovery\QueryHistory\2<|||>1<|||>2014-12-17 12:33:32|ironmanrecovery|266|select * from wp_posts where ID = '2039'
+Servers\ironmanrecovery\QueryHistory\3<|||>1<|||>2014-12-17 13:01:53|ironmanrecovery|2074|select * from wp_postmeta where post_id = '2039'
+Servers\localhost\SessionCreated<|||>1<|||>2014-12-09 13:11:52
+Servers\localhost\Host<|||>1<|||>127.0.0.1
+Servers\localhost\WindowsAuth<|||>3<|||>0
+Servers\localhost\User<|||>1<|||>root
+Servers\localhost\Password<|||>1<|||>3
+Servers\localhost\LoginPrompt<|||>3<|||>0
+Servers\localhost\Port<|||>1<|||>3306
+Servers\localhost\NetType<|||>3<|||>0
+Servers\localhost\Compressed<|||>3<|||>0
+Servers\localhost\LocalTimeZone<|||>3<|||>0
+Servers\localhost\FullTableStatus<|||>3<|||>1
+Servers\localhost\Databases<|||>1<|||>
+Servers\localhost\Comment<|||>1<|||>
+Servers\localhost\StartupScriptFilename<|||>1<|||>
+Servers\localhost\SSHtunnelHost<|||>1<|||>
+Servers\localhost\SSHtunnelHostPort<|||>3<|||>0
+Servers\localhost\SSHtunnelUser<|||>1<|||>
+Servers\localhost\SSHtunnelPassword<|||>1<|||>1
+Servers\localhost\SSHtunnelTimeout<|||>3<|||>4
+Servers\localhost\SSHtunnelPrivateKey<|||>1<|||>
+Servers\localhost\SSHtunnelPort<|||>3<|||>3307
+Servers\localhost\SSL_Active<|||>3<|||>0
+Servers\localhost\SSL_Key<|||>1<|||>
+Servers\localhost\SSL_Cert<|||>1<|||>
+Servers\localhost\SSL_CA<|||>1<|||>
+Servers\MelhoresOnibus\SessionCreated<|||>1<|||>2014-11-19 10:07:48
+Servers\MelhoresOnibus\Host<|||>1<|||>186.202.152.130
+Servers\MelhoresOnibus\WindowsAuth<|||>3<|||>0
+Servers\MelhoresOnibus\User<|||>1<|||>melhoresonibus
+Servers\MelhoresOnibus\Password<|||>1<|||>726677767A6A78393635375
+Servers\MelhoresOnibus\LoginPrompt<|||>3<|||>0
+Servers\MelhoresOnibus\Port<|||>1<|||>3306
+Servers\MelhoresOnibus\NetType<|||>3<|||>0
+Servers\MelhoresOnibus\Compressed<|||>3<|||>0
+Servers\MelhoresOnibus\LocalTimeZone<|||>3<|||>0
+Servers\MelhoresOnibus\FullTableStatus<|||>3<|||>1
+Servers\MelhoresOnibus\Databases<|||>1<|||>melhoresonibus
+Servers\MelhoresOnibus\Comment<|||>1<|||>
+Servers\MelhoresOnibus\StartupScriptFilename<|||>1<|||>
+Servers\MelhoresOnibus\SSHtunnelHost<|||>1<|||>
+Servers\MelhoresOnibus\SSHtunnelHostPort<|||>3<|||>0
+Servers\MelhoresOnibus\SSHtunnelUser<|||>1<|||>
+Servers\MelhoresOnibus\SSHtunnelPassword<|||>1<|||>2
+Servers\MelhoresOnibus\SSHtunnelTimeout<|||>3<|||>4
+Servers\MelhoresOnibus\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MelhoresOnibus\SSHtunnelPort<|||>3<|||>3307
+Servers\MelhoresOnibus\SSL_Active<|||>3<|||>0
+Servers\MelhoresOnibus\SSL_Key<|||>1<|||>
+Servers\MelhoresOnibus\SSL_Cert<|||>1<|||>
+Servers\MelhoresOnibus\SSL_CA<|||>1<|||>
+Servers\MelhoresOnibus\ServerVersionFull<|||>1<|||>5.1.73-rel14.11-log - (Percona Server (GPL), 14.11)
+Servers\MelhoresOnibus\ConnectCount<|||>3<|||>2
+Servers\MelhoresOnibus\ServerVersion<|||>3<|||>50173
+Servers\MelhoresOnibus\LastConnect<|||>1<|||>2014-11-19 10:46:40
+Servers\MelhoresOnibus\lastUsedDB<|||>1<|||>melhoresonibus
+Servers\MelhoresOnibus\melhoresonibus|veiculos\Sort<|||>1<|||>0_id_veiculos|
+Servers\ppgh\SessionCreated<|||>1<|||>2014-10-14 16:17:23
+Servers\ppgh\Host<|||>1<|||>localhost
+Servers\ppgh\WindowsAuth<|||>3<|||>0
+Servers\ppgh\User<|||>1<|||>root
+Servers\ppgh\Password<|||>1<|||>9
+Servers\ppgh\LoginPrompt<|||>3<|||>0
+Servers\ppgh\Port<|||>1<|||>3306
+Servers\ppgh\NetType<|||>3<|||>0
+Servers\ppgh\Compressed<|||>3<|||>0
+Servers\ppgh\LocalTimeZone<|||>3<|||>0
+Servers\ppgh\FullTableStatus<|||>3<|||>1
+Servers\ppgh\Databases<|||>1<|||>ppgh
+Servers\ppgh\Comment<|||>1<|||>
+Servers\ppgh\StartupScriptFilename<|||>1<|||>
+Servers\ppgh\SSHtunnelHost<|||>1<|||>
+Servers\ppgh\SSHtunnelHostPort<|||>3<|||>0
+Servers\ppgh\SSHtunnelUser<|||>1<|||>
+Servers\ppgh\SSHtunnelPassword<|||>1<|||>9
+Servers\ppgh\SSHtunnelTimeout<|||>3<|||>4
+Servers\ppgh\SSHtunnelPrivateKey<|||>1<|||>
+Servers\ppgh\SSHtunnelPort<|||>3<|||>3307
+Servers\ppgh\SSL_Active<|||>3<|||>0
+Servers\ppgh\SSL_Key<|||>1<|||>
+Servers\ppgh\SSL_Cert<|||>1<|||>
+Servers\ppgh\SSL_CA<|||>1<|||>
+Servers\ppgh\RefusedCount<|||>3<|||>3
+Servers\ppgh\ServerVersionFull<|||>1<|||>5.6.17 - MySQL Community Server (GPL)
+Servers\ppgh\ConnectCount<|||>3<|||>1
+Servers\ppgh\ServerVersion<|||>3<|||>50617
+Servers\ppgh\LastConnect<|||>1<|||>2014-10-14 16:23:57
+Servers\ppgh1\SessionCreated<|||>1<|||>2014-10-14 16:24:03
+Servers\ppgh1\Host<|||>1<|||>186.202.152.72
+Servers\ppgh1\WindowsAuth<|||>3<|||>0
+Servers\ppgh1\User<|||>1<|||>ppgh1
+Servers\ppgh1\Password<|||>1<|||>6C6A746C77666B6E665
+Servers\ppgh1\LoginPrompt<|||>3<|||>0
+Servers\ppgh1\Port<|||>1<|||>3306
+Servers\ppgh1\NetType<|||>3<|||>0
+Servers\ppgh1\Compressed<|||>3<|||>0
+Servers\ppgh1\LocalTimeZone<|||>3<|||>0
+Servers\ppgh1\FullTableStatus<|||>3<|||>1
+Servers\ppgh1\Databases<|||>1<|||>ppgh1
+Servers\ppgh1\Comment<|||>1<|||>
+Servers\ppgh1\StartupScriptFilename<|||>1<|||>
+Servers\ppgh1\SSHtunnelHost<|||>1<|||>
+Servers\ppgh1\SSHtunnelHostPort<|||>3<|||>0
+Servers\ppgh1\SSHtunnelUser<|||>1<|||>
+Servers\ppgh1\SSHtunnelPassword<|||>1<|||>1
+Servers\ppgh1\SSHtunnelTimeout<|||>3<|||>4
+Servers\ppgh1\SSHtunnelPrivateKey<|||>1<|||>
+Servers\ppgh1\SSHtunnelPort<|||>3<|||>3307
+Servers\ppgh1\SSL_Active<|||>3<|||>0
+Servers\ppgh1\SSL_Key<|||>1<|||>
+Servers\ppgh1\SSL_Cert<|||>1<|||>
+Servers\ppgh1\SSL_CA<|||>1<|||>
+Servers\ppgh1\ServerVersionFull<|||>1<|||>5.1.73-rel14.11-log - (Percona Server (GPL), 14.11)
+Servers\ppgh1\ConnectCount<|||>3<|||>2
+Servers\ppgh1\ServerVersion<|||>3<|||>50173
+Servers\ppgh1\LastConnect<|||>1<|||>2014-10-15 15:24:46
+Servers\ppgh1\lastUsedDB<|||>1<|||>
+Servers\ppgh1\QueryHistory\1<|||>1<|||>2014-10-14 16:25:22|ppgh1|359|use ppgh1
+Servers\ppgh1\QueryHistory\2<|||>1<|||>2014-10-14 16:25:29|ppgh1|390|show tables
+Servers\SGWS\SessionCreated<|||>1<|||>2015-01-20 10:28:39
+Servers\SGWS\Host<|||>1<|||>186.202.152.54
+Servers\SGWS\WindowsAuth<|||>3<|||>0
+Servers\SGWS\User<|||>1<|||>sgws111
+Servers\SGWS\Password<|||>1<|||>6A776D7B6E6A3A9
+Servers\SGWS\LoginPrompt<|||>3<|||>0
+Servers\SGWS\Port<|||>1<|||>3306
+Servers\SGWS\NetType<|||>3<|||>0
+Servers\SGWS\Compressed<|||>3<|||>0
+Servers\SGWS\LocalTimeZone<|||>3<|||>0
+Servers\SGWS\FullTableStatus<|||>3<|||>1
+Servers\SGWS\Databases<|||>1<|||>sgws111
+Servers\SGWS\Comment<|||>1<|||>
+Servers\SGWS\StartupScriptFilename<|||>1<|||>
+Servers\SGWS\SSHtunnelHost<|||>1<|||>
+Servers\SGWS\SSHtunnelHostPort<|||>3<|||>0
+Servers\SGWS\SSHtunnelUser<|||>1<|||>
+Servers\SGWS\SSHtunnelPassword<|||>1<|||>6
+Servers\SGWS\SSHtunnelTimeout<|||>3<|||>4
+Servers\SGWS\SSHtunnelPrivateKey<|||>1<|||>
+Servers\SGWS\SSHtunnelPort<|||>3<|||>3307
+Servers\SGWS\SSL_Active<|||>3<|||>0
+Servers\SGWS\SSL_Key<|||>1<|||>
+Servers\SGWS\SSL_Cert<|||>1<|||>
+Servers\SGWS\SSL_CA<|||>1<|||>
+Servers\SGWS\ServerVersionFull<|||>1<|||>5.1.71-rel14.9-log - Percona Server (GPL), 14.9, Revision 589
+Servers\SGWS\ConnectCount<|||>3<|||>8
+Servers\SGWS\ServerVersion<|||>3<|||>50171
+Servers\SGWS\LastConnect<|||>1<|||>2015-04-13 10:23:14
+Servers\SGWS\lastUsedDB<|||>1<|||>sgws111
+Servers\SGWS\QueryHistory\1<|||>1<|||>2015-03-19 09:54:04|sgws111|437|select * from cadastro_juridica where id_empresa = 1730
+Servers\SGWS\sgws111|saidas\Sort<|||>1<|||>0_codigo_saida|
+Servers\SGWS\sgws111|saidas\RecentFilters\1<|||>1<|||>`codigo_saida` IN ('54246', '54247')
+Servers\SGWS\sgws111|saidas\RecentFilters\2<|||>1<|||>`confirmacao` IN ('1') AND<{{{><}}}>`for_print` IN ('1')
+Servers\SGWS\sgws111|saidas\RecentFilters\3<|||>1<|||>`confirmacao` IN ('1')<{{{><}}}>`for_print` IN ('1')
+Servers\SGWS\sgws111|saidas\RecentFilters\4<|||>1<|||>`confirmacao` IN ('1')
+Servers\SGWS\sgws111|saidas\RecentFilters\5<|||>1<|||>`for_print` IN ('1')
+Servers\solo-lar\SessionCreated<|||>1<|||>2014-12-19 10:00:26
+Servers\solo-lar\Host<|||>1<|||>186.202.152.55
+Servers\solo-lar\WindowsAuth<|||>3<|||>0
+Servers\solo-lar\User<|||>1<|||>solo_lar2
+Servers\solo-lar\Password<|||>1<|||>75636F77676E363332342
+Servers\solo-lar\LoginPrompt<|||>3<|||>0
+Servers\solo-lar\Port<|||>1<|||>3306
+Servers\solo-lar\NetType<|||>3<|||>0
+Servers\solo-lar\Compressed<|||>3<|||>0
+Servers\solo-lar\LocalTimeZone<|||>3<|||>0
+Servers\solo-lar\FullTableStatus<|||>3<|||>1
+Servers\solo-lar\Databases<|||>1<|||>solo_lar2
+Servers\solo-lar\Comment<|||>1<|||>
+Servers\solo-lar\StartupScriptFilename<|||>1<|||>
+Servers\solo-lar\SSHtunnelHost<|||>1<|||>
+Servers\solo-lar\SSHtunnelHostPort<|||>3<|||>0
+Servers\solo-lar\SSHtunnelUser<|||>1<|||>
+Servers\solo-lar\SSHtunnelPassword<|||>1<|||>4
+Servers\solo-lar\SSHtunnelTimeout<|||>3<|||>4
+Servers\solo-lar\SSHtunnelPrivateKey<|||>1<|||>
+Servers\solo-lar\SSHtunnelPort<|||>3<|||>3307
+Servers\solo-lar\SSL_Active<|||>3<|||>0
+Servers\solo-lar\SSL_Key<|||>1<|||>
+Servers\solo-lar\SSL_Cert<|||>1<|||>
+Servers\solo-lar\SSL_CA<|||>1<|||>
+Servers\solo-lar\RefusedCount<|||>3<|||>1
+Servers\solo-lar\ServerVersionFull<|||>1<|||>5.1.73-rel14.11-log - (Percona Server (GPL), 14.11)
+Servers\solo-lar\ConnectCount<|||>3<|||>1
+Servers\solo-lar\ServerVersion<|||>3<|||>50173
+Servers\solo-lar\LastConnect<|||>1<|||>2014-12-19 10:02:09
+Servers\solo-lar\lastUsedDB<|||>1<|||>solo_lar2
+Servers\solo-lar\QueryHistory\1<|||>1<|||>2014-12-19 10:14:06|solo_lar2|234|select * from inmueble_usados where id_inmueble_usados = '4961'
+Servers\solo-lar\QueryHistory\2<|||>1<|||>2014-12-19 10:55:34|solo_lar2|203|select * from urbanizaciones where id_urb = '73'
+Servers\valmir\SessionCreated<|||>1<|||>2014-10-24 15:53:46
+Servers\valmir\Host<|||>1<|||>186.202.152.152
+Servers\valmir\WindowsAuth<|||>3<|||>0
+Servers\valmir\User<|||>1<|||>valmirprascide
+Servers\valmir\Password<|||>1<|||>75776678393635375
+Servers\valmir\LoginPrompt<|||>3<|||>0
+Servers\valmir\Port<|||>1<|||>3306
+Servers\valmir\NetType<|||>3<|||>0
+Servers\valmir\Compressed<|||>3<|||>0
+Servers\valmir\LocalTimeZone<|||>3<|||>0
+Servers\valmir\FullTableStatus<|||>3<|||>1
+Servers\valmir\Databases<|||>1<|||>valmirprascide
+Servers\valmir\Comment<|||>1<|||>
+Servers\valmir\StartupScriptFilename<|||>1<|||>
+Servers\valmir\SSHtunnelHost<|||>1<|||>
+Servers\valmir\SSHtunnelHostPort<|||>3<|||>0
+Servers\valmir\SSHtunnelUser<|||>1<|||>
+Servers\valmir\SSHtunnelPassword<|||>1<|||>4
+Servers\valmir\SSHtunnelTimeout<|||>3<|||>4
+Servers\valmir\SSHtunnelPrivateKey<|||>1<|||>
+Servers\valmir\SSHtunnelPort<|||>3<|||>3307
+Servers\valmir\SSL_Active<|||>3<|||>0
+Servers\valmir\SSL_Key<|||>1<|||>
+Servers\valmir\SSL_Cert<|||>1<|||>
+Servers\valmir\SSL_CA<|||>1<|||>
+Servers\valmir\ServerVersionFull<|||>1<|||>5.6.16-64.1-1.ctbanco7-log - (Debian)
+Servers\valmir\ConnectCount<|||>3<|||>4
+Servers\valmir\ServerVersion<|||>3<|||>50616
+Servers\valmir\LastConnect<|||>1<|||>2014-12-19 14:00:03
+Servers\valmir\lastUsedDB<|||>1<|||>valmirprascide
