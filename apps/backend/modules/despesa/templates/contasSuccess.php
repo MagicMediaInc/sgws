@@ -182,7 +182,7 @@
 
 </style>
 
-<h1 class="icono_projeto"><?php echo __('Prestações de Contas') ?></h1>
+<h1 class="icono_projeto"><?php echo __('Relatório Saldo Pendente') ?></h1>
 
 <a class="btn-adicionar" href="<?php echo url_for($this->getModuleName().'/newFinanciero') ?>">Inclusão de Entradas/Saídas</a>
 
@@ -395,5 +395,7 @@
         <a href="#" id="hrefPrint" rel="content-area-print">Imprimir <?php echo image_tag('icons/print','width="30" style="position: relative; top: 9px;"') ?></a>
 
     </div>
+
+    <div class="erro_no_data" style="text-align:right"><i><em>(*) Quando o saldo é positivo significa o valor que o funcionário deve para ADM</em></i></div>
 
 </div>

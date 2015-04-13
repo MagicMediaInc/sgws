@@ -3,7 +3,36 @@
     <input type="hidden" id="idCodigoUltimo" value=" <?php echo $codigoUltimo;?>">
 <script type="text/javascript"> 
 $(document).ready(function() {
-    
+    if($('#proposta_id_status_proposta').val() == 2){ // Es projeto
+      $("#title_pro").html("INFORMAÇÕES DO PROJETO");
+      $("#proposta_id_negociacao").hide();
+      $("#dataFinalLine").show();
+      $("#proj_block").show();
+      if($("#proposta_data_ir_projeto").val() == ""){
+          $('.proposta_data_ir_projetoformError').show();
+          $("#proposta_data_ir_projeto").addClass('validate[required] errorFound');
+      }
+      $("#proposta_codigo_sgws_projeto").removeAttr('disabled');
+      $("#back_log").show();
+      if($("#proposta_codigo_sgws_projeto").val() == ""){
+      suma = eval(idCodigoUltimo) + 1;
+      $('.no-proposta').show();
+      //trim(suma);
+      $("#proposta_codigo_sgws_projeto").val("PJ"+suma);
+   }
+  }else{
+      $("#title_pro").html("INFORMAÇÕES DO PROPOSTA");
+      $("#proposta_id_negociacao").show();
+      $("#dataFinalLine").hide();
+      $("#proj_block").hide();
+      $("#proposta_data_ir_projeto").removeClass('validate[required] errorFound');
+      $('.proposta_data_ir_projetoformError').hide();
+      $('.no-proposta').hide();
+      $("#proposta_codigo_sgws_projeto").attr('disabled','disabled');
+      $("#back_log").hide();
+      $("#proposta_codigo_sgws_projeto").val("");
+      suma = 0;
+  }
      var idResponsable = $('#idResponsablesSelect').val();
      var idCodigoUltimo = $('#idCodigoUltimo').val();
      $('#proposta_horas_trabajadas').val($('#h_trabajadas').val());

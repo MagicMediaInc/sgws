@@ -24,9 +24,34 @@
             else if((valor_seleccionado.toLocaleString().indexOf(',') + 2) == valor_seleccionado.toLocaleString().length) total_print = valor_seleccionado.toLocaleString() + '0';
             else if((valor_seleccionado.toLocaleString().indexOf(',') + 3) == valor_seleccionado.toLocaleString().length) total_print = valor_seleccionado.toLocaleString();
             else if((valor_seleccionado.toLocaleString().indexOf(',') + 4) == valor_seleccionado.toLocaleString().length) total_print = valor_seleccionado.substring(0, valor_seleccionado.length-1);
-            $('#total-to-print').html('R$ ' + total_print);
+            $('.total-to-print').html('R$ ' + total_print);
             /* Act on the event */
         });
+        $('#chkTodos').on('change', function(event) {
+            console.log($(this).closest('tr').attr('data-valor'));
+            var todos = $(this).is(':checked');
+            valor_seleccionado = 0;
+            valor_imprimir = '';
+            $('.chk-print').each(function(){
+                if(todos){
+                    $(this).prop('checked',true);
+                    valor_seleccionado += parseFloat($(this).closest('tr').attr('data-valor'));
+                }
+                else{
+                    $(this).prop('checked',false);
+                }
+                console.log("check: " + parseFloat($(this).closest('tr').attr('data-valor')));
+                console.log("valor_seleccionado: " + valor_seleccionado);   
+                valor_imprimir = valor_seleccionado;
+                if(valor_imprimir.toLocaleString().indexOf(',') < 0) total_print = valor_imprimir.toLocaleString() + ',00';
+                else if((valor_imprimir.toLocaleString().indexOf(',') + 2) == valor_imprimir.toLocaleString().length) total_print = valor_imprimir.toLocaleString() + '0';
+                else if((valor_imprimir.toLocaleString().indexOf(',') + 3) == valor_imprimir.toLocaleString().length) total_print = valor_imprimir.toLocaleString();
+                else if((valor_imprimir.toLocaleString().indexOf(',') + 4) == valor_imprimir.toLocaleString().length) total_print = valor_imprimir.substring(0, valor_seleccionado.length-1);
+                $('.total-to-print').html('R$ ' + total_print);
+            });
+            /* Act on the event */
+        });
+        
         $("#to_date").datepicker({
             defaultDate: "+1w",
             dateFormat: 'dd-mm-yy',          
@@ -143,6 +168,7 @@
                 <th class="no_for_print" style="width: 10%;font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">Saldo</th>
                 <th style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;">GP</th>
                 <th class="no_for_print" style="border-bottom: 1px #DDD solid;">ADM</th>
+                <th class="no_for_print" style="border-bottom: 1px #DDD solid;">INF.</th>
                 <th class="for_print" style="font-size: 11px; border-bottom: 1px #DDD solid; background-color: #5092bd; color: #FFF;" >Rubrica</th>
             </thead>
             <tbody>
@@ -162,12 +188,13 @@
                             <?php endif; ?>
                     <?php $totalGral = $total + $monto ; ?>
                     <tr data-valor="<?php echo $valor->getSaidas(); ?>"><?php if($sf_request->getParameter('status') != '1'):?>
-                        <td class="no-print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">&nbsp;
+                        <td class="no_for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">&nbsp;
                             <?php  $procesaSeleccionados = true; ?>
                             
                             <input class="chk-print" type="checkbox" id="chk_<?php echo $valor->getCodigoSaida() ?>" name="chk[<?php echo $valor->getCodigoSaida() ?>]" value="<?php echo $valor->getCodigoSaida() ?>">
                             
                         </td>
+                        <td class="for_print"></td>
                         <?php endif;?>
                          <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; "><?php echo date('d/m/Y', strtotime($valor->getDatareal())) ?></td>
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
@@ -193,15 +220,15 @@
                         <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                              <?php echo ucfirst($valor->getFormapagamento())  ?>
                         </td>
-                        <td class="no_for_print"style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
+                        <td class="no_for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                             <?php echo $valor->getOperacao() == 's'  && $valor->getCentro() == 'adiantamento' ? 'R$ '.aplication_system::monedaFormat($monto,2,",",".")  : '' ?>&nbsp;
                             <?php $valor->getOperacao() == 's'  && $valor->getCentro() == 'adiantamento'? $totalEntrada = $totalEntrada + $monto : '' ?>
                         </td>
-                        <td class="no_for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
+                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; ">
                             <?php echo $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento' ? 'R$ '.aplication_system::monedaFormat($monto,2,",",".")  : '' ?>&nbsp;
                             <?php $valor->getOperacao() == 's'  && $valor->getCentro() != 'adiantamento'? $totalSalida = $totalSalida - $monto : '' ?>
                         </td>
-                        <td style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; " data-attr="saldo">R$ <?php echo aplication_system::monedaFormat($total,2,",",".");?></td>
+                        <td class="no_for_print" style="font-size: 12px; vertical-align: top; border-bottom: 1px #DDD solid; border-right: 1px #DDD solid; " data-attr="saldo">R$ <?php echo aplication_system::monedaFormat($total,2,",",".");?></td>
                         <td id="status_<?php echo $valor->getCodigoSaida() ?>" class="no_for_print" >
                             <?php if((aplication_system::esGerente() && !$valor->getConfirmacao())|| aplication_system::esSocio() ): ?>
                                 <?php echo jq_link_to_remote(image_tag(($valor->getBaixa() == 1 ? '1' : '0').'.png','alt="" title="" border=0'), array(
@@ -260,7 +287,7 @@
                     <tr class="no_for_print" style="font-size: 13px;font-weight: bold;">
                         <td colspan="<?php echo ($sf_request->getParameter('status') == 1) ? '5' : '6' ?>">&nbsp;</td>
                         <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td>
-                        <td id="total-to-print">R$ <?php echo ($sf_request->getParameter('status') == 1) ? aplication_system::monedaFormat($totalSalida) : '0,00' ?></td>
+                        <td class="total-to-print">R$ <?php echo ($sf_request->getParameter('status') == 1) ? aplication_system::monedaFormat($totalSalida) : '0,00' ?></td>
                         <td colspan="4" style="text-align: left; padding-right: 48px;">
                             <?php if($sf_request->getParameter('status') == 1): ?>Total Global: R$ <?php echo aplication_system::monedaFormat($total_global); endif;  ?>
                         </td>
@@ -269,8 +296,8 @@
                     <tr class="for_print" style="font-size: 13px;font-weight: bold;">
                         <td colspan="<?php echo ($sf_request->getParameter('status') == 1) ? '5' : '6' ?>">&nbsp;</td>
                         <!-- <td>R$ <?php echo aplication_system::monedaFormat($totalEntrada) ?></td> -->
-                        <td>R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
-                        <td colspan="4" style="text-align: left; padding-right: 48px;">
+                        <td class="no_for_print">R$ <?php echo aplication_system::monedaFormat($totalSalida) ?></td>
+                        <td class="total-to-print" colspan="4" style="text-align: left; padding-right: 48px;">
                             <?php if($sf_request->getParameter('status') == 1): ?>Total Global: R$ <?php echo aplication_system::monedaFormat($total_global); endif;  ?>
                         </td>
                         
@@ -299,4 +326,4 @@
     </div>
 </div>
 
-<div style="text-align:right;color: #919191"><i><em>(Saldo positivo significa o valor que o funcionário deve para ADM)</em></i></div>
+<div class="erro_no_data" style="text-align:right"><i><em>(*) Quando o saldo é positivo significa o valor que o funcionário deve para ADM</em></i></div>

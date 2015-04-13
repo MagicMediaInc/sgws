@@ -540,7 +540,7 @@ class LxUserPeer extends BaseLxUserPeer {
         
         //$c->add(self::ID_PROFILE, 1, Criteria::GREATER_THAN);
         $c->add(self::ID_PROFILE, 6 , Criteria::NOT_EQUAL);
-        //$c->add(self::STATUS, 1 ,Criteria::EQUAL);
+        $c->add(self::STATUS, 1 ,Criteria::EQUAL);
         $c->addAscendingOrderByColumn(self::NAME);
         $rs = self::doSelectStmt($c);
         //Se recuperan los registros y se genera arreglo
