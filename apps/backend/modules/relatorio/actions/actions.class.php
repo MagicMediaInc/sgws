@@ -283,7 +283,7 @@ class relatorioActions extends sfActions
       {
           $nMes = globalFunctions::zerofill($i,2);
           $ttotalFile = $tt['total1'][$i] + $tt['total2'][$i];
-          $r['Saldo'][$nMes] = aplication_system::monedaFormat($ttotalFile);
+          $r['TOTAL'][$nMes] = aplication_system::monedaFormat($ttotalFile);
           unset($ttotalFile);
       }
 //      echo "<pre>";
@@ -525,7 +525,7 @@ class relatorioActions extends sfActions
                     break;
             }
       }
-      $propostas = PropostaPeer::getPropostasEnNegociacao($ano, $this->sort, $this->by);
+      $propostas = PropostaPeer::getPropostasEnNegociacao($ano, $this->sort, $this->by, $this->getRequestParameter('buscador'));
       $this->result =  $propostas;
   }
   
@@ -563,7 +563,7 @@ class relatorioActions extends sfActions
                     break;
             }
       }
-      $this->result = PropostaPeer::getPropostasHot($this->sort, $this->by);
+      $this->result = PropostaPeer::getPropostasHot($this->sort, $this->by, $this->getRequestParameter('buscador'));
       
   }
   

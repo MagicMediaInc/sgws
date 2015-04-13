@@ -39,9 +39,6 @@ $(document).ready(function() {
                     <input type="submit" name="search" id="busca" value="Buscar" />
                 </span>
             </td>
-            <td style="vertical-align: bottom; padding-bottom: 4px;">
-                <input type="submit" value="Filtrar" />
-            </td>
         </tr>
     </table>
 </form>
@@ -131,6 +128,13 @@ $(document).ready(function() {
                         <td><?php #var_dump($projeto) ?></td>
                         <td><?php #var_dump($projeto) ?></td>
                         <td><?php #var_dump($projeto) ?></td>
+                        <td><?php 
+                            $totalMes = 0;
+                            foreach ($servicios as $dato):
+                                $totalMes += $dato['valor'];
+                            endforeach;
+                            echo 'R$ '.aplication_system::monedaFormat($totalMes);
+                         ?></td>
 
                     </tr>
 
@@ -156,11 +160,14 @@ $(document).ready(function() {
                                     <td style="width: 20%;"><?php echo $dato['gerente'] ?></td>
                                     <td style="width: 20%;">
                                         <?php 
-                                            $analisis = AnalisisPeer::getAnalisis($dato['id']);
-                                            // if($analisis[0):                                                     # En caso de que sea la primera analisis critica
-                                            if($analisis[count($analisis)-1]->getResponsableComercial() != 0):      # En caso de que sea la ultima analisis critica
-                                                $responsable = LxUserPeer::retrieveByPK($analisis[count($analisis)-1]->getResponsableComercial());
-                                                echo $responsable->getName();
+                                            if($analisis = AnalisisPeer::getAnalisis($dato['id'])):
+                                                // if($analisis[0):                                                     # En caso de que sea la primera analisis critica
+                                                if($analisis[count($analisis)-1]->getResponsableComercial() != 0):      # En caso de que sea la ultima analisis critica
+                                                    $responsable = LxUserPeer::retrieveByPK($analisis[count($analisis)-1]->getResponsableComercial());
+                                                    echo $responsable->getName();
+                                                else:
+                                                    ?> --- <?php
+                                                endif;
                                             else:
                                                 ?> --- <?php
                                             endif;

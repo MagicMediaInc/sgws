@@ -126,7 +126,6 @@ $(document).ready(function() {
 
                                 <td style="width: 20%">
 
-                                    <?php var_dump($serv) ?>
                                     <?php echo $serv['tipo'] ?>
 
                                 </td>

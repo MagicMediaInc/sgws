@@ -95,6 +95,7 @@ $(document).ready(function() {
                 $("#back_log").show();
                 if($("#proposta_codigo_sgws_projeto").val() == ""){
                 suma = eval(idCodigoUltimo) + 1;
+                $('.no-proposta').show();
                 //trim(suma);
                 $("#proposta_codigo_sgws_projeto").val("PJ"+suma);
              }
@@ -105,6 +106,7 @@ $(document).ready(function() {
                 $("#proj_block").hide();
                 $("#proposta_data_ir_projeto").removeClass('validate[required] errorFound');
                 $('.proposta_data_ir_projetoformError').hide();
+                $('.no-proposta').hide();
                 $("#proposta_codigo_sgws_projeto").attr('disabled','disabled');
                 $("#back_log").hide();
                 $("#proposta_codigo_sgws_projeto").val("");
@@ -310,7 +312,7 @@ $(document).ready(function() {
                       <?php echo $form['id_status_proposta']->renderError() ?>
                     </div>
                   </div>
-                  <div class="row grey">
+                  <div class="row grey no-proposta">
                     <div class="divtitles"><label>Código Projeto</label></div>
                     <div class="divcontens">
                       <?php echo $form['codigo_sgws_projeto'] ?>
@@ -322,7 +324,7 @@ $(document).ready(function() {
                       <?php echo $form['codigo_centro']->renderError() ?>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row no-proposta">
                       <div class="divtitles"><?php echo $form['gerente']->renderLabel() ?></div>
                       <div class="divcontens">
                         <?php echo $form['gerente'] ?>
@@ -336,7 +338,7 @@ $(document).ready(function() {
                         <?php echo $form['codigo_tipo']->renderError() ?>
                     </div>
                   </div> 
-                  <div class="row">
+                  <div class="row no-proposta">
                       <div class="divtitles"><?php echo $form['horas_vendidas']->renderLabel() ?></div>
                       <div class="divcontens"><?php echo $form['horas_vendidas'] ?>
                         <?php echo $form['horas_vendidas']->renderError() ?>
@@ -347,7 +349,7 @@ $(document).ready(function() {
                         <?php echo $form['horas_trabajadas']->renderError() ?>
                       </div>
                   </div>
-                  <div class="row grey">
+                  <div class="row grey no-proposta">
                       <div class="divtitles"><?php echo $form['valor_prev_hh']->renderLabel() ?></div>
                       <div class="divcontens">
                             <?php echo $form['valor_prev_hh'] ?>
@@ -359,7 +361,7 @@ $(document).ready(function() {
                         <?php echo $form['coeficiente']->renderError() ?>
                       </div>
                   </div>  
-                  <div class="row" id='dataFinalLine'>
+                  <div class="row no-proposta" id='dataFinalLine'>
                       <div class="divtitles"><?php echo $form['data_fr_projeto']->renderLabel() ?></div>
                       <div class="divcontens">
                         <?php echo $form['data_fr_projeto'] ?>
@@ -454,6 +456,51 @@ $(document).ready(function() {
                 <th>&nbsp;</th>
             </thead>
             <tbody>
+
+                <?php 
+                    if($analisis = AnalisisPeer::getAnalisis($form->getObject()->getCodigoProjeto())):
+                        if($analisis[0]):    
+                        // var_dump($analisis[0])    ;
+                        // die("")           ;
+                          ?>
+                            <tr>
+                                <td>
+                                    <?php if($edit): ?>
+                                        <?php echo link_to(image_tag('delete'), 'projeto/deleteAnexo?id='.$analisis[0]->getId(), array('method' => 'delete', 'confirm' => __('Tem certeza de que quer apagar os dados selecionados?'), 'class' => '')) ?>
+                                    <?php endif; ?>
+                                </td>
+                                <td style="padding-left: 10px;"><?php echo date("d-m-Y", strtotime($analisis[0]->getDataCreacion())) ?></td>
+                                <td>
+                                    <?php 
+                                        if($respo = LxUserPeer::retrieveByPK($analisis[0]->getIdResponsavel()) ):
+                                            echo $respo->getName() ;
+                                        else:
+                                          ?> --- <?php 
+                                        endif;
+                                        ?>
+                                </td>
+                                <td><?php //echo $analisis[0]->getStatus() ? 'Aprovado' : 'Não aprovado' ?></td>
+                                <td><?php echo $analisis[0]->getDescricao() ?></td>
+                                <td>
+                                    <a href="<?php echo url_for('@default?module=projeto&action=editAnexo&id='.$analisis[0]->getId()) ?>">
+                                        <?php echo image_tag('icons/icon_obs', 'title="Editar Anexo" alt="Editar Anexo"') ?>
+                                    </a>
+                                    <?php if($analisis[0]): ?>
+                                        <a href="<?php echo url_for('@default?module=projeto&action=editAnalisisCritico&id_analisis='.$analisis[0]->getId().'&by_analisis=1') ?>">
+                                            <?php echo image_tag('icons/1389916284_list-accept','width="23" title="Análise Critica"') ?>
+                                        </a>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                          <?php
+                        else:
+                            ?> --- <?php
+                        endif;
+                    else:
+                        ?> --- <?php
+                    endif;
+                    
+                ?>
                 <?php if($anexos): ?>
                     <?php foreach ($anexos as $revision) : ?>
                 
